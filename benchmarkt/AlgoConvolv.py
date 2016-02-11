@@ -24,7 +24,7 @@ def convolvimg(width , heigh, fpsArray):
         frames = frames +1
         end = time.time()
         seconds = end- start
-
+	#print(frame.shape)
         if seconds-tick >= 1:
             tick = tick + 1
             fps = frames
