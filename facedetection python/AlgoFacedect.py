@@ -6,7 +6,9 @@ import multiprocessing
 import threading
 import psutil
 
-def facedetect(width , heigh):#def facedetect(width , heigh, fpsArrayshared):
+#def facedetect(width , heigh):#
+def facedetect(width , heigh, fpsArray):
+
     video_capture = cv2.VideoCapture(camera)
     video_capture.set(3,width)
     video_capture.set(4,heigh)
@@ -20,9 +22,9 @@ def facedetect(width , heigh):#def facedetect(width , heigh, fpsArrayshared):
     fps =0
     i=0
     
-    fpsArray = []
     
-    print("starting webcam")
+    
+    #print("starting webcam")
     start = time.time()
    
     
@@ -36,7 +38,8 @@ def facedetect(width , heigh):#def facedetect(width , heigh, fpsArrayshared):
         if seconds-tick >= 1:
           tick = tick + 1
           fps = frames
-          #fpsArrayshared[i]=fps
+          fpsArray.append(fps)
+          #fpsArray[i]=fps
           i=i+1
           frames = 0
       
@@ -74,10 +77,15 @@ cascPath = sys.argv[1]
 faceCascade = cv2.CascadeClassifier(cascPath)
 camera= int(sys.argv[2])
 timeout = int(sys.argv[3])
+width= int(sys.argv[4])
+height = int(sys.argv[5])
+fpsArrayshared2 = []
 
 if __name__ == '__main__':
 
-    facedetect(220,176)
-    
+    #print("start")
+    #facedetect(220,176,fpsArrayshared2)
+    facedetect(width,height,fpsArrayshared2)
+    print(fpsArrayshared2)
     
         
