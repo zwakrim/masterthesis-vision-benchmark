@@ -45,7 +45,7 @@ def facedetect(width , heigh, fpsArray):
       
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         cv2.putText(frame, "FPS: {}" .format(fps), (15,80) ,font,1,color)
-        
+
         faces = faceCascade.detectMultiScale(
             gray,
             scaleFactor=1.2,
