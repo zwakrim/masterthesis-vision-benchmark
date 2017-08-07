@@ -14,9 +14,11 @@ def cpu_info_time(time_max):
 
     while time.time () - start <= time_max + 5:
         print(psutil.cpu_percent (1, 1))  # get cpu usage in %
+        """ 
         print(psutil.cpu_freq (percpu=True))  # get cpu frequentie in Mhz
         print(psutil.virtual_memory ())
-        print(psutil.swap_memory ())
+        print(psutil.swap_memory ())"""
+        
         if platform.system () == "Linux":
             print(psutil.sensors_temperatures ())
         if do_or_not:
@@ -25,9 +27,9 @@ def cpu_info_time(time_max):
 
 def cpuinfo():
     print(psutil.cpu_percent (1, 1))  # get cpu usage in %
-    print(psutil.cpu_freq (percpu=True))  # get cpu frequentie in Mhz
+    """ print(psutil.cpu_freq (percpu=True))  # get cpu frequentie in Mhz
     print(psutil.virtual_memory ())
-    print(psutil.swap_memory ())
+    print(psutil.swap_memory ())"""
     if platform.system () == "Linux":
         print(psutil.sensors_temperatures ())
 
@@ -39,6 +41,7 @@ if __name__ == '__main__':
     print(os)
     print(machine)
     print(bits)
+
     python_algorithm = open ("python_algorithm.txt", "r")
     algorithm_lines = python_algorithm.readlines ()
     for line in algorithm_lines:
@@ -58,6 +61,23 @@ if __name__ == '__main__':
     if os == "Windows":
         windows_algorithm = open ("windows_algorithm.txt", "r")
         algorithm_lines = windows_algorithm.readlines ()
+        for line in algorithm_lines:
+            if line[0][0] != "#":
+                cpu_info_time (1)
+                p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True)
+                cpu_info_time (1)
+                while p.poll () is None:
+                    cpu_info_time (0)
+                cpu_info_time (1)
+                out, err = p.communicate ()
+                p.wait ()
+                print(out)
+                print("end")
+                time.sleep (3)
+
+    elif os == "Linux":
+        linux_algorithm = open ("linux_algorithm.txt", "r")
+        algorithm_lines = linux_algorithm.readlines ()
         for line in algorithm_lines:
             if line[0][0] != "#":
                 cpu_info_time (1)
