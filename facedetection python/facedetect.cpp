@@ -25,7 +25,7 @@ static void help()
             "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
 }
 
-void detectAndDraw( Mat& img, CascadeClassifier& cascade,
+void detectAndDraw( Mat& img,  CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip, int fps );
 
@@ -135,9 +135,9 @@ int main( int argc, const char** argv )
                     break;
             }
          //std::cout << "myvector stores " << int(fpsVector.size()) << " numbers.\n";
-        cout << "fps= ";
+        cout << "fps ";
         for (int i=0; i<fpsVector.size();i++){
-            cout << fpsVector[i] << ", ";
+            cout << fpsVector[i] << " "<< endl;
           }
          break;
         }
@@ -187,7 +187,7 @@ int main( int argc, const char** argv )
 }
 
 void detectAndDraw( Mat& img, CascadeClassifier& cascade,
-                    CascadeClassifier& nestedCascade,
+                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip , int fps)
 {
 

@@ -86,6 +86,6 @@ if __name__ == '__main__':
     #print("start")
     #facedetect(220,176,fpsArrayshared2)
     facedetect(width,height,fpsArrayshared2)
-    print(fpsArrayshared2)
+    print("fps,"+",".join(str(x) for x in fpsArrayshared2)+ ",")
     
         

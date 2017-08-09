@@ -1,5 +1,5 @@
 #facedetection  cameranumber second widht height
-facedetect.exe 0 10 220 176
-facedetect.exe 0 10 320 240
-facedetect.exe 0 10 640 480
-facedetect.exe 0 10 1024 768
+facedetect.exe 0 5 220 176
+facedetect.exe 0 5 320 240
+facedetect.exe 0 5 640 480
+facedetect.exe 0 5 1024 768

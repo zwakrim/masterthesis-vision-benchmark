@@ -1,0 +1,114 @@
+%toc
+
+= make =
+
+A `Makefile` specifies targets, dependencies and rules to create targets.
+
+We look at a `Makefile` to build a simple program starting from the most simple
+version, but working our way up to using more advanced features.
+
+We also show a `Makefile` to build a static library.
+
+== Building a simple program ==
+
+=== Naive version ===
+
+{{{
+similaritySearch: hps.o matchlist.o similaritySearch.o yoffsetSearch.o gpuSimilaritySearch.o main.o 
+	gcc -Wall -std=c99 -I ../../../common/inc -L ../../../common/lib/Win32 hps.o \
+		matchlist.o similaritySearch.o yoffsetSearch.o gpuSimilaritySearch.o main.o \
+		-o similaritySearch -lgnu_timer -lgnu_gpu -lOpenCL
+
+hps.o: hps.c hps.h
+	gcc -c -Wall -std=c99 -I ../../../common/inc hps.c
+matchlist.o: matchlist.c matchlist.h
+	gcc -c -Wall -std=c99 -I ../../../common/inc matchlist.c
+similaritySearch.o: similaritySearch.c similaritySearch.h
+	gcc -c -Wall -std=c99 -I ../../../common/inc similaritySearch.c
+yoffsetSearch.o: yoffsetSearch.c yoffsetSearch.h
+	gcc -c -Wall -std=c99 -I ../../../common/inc yoffsetSearch.c
+gpuSimilaritySearch.o: gpuSimilaritySearch.c gpuSimilaritySearch.h
+	gcc -c -Wall -std=c99 -I ../../../common/inc gpuSimilaritySearch.c
+main.o: main.c
+	gcc -c -Wall -std=c99 -I ../../../common/inc main.c
+}}}
+
+=== Using user defined variables ===
+
+{{{
+CC = gcc
+CFLAGS = -Wall -std=c99 -I ../../../common/inc
+LFLAGS = -L ../../../common/lib/Win32
+OBJECTS = hps.o matchlist.o similaritySearch.o yoffsetSearch.o gpuSimilaritySearch.o main.o
+
+similaritySearch: $(OBJECTS)
+	$(CC) $(CFLAGS) $(LFLAGS) $(OBJECTS) \
+		-o similaritySearch -lgnu_timer -lgnu_gpu -lOpenCL
+
+hps.o: hps.c hps.h
+	$(CC) -c $(CFLAGS) hps.c
+matchlist.o: matchlist.c matchlist.h
+	$(CC) -c $(CFLAGS) matchlist.c
+similaritySearch.o: similaritySearch.c similaritySearch.h
+	$(CC) -c $(CFLAGS) similaritySearch.c
+yoffsetSearch.o: yoffsetSearch.c yoffsetSearch.h
+	$(CC) -c $(CFLAGS) yoffsetSearch.c
+gpuSimilaritySearch.o: gpuSimilaritySearch.c gpuSimilaritySearch.h
+	$(CC) -c $(CFLAGS) gpuSimilaritySearch.c
+main.o: main.c
+	$(CC) -c $(CFLAGS) main.c
+}}}
+
+=== Using pattern rules ===
+
+{{{
+CC = gcc
+CFLAGS = -Wall -std=c99 -I ../../../common/inc
+LFLAGS = -L ../../../common/lib/Win32
+LIBS = -lgnu_timer -lgnu_gpu -lOpenCL
+OBJECTS = hps.o matchlist.o similaritySearch.o yoffsetSearch.o gpuSimilaritySearch.o main.o
+
+similaritySearch: $(OBJECTS)
+	$(CC) $(CFLAGS) $(LFLAGS) $^ -o $@ $(LIBS)
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+hps.o: hps.c hps.h
+matchlist.o: matchlist.c matchlist.h
+similaritySearch.o: similaritySearch.c similaritySearch.h
+yoffsetSearch.o: yoffsetSearch.c yoffsetSearch.h
+gpuSimilaritySearch.o: gpuSimilaritySearch.c gpuSimilaritySearch.h
+main.o: main.c
+}}}
+
+== Building a static library ==
+
+The `ar` program is used to add object code to static libraries.
+
+{{{
+AR = ar
+CC = gcc
+CFLAGS = -Wall -std=c99 -I ../../../common/inc
+OBJECTS = gnu_timer.o
+
+gnu_timer.a: $(OBJECTS)
+	$(AR) rcs $@ $^
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+gnu_timer.o: gnu_timer.c
+
+clean:
+	rm -f gnu_timer.o gnu_timer.a
+}}}
+
+== Debugging make ==
+
+* To print debugging information use the option `-d`
+* To see what `make` would do without doing it, use the option `-n`
+
+== Book ==
+
+There is an open book on `make`: http://www.oreilly.com/openbook/make3/book/index.html
