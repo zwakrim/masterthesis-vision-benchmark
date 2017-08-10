@@ -107,7 +107,7 @@ if __name__ == '__main__':
             jsonperf= json.dumps(performance,indent=4)
             print(jsonperf)
             time.sleep (3)
-    filename = 'result/python_perf.json'
+    filename = 'result/'+node+'_python_perf.json'
     saveFile= open(filename,'w')
     saveFile.write(jsonperf)
     saveFile.close()
