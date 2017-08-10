@@ -1,0 +1,235 @@
+
+#pragma OPENCL EXTENSION cl_amd_printf : enable 
+
+
+// Copy data
+
+__kernel void floatCopy(
+    __global float * source1,
+	__global float * source2,
+    __global float * dest,
+    unsigned int     data_size
+    )
+{
+    unsigned int index = get_global_id(0);
+    
+    if (index >= data_size) {
+        return;
+    }
+
+    dest[index] = source1[index];
+
+    return;
+}
+
+__kernel void floatMultiplication(
+    __global float * source1,
+	__global float * source2,
+    __global float * dest,
+    unsigned int     data_size
+    )
+{
+    unsigned int index = get_global_id(0);
+    
+    if (index >= data_size) {
+        return;
+    }
+
+    dest[index] = source1[index] + source2[index];
+
+    return;
+}
+
+////////////////
+// EXERCISE 2 //
+////////////////
+
+// Copy data
+
+__kernel void charCopy(
+    __global char * source,
+    __global char * dest,
+    unsigned int    data_size
+    )
+{
+    unsigned int index = get_global_id(0);
+
+    if (index >= data_size) {
+        return;
+    }
+
+    dest[index] = source[index];
+
+    return;
+}
+
+__kernel void char4Copy(
+    __global char4 * source,
+    __global char4 * dest,
+    unsigned int     data_size
+    )
+{
+    unsigned int index = get_global_id(0);
+
+    if (index >= data_size) {
+        return;
+    }
+
+    dest[index] = source[index];
+}
+
+////////////////
+// EXERCISE 3 //
+////////////////
+
+// Summing two integer lists
+__kernel void intSum(
+    __global int * source1,
+    __global int * source2,
+    __global int * dest,
+    unsigned int   size
+    )
+{
+    unsigned int index = get_global_id(0);
+
+    if (index < size) {
+        dest[index] = source1[index] + source2[index];
+    }
+}
+
+////////////////
+// EXERCISE 4 //
+////////////////
+
+// global erosion
+__kernel void globalErosion(
+    __global unsigned int * source,
+    __global unsigned int * dest,
+             unsigned int   size,
+             unsigned int   mskSize)
+{
+    unsigned int i = get_global_id(0);
+    unsigned int mskRadius = mskSize / 2;
+
+    unsigned int currMin = UINT_MAX;
+    for (unsigned int j = 0; j < mskSize; ++j) {
+        int k = i - mskRadius + j;
+        if (k >= 0 && k < size) {
+            currMin = source[k] < currMin ? source[k] : currMin;
+        }
+    }
+    dest[i] = currMin;
+}
+
+// local erosion
+__kernel void localErosion(
+    __global unsigned int * source,
+    __global unsigned int * dest,
+    __local  unsigned int * shared,
+             unsigned int   size,
+             unsigned int   mskSize)
+{
+    // need to use int types because gi - ls needs to be interpreted as a signed
+    // integer!!!!!
+    int gi = get_global_id(0);
+    int li = get_local_id(0);
+    int ls = get_local_size(0);
+
+    unsigned int mskRadius = mskSize / 2;
+
+    shared[li]          = gi - ls >= 0    ? source[gi - ls]  : UINT_MAX;
+    shared[li + ls]     = gi <= size      ? source[gi]       : UINT_MAX;
+    shared[li + 2*ls]   = gi + ls < size  ? source[gi + ls]  : UINT_MAX;
+    barrier(CLK_LOCAL_MEM_FENCE);
+
+    unsigned int currMin = UINT_MAX;
+    for (unsigned int j = 0; j < mskSize; ++j) {
+        int k = li + ls - mskRadius + j;
+        if (k >= 0 && k < size) {
+            currMin = shared[k] < currMin ? shared[k] : currMin;
+        }
+    }
+    dest[gi] = currMin;
+} 
+
+////////////////
+// EXERCISE 5 //
+////////////////
+
+// global 2D erosion
+__kernel void globalErosion2(
+    __global unsigned int * source,
+    __global unsigned int * dest,
+             unsigned int   width,      // height = width
+             unsigned int   mskWidth)   // mskHeight = mskWidth
+{
+    unsigned int x = get_global_id(0);
+    unsigned int y = get_global_id(1);
+
+    unsigned int mskRadius = mskWidth / 2;
+
+    unsigned int currMin = UINT_MAX;
+
+    for (unsigned int my = 0; my < mskWidth; ++my) {
+        int iy = y - mskRadius + my;
+        for (unsigned int mx = 0; mx < mskWidth; ++mx) {
+            int ix = x - mskRadius + mx;
+            if (iy >= 0 && iy < width && ix >= 0 && ix < width) {
+                currMin = source[iy*width + ix] < currMin ? source[iy*width + ix] : currMin;
+            }
+        }
+    }
+
+    dest[y*width + x] = currMin;
+    
+}
+
+// local 2D erosion
+// assumes get_local_size(1) == 1
+__kernel void localErosion2(
+    __global unsigned int * source,
+    __global unsigned int * dest,
+    __local  unsigned int * shared,
+             unsigned int   width,      // height = width
+             unsigned int   mskWidth)  // mskHeight = mskWidth
+{
+    unsigned int gx = get_global_id(0);
+    unsigned int gy = get_global_id(1);
+
+    unsigned int height = width;
+
+    // l_gx can be negative ==> signed integers
+    int l_gx = gx - get_local_size(0);
+    int r_gx = gx + get_local_size(0);
+
+    unsigned int lx = get_local_id(0);
+    unsigned int ly = get_local_id(1);
+
+    unsigned int ls = get_local_size(0);
+
+    unsigned int mskRadius = mskWidth / 2;
+
+    unsigned int currMin = UINT_MAX;
+
+    for(unsigned int mskY = 0; mskY < mskWidth; ++mskY) {
+        int ny = gy - mskRadius + mskY;
+        if (ny < 0) continue;   // ny < 0 --> go directly to the next iteration
+        if (ny >= height) break;  // ny >= size --> we are outside the image and can stop
+
+        // before loading shared memory make sure no one is still using it
+        barrier(CLK_LOCAL_MEM_FENCE);
+        shared[lx]      = l_gx >= 0    ? source[ny*width + l_gx] : UINT_MAX;
+        shared[lx+ls]   = gx < width   ? source[ny*width + gx]   : UINT_MAX;
+        shared[lx+2*ls] = r_gx < width ? source[ny*width + r_gx] : UINT_MAX; 
+
+        // before using shared memory make sure no one is still loading it
+        barrier(CLK_LOCAL_MEM_FENCE);
+        for(unsigned int mskX = 0; mskX < mskWidth; ++mskX) {
+            currMin = shared[lx + ls - mskRadius + mskX] < currMin ? shared[lx +ls - mskRadius + mskX] : currMin;
+        }
+    }
+
+    if (gx < width && gy < height) {
+       dest[gy*width +  gx] = currMin;
+    }
+} 
