@@ -18,7 +18,7 @@ def cpu_info_time(time_max= 0, array_cpu_perc=[], array_temperature= []):
     start = time.time ()
     while time.time () - start <= time_max:
         perc=psutil.cpu_percent (1, 1) # get cpu usage in %
-       # print(perc)
+        print(perc)
         array_cpu_perc.append(perc)
         """ 
         print(psutil.cpu_freq (percpu=True))  # get cpu frequentie in Mhz
