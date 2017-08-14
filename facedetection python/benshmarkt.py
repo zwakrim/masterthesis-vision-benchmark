@@ -6,10 +6,10 @@ import time
 import psutil
 
 
-def cpu_info_time(time_max= 0, array_cpu_perc=[], array_temperature= []):
+def cpu_info_time(time_max= 1, array_cpu_perc=[], array_temperature= []):
     ##check if time is given
     do_or_not = False
-    if time_max == 0:
+    if time_max == 1:
         do_or_not = True
     else:
         do_or_not = False
