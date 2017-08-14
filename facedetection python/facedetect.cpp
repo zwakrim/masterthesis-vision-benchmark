@@ -105,7 +105,7 @@ int main( int argc, const char** argv )
         capture.set(CV_CAP_PROP_FRAME_WIDTH,width);
         capture.set(CV_CAP_PROP_FRAME_HEIGHT,height);
 
-        cout << "Video capturing has been started ..." << endl;
+        //cout << "Video capturing has been started ..." << endl;
 
 
 
@@ -135,10 +135,11 @@ int main( int argc, const char** argv )
                     break;
             }
          //std::cout << "myvector stores " << int(fpsVector.size()) << " numbers.\n";
-        cout << "fps ";
+        cout << "fps,";
         for (int i=0; i<fpsVector.size();i++){
-            cout << fpsVector[i] << " "<< endl;
+            cout << fpsVector[i] << ",";
           }
+        cout << endl;
          break;
         }
     }
