@@ -205,8 +205,11 @@ if __name__ == '__main__':
 
 
                 for line in iter(p.stdout.readline,''):
+                    print(line.rstrip())
                     out=line.rstrip()
                     out=out.split(",")
+
+
                     for data in out[1:len(out)-1]:
                         if not out[0] in d_data_linux:
                             d_data_linux[out[0]] = []
