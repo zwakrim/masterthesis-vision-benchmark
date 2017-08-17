@@ -214,8 +214,8 @@ if __name__ == '__main__':
                     for data in out[1:len(out)-1]:
                         if not out[0] in d_linux_out:
                             d_linux_out[out[0]] = []
-                    d_linux_out[out[0]].append(int(data))
-
+                    	d_linux_out[out[0]].append(int(data))
+		    print(d_linux_out)
                 p.wait () #wait untill subprosess stops
 
 
