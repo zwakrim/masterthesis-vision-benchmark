@@ -182,7 +182,7 @@ if __name__ == '__main__':
 
     elif os == "Linux":
         print("starting Linux c++ algoritmes")
-        linux_algorithm = open ("windows_algorithm.txt", "r")
+        linux_algorithm = open ("linux_algorithm.txt", "r")
         algorithm_lines = linux_algorithm.readlines ()
         for line in algorithm_lines:
             if line[0][0] == "#":
