@@ -18,7 +18,7 @@ def cpu_info_time(time_max= 1, array_cpu_perc=[], array_temperature= []):
     start = time.time ()
     while time.time () - start <= time_max:
         perc=psutil.cpu_percent (1, 1) # get cpu usage in %
-        print(perc)
+        #print(perc)
         array_cpu_perc.append(perc)
         """ 
         print(psutil.cpu_freq (percpu=True))  # get cpu frequentie in Mhz
@@ -89,23 +89,23 @@ if __name__ == '__main__':
             cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #whats cpu does after subprocess
             #out = p.stdout.readline() #print the communicaiton of the subprocess
 
-
+            d_python_out={}
             for line in iter(p.stdout.readline,''):
+
                 out=line.rstrip()
                 out=out.split(",")
 
                 for data in out[1:len(out)-1]:
-                    if not out[0] in d_data_python:
-                        d_data_python[out[0]] = []
-                    d_data_python[out[0]].append(int(data))
-
+                    if not out[0] in d_python_out:
+                        d_python_out[out[0]] = []
+                    d_python_out[out[0]].append(int(data))
 
             p.wait () #wait untill subprosess stops
 
-
             d_data_python["cpu %"]= cpu_perc
             d_data_python["cpu temp"]=cpu_temp
-            d_res_python[res]= d_data_python
+            d_res_python[res]= d_python_out.items() + d_data_python.items()
+            #print(d_res_python)
             d_algo_type["python"]=d_res_python
 
 
@@ -145,29 +145,30 @@ if __name__ == '__main__':
                     cpu_info_time (array_cpu_perc=cpu_perc)
                 cpu_info_time (5,array_cpu_perc=cpu_perc)
 
+                d_windows_out={}
                 for line in iter(p.stdout.readline,''):
-                    print(line.rstrip())
+
                     out=line.rstrip()
                     out=out.split(",")
 
                     for data in out[1:len(out)-1]:
-                        if not out[0] in d_data_windows:
-                            d_data_windows[out[0]] = []
-                        d_data_windows[out[0]].append(int(data))
-            #print(d_data)
-            p.wait () #wait untill subprosess stops
+                        if not out[0] in d_windows_out:
+                            d_windows_out[out[0]] = []
+                        d_windows_out[out[0]].append(int(data))
+
+                p.wait () #wait untill subprosess stops
 
 
-            d_data_windows["cpu %"]= cpu_perc
-            #d_data["cpu temp"]=cpu_temp
-            d_res_windows[res]= d_data_windows
-            d_algo_type["Windows"]=d_res_windows
+                d_data_windows["cpu %"]= cpu_perc
+                #d_data["cpu temp"]=cpu_temp
+                d_res_windows[res] = d_windows_out.items() + d_data_windows.items()
+                d_algo_type["Windows"]=d_res_windows
 
 
-            performance[algo_name]=d_algo_type
-            jsonperf= json.dumps(performance,indent=4)
-            #print(jsonperf)
-            time.sleep (3)
+                performance[algo_name]=d_algo_type
+                jsonperf= json.dumps(performance,indent=4)
+                #print(jsonperf)
+                time.sleep (3)
 
         """
         filename = 'result/'+node+'_windows_perf.json'
@@ -204,23 +205,23 @@ if __name__ == '__main__':
                 #out = p.stdout.readline() #print the communicaiton of the subprocess
 
 
+                d_linux_out={}
                 for line in iter(p.stdout.readline,''):
-                    print(line.rstrip())
+
                     out=line.rstrip()
                     out=out.split(",")
 
-
                     for data in out[1:len(out)-1]:
-                        if not out[0] in d_data_linux:
-                            d_data_linux[out[0]] = []
-                        d_data_linux[out[0]].append(int(data))
-                #print(d_data)
+                        if not out[0] in d_linux_out:
+                            d_linux_out[out[0]] = []
+                    d_linux_out[out[0]].append(int(data))
+
                 p.wait () #wait untill subprosess stops
 
 
                 d_data_linux["cpu %"]= cpu_perc
                 d_data_linux["cpu temp"]=cpu_temp
-                d_res_linux[res]= d_data_linux
+                d_res_linux[res]= d_data_linux.items()+d_linux_out.items()
                 d_algo_type["linux"]=d_res_linux
 
 
@@ -233,3 +234,4 @@ if __name__ == '__main__':
     saveFile= open(filename,'w')
     saveFile.write(jsonperf)
     saveFile.close()
+    print("benchmarkt done")
