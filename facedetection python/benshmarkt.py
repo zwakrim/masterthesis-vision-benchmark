@@ -53,23 +53,20 @@ if __name__ == '__main__':
 
     #those part are used to create the json file
     algo =" "
-    algo_spec={}
-    d_data_python={}
-    d_data_windows={}
-    d_data_linux={}
-    d_res_python={}
-    d_res_windows={}
-    d_res_linux={}
-    d_algo_type={}
     algo_name=""
     res = ""
 
+
     ##first do the python algorimtes
 
+    print("starting python algorithms")
+    d_algo_type={}
     python_algorithm = open ("python_algorithm.txt", "r")  #open file of python algoritmes
     algorithm_lines = python_algorithm.readlines () #read each line
 
     for line in algorithm_lines:
+        d_data_python={} ##used to save correctly the data
+        d_res_python={}  ##same as above
         if line[0][0]=="#":
             algo=line.split('#')[1]
             algo= algo.split(' ')
@@ -77,13 +74,17 @@ if __name__ == '__main__':
 
         elif line[0][0] != "#":
             spl=line.split(' ')
+
             if algo_name == "facedetection":
                 res = spl[5] +","+ spl[6].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
+            elif algo_name == "Matrixmul":
+                res= spl[2]
 
             cpu_temp = []
             cpu_perc = []
             cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #begin to see what cpu does before openening process
             p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True) #opensubprocess
+            print("startin python " + algo_name + " " + res)
             while p.poll () is None:
                 cpu_info_time (array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #whats cpu does during subprocess
             cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #whats cpu does after subprocess
@@ -98,18 +99,16 @@ if __name__ == '__main__':
                 for data in out[1:len(out)-1]:
                     if not out[0] in d_python_out:
                         d_python_out[out[0]] = []
-                    d_python_out[out[0]].append(int(data))
+                    d_python_out[out[0]].append(float(data))
 
             p.wait () #wait untill subprosess stops
 
             d_data_python["cpu %"]= cpu_perc
             d_data_python["cpu temp"]=cpu_temp
             d_res_python[res]= d_python_out.items() + d_data_python.items()
-            #print(d_res_python)
-            d_algo_type["python"]=d_res_python
+            d_algo_type.setdefault(algo_name,[]).append(d_res_python)
 
-
-            performance[algo_name]=d_algo_type
+            performance.setdefault("python",[]).append(d_algo_type)
             jsonperf= json.dumps(performance,indent=4)
             #print(jsonperf)
             time.sleep (3)
@@ -125,9 +124,12 @@ if __name__ == '__main__':
 
     if os == "Windows":
         print("starting windows c++ algoritmes")
+        d_algo_type={}
         windows_algorithm = open ("windows_algorithm.txt", "r")
         algorithm_lines = windows_algorithm.readlines ()
         for line in algorithm_lines:
+            d_data_windows={}
+            d_res_windows={}
             if line[0][0] == "#":
                 algo=line.split('#')[1]
                 algo= algo.split(' ')
@@ -136,6 +138,9 @@ if __name__ == '__main__':
                 spl=line.split(' ')
                 if algo_name == "facedetection":
                     res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
+                elif algo_name =="Matrixmul":
+                    print(spl[1])
+                    res= spl[1]
 
                 cpu_perc = []
                 cpu_info_time (5,array_cpu_perc=cpu_perc)
@@ -162,20 +167,14 @@ if __name__ == '__main__':
                 d_data_windows["cpu %"]= cpu_perc
                 #d_data["cpu temp"]=cpu_temp
                 d_res_windows[res] = d_windows_out.items() + d_data_windows.items()
-                d_algo_type["Windows"]=d_res_windows
+                d_algo_type.setdefault(algo_name,[]).append(d_res_windows)
 
-
-                performance[algo_name]=d_algo_type
+                performance.setdefault("linux",[]).append(d_algo_type)
                 jsonperf= json.dumps(performance,indent=4)
-                #print(jsonperf)
+                print(jsonperf)
                 time.sleep (3)
 
-        """
-        filename = 'result/'+node+'_windows_perf.json'
-        saveFile= open(filename,'w')
-        saveFile.write(jsonperf)
-        saveFile.close()
-        """
+
 
 
 #########################################################################################################################################
@@ -183,9 +182,14 @@ if __name__ == '__main__':
 
     elif os == "Linux":
         print("starting Linux c++ algoritmes")
+        d_algo_type={}
         linux_algorithm = open ("linux_algorithm.txt", "r")
         algorithm_lines = linux_algorithm.readlines ()
         for line in algorithm_lines:
+            d_data_linux={}
+            d_res_linux={}
+
+
             if line[0][0] == "#":
                 algo=line.split('#')[1]
                 algo= algo.split(' ')
@@ -215,17 +219,16 @@ if __name__ == '__main__':
                         if not out[0] in d_linux_out:
                             d_linux_out[out[0]] = []
                     	d_linux_out[out[0]].append(int(data))
-		    print(d_linux_out)
+		        print(d_linux_out)
                 p.wait () #wait untill subprosess stops
 
 
                 d_data_linux["cpu %"]= cpu_perc
                 d_data_linux["cpu temp"]=cpu_temp
                 d_res_linux[res]= d_data_linux.items()+d_linux_out.items()
-                d_algo_type["linux"]=d_res_linux
+                d_algo_type.setdefault(algo_name,[]).append(d_res_linux)
 
-
-                performance[algo_name]=d_algo_type
+                performance.setdefault("windows",[]).append(d_algo_type)
                 jsonperf= json.dumps(performance,indent=4)
                 #print(jsonperf)
                 time.sleep (3)

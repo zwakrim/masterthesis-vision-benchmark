@@ -1,4 +1,10 @@
 #facedetection haarcascade cameranumber second widht height
 python AlgoFacedect.py haarcascade_frontalface_default.xml 0 5 220 176
-#Matrixmul
+python AlgoFacedect.py haarcascade_frontalface_default.xml 0 5 320 240
+python AlgoFacedect.py haarcascade_frontalface_default.xml 0 5 640 480
+python AlgoFacedect.py haarcascade_frontalface_default.xml 0 5 1024 768
+#Matrixmul N
+python AlgoMatrixMul.py 10000
+python AlgoMatrixMul.py 100000
 python AlgoMatrixMul.py 1000000
+python AlgoMatrixMul.py 10000000
