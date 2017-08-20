@@ -60,22 +60,22 @@ if __name__ == '__main__':
     ##first do the python algorimtes
 
     print("starting python algorithms")
-    d_algo_type={}
+
     python_algorithm = open ("python_algorithm.txt", "r")  #open file of python algoritmes
     algorithm_lines = python_algorithm.readlines () #read each line
-
+    d_algo_type={}
     for line in algorithm_lines:
         d_data_python={} ##used to save correctly the data
         d_res_python={}  ##same as above
         if line[0][0]=="#":
             algo=line.split('#')[1]
             algo= algo.split(' ')
-            algo_name=algo[0]#get the name of the algoritme
+            algo_name=algo[1]#get the name of the algoritme
 
         elif line[0][0] != "#":
             spl=line.split(' ')
 
-            if algo_name == "facedetection":
+            if algo[0] == "camera":
                 res = spl[5] +","+ spl[6].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
             elif algo_name == "Matrixmul":
                 res= spl[2]
@@ -106,12 +106,18 @@ if __name__ == '__main__':
             d_data_python["cpu %"]= cpu_perc
             d_data_python["cpu temp"]=cpu_temp
             d_res_python[res]= d_python_out.items() + d_data_python.items()
-            d_algo_type.setdefault(algo_name,[]).append(d_res_python)
 
-            performance.setdefault("python",[]).append(d_algo_type)
+            if not algo_name in d_algo_type:
+                d_algo_type[algo_name]= []
+            d_algo_type[algo_name].append(d_res_python)
+
+            if not "python" in performance:
+                performance["python"]=[]
+            performance["python"]= d_algo_type
             jsonperf= json.dumps(performance,indent=4)
-            #print(jsonperf)
+            # print(jsonperf)
             time.sleep (3)
+
     """
     filename = 'result/'+node+'_python_perf.json'
     saveFile= open(filename,'w')
@@ -119,9 +125,6 @@ if __name__ == '__main__':
     saveFile.close()
     """
 #########################################################################################################################################
-
-
-
     if os == "Windows":
         print("starting windows c++ algoritmes")
         d_algo_type={}
@@ -167,17 +170,22 @@ if __name__ == '__main__':
                 d_data_windows["cpu %"]= cpu_perc
                 #d_data["cpu temp"]=cpu_temp
                 d_res_windows[res] = d_windows_out.items() + d_data_windows.items()
-                d_algo_type.setdefault(algo_name,[]).append(d_res_windows)
 
-                performance.setdefault("linux",[]).append(d_algo_type)
+                if not algo_name in d_algo_type:
+                    d_algo_type[algo_name]= []
+                d_algo_type[algo_name].append(d_res_windows)
+
+                if not "windows c++" in performance:
+                    performance["windows c++"]=[]
+                performance["windows c++"]= d_algo_type
+
                 jsonperf= json.dumps(performance,indent=4)
-                print(jsonperf)
+                # print(jsonperf)
                 time.sleep (3)
 
 
 
-
-#########################################################################################################################################
+        #########################################################################################################################################
 
 
     elif os == "Linux":
@@ -218,20 +226,28 @@ if __name__ == '__main__':
                     for data in out[1:len(out)-1]:
                         if not out[0] in d_linux_out:
                             d_linux_out[out[0]] = []
-                    	d_linux_out[out[0]].append(int(data))
-		        print(d_linux_out)
+                        d_linux_out[out[0]].append(int(data))
+                        print(d_linux_out)
                 p.wait () #wait untill subprosess stops
 
 
                 d_data_linux["cpu %"]= cpu_perc
                 d_data_linux["cpu temp"]=cpu_temp
                 d_res_linux[res]= d_data_linux.items()+d_linux_out.items()
-                d_algo_type.setdefault(algo_name,[]).append(d_res_linux)
 
-                performance.setdefault("windows",[]).append(d_algo_type)
+                if not algo_name in d_algo_type:
+                    d_algo_type[algo_name]= []
+                d_algo_type[algo_name].append(d_res_linux)
+
+                if not "linux c++" in performance:
+                    performance["linux c++"]=[]
+                performance["linux c++"]= d_algo_type
+
                 jsonperf= json.dumps(performance,indent=4)
-                #print(jsonperf)
+                # print(jsonperf)
                 time.sleep (3)
+
+
 
     filename = 'result/'+node+'_'+ os+ '.json'
     saveFile= open(filename,'w')
