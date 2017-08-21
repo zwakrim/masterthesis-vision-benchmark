@@ -227,7 +227,7 @@ if __name__ == '__main__':
                         if not out[0] in d_linux_out:
                             d_linux_out[out[0]] = []
                         d_linux_out[out[0]].append(int(data))
-                        print(d_linux_out)
+                        #print(d_linux_out)
                 p.wait () #wait untill subprosess stops
 
 
