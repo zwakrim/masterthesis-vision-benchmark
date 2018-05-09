@@ -3,6 +3,9 @@ import time
 import sys
 import psutil
 import math
+import jsonlines
+import datetime
+
 
 
 def matrixmul(m1,m2):
@@ -28,12 +31,21 @@ freq = psutil.cpu_freq()[0] #in MHz
 if __name__ == '__main__':
     matrixmul(m1,m2)
 
-    ops= n/times/math.pow(10,9) #n /s / 10^9 to have evething in Gb/s
+    ops= n/times/math.pow(10,9) #n /s / 10^9 to have evething in GOp/s
     ticks =  (freq/math.pow(10,3)) * times #MHz * s 10^3 to have it in Ghz
     Bw=ops*np.dtype(float).itemsize*3 #ops * 8 * 3 (B/s)
 
     print("time(s)," + str(times)+",")
-    print("ops(Gb),"+str(ops)+",")
+    print("ops(Gops),"+str(ops)+",")
     print("ticks,"+str(ticks)+",")
     print("Bw(Gb/s),"+str(Bw)+",")
 
+    timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
+    filename =  'result/'+ "AlgoMatrixMul_"+ str(timesnow)+ '.json'
+    with jsonlines.open(filename,mode='w') as outputfile:
+        result ={}
+        result ["duration(s)"]=(times)
+        result["ops(Gops)"] =(ops)
+        result["ticks"]=(ticks)
+        result["Bw(Gb/s)"]= (Bw)
+        outputfile.write(result)

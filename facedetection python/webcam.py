@@ -36,7 +36,7 @@ fps =0
 start = time.time()
 timeout = 60.0
 
-while (time.time() - start <= 10):
+while (time.time() - start <= 60):
     # Capture frame-by-frame
     ret, frame = video_capture.read()
     frames = frames +1
@@ -61,13 +61,15 @@ while (time.time() - start <= 10):
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
-		print ("x: ",x,", y: ",y)
+		#print ("x: ",x,", y: ",y)
 		prov=str(x)
 		prov = prov + 'x'
 		#ser.write(prov)
+		print(prov)
 		prov=str(y)
-		prov = prov + 'x'
+		prov = prov + 'y'
 		#ser.write(prov)
+		print(prov)
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
     # Display the resulting frame

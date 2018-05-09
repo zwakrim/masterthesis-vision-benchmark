@@ -37,7 +37,7 @@ def convolvimg(width , heigh, fpsArray):
         lower_color= np.array([150,150,50])
         upper_color= np.array([180,255,255])
 
-        #mask = cv2.inRange(hsv,lower_color,upper_color)
+        mask = cv2.inRange(hsv,lower_color,upper_color)
         #result = cv2.bitwise_and(frame,frame,mask=mask)
 
         #blur= cv2.medianBlur(frame,5,0)

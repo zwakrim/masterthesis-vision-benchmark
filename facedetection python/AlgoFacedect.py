@@ -5,12 +5,16 @@ import time
 import multiprocessing
 import threading
 import psutil
+import jsonlines
+import datetime
+
 
 #def facedetect(width , heigh):#
 def facedetect(width , heigh, fpsArray):
 
     video_capture = cv2.VideoCapture(camera)
     video_capture.set(3,width)
+
     video_capture.set(4,heigh)
      
 
@@ -38,6 +42,7 @@ def facedetect(width , heigh, fpsArray):
         if seconds-tick >= 1:
           tick = tick + 1
           fps = frames
+          print str(fps)
           fpsArray.append(fps)
           #fpsArray[i]=fps
           i=i+1
@@ -88,6 +93,23 @@ if __name__ == '__main__':
     #print("start")
     #facedetect(220,176,fpsArrayshared2)
     facedetect(width,height,fpsArrayshared2)
-    print("fps,"+",".join(str(x) for x in fpsArrayshared2)+ ",")
+    timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
+
+    filename =  'result/'+ "Algofacedetection_"+str(width) + str(timesnow)+ '.json'
+    with jsonlines.open(filename,mode='w') as outputfile:
+        counter =1
+        for item in fpsArrayshared2:
+            result ={}
+            result["algoritme"]= "Facedetection"
+            result["fps"] = item
+            result["Type"] = "Python"
+            result["Second"] = counter
+            result["resolution"] = width
+            counter = counter +1
+            outputfile.write(result)
+
+
+
+# print("fps,"+",".join(str(x) for x in fpsArrayshared2)+ ",")
     
         
