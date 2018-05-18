@@ -1,6 +1,0 @@
-{"machine": "AMD64", "bits": "64bit", "os": "Windows", "node": "LAPTOP-TPLGCH9G", "cores": 4}
-{"node": "LAPTOP-TPLGCH9G", "counter": 0, "resulotion": 0, "algoritme": "before", "percent cpu": [10.9, 9.4, 7.8, 10.9]}
-{"node": "LAPTOP-TPLGCH9G", "counter": 1, "resulotion": 0, "algoritme": "before", "percent cpu": [1.6, 0.0, 0.0, 1.6]}
-{"node": "LAPTOP-TPLGCH9G", "counter": 2, "resulotion": 0, "algoritme": "before", "percent cpu": [4.6, 1.6, 3.1, 0.0]}
-{"node": "LAPTOP-TPLGCH9G", "counter": 3, "resulotion": 0, "algoritme": "before", "percent cpu": [3.1, 1.6, 0.0, 1.5]}
-{"node": "LAPTOP-TPLGCH9G", "counter": 4, "resulotion": 0, "algoritme": "before", "percent cpu": [1.6, 0.0, 0.0, 1.6]}

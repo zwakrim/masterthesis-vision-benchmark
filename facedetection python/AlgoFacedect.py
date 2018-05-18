@@ -95,12 +95,12 @@ if __name__ == '__main__':
     facedetect(width,height,fpsArrayshared2)
     timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
 
-    filename =  'result/'+ "Algofacedetection_"+str(width) + str(timesnow)+ '.json'
+    filename =  'result/'+ "Algofacedetection_python_"+str(width) + str(timesnow)+ '.json'
     with jsonlines.open(filename,mode='w') as outputfile:
         counter =1
         for item in fpsArrayshared2:
             result ={}
-            result["algoritme"]= "Facedetection"
+            result["algoritme"]= "Facedetection_python"
             result["fps"] = item
             result["Type"] = "Python"
             result["Second"] = counter

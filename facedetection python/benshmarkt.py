@@ -68,9 +68,7 @@ if __name__ == '__main__':
         res = ""
 
         ##first do the python algorimtes
-
         print("starting python algorithms")
-
         python_algorithm = open ("python_algorithm.txt", "r")  # open file of python algoritmes
         algorithm_lines = python_algorithm.readlines ()  # read each line
         d_algo_type = {}
@@ -101,12 +99,12 @@ if __name__ == '__main__':
                 p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=False,
                                       stderr=subprocess.PIPE)  # opensubprocess
 
-                print("startin python " + algo_name + " " + res)
+                print("starting python " + algo_name + " " + res)
                 counter = 0
                 while p.poll () is None:
                     if algo[0] == "camera":
                         cpu_info_time (array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
-                                       algorithme=algo_name, counter=counter,
+                                       algorithme=algo_name + "_python", counter=counter,
                                        resolution=int (res.split (",")[0]))  # whats cpu does during subprocess
                     else:
                         cpu_info_time (array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
@@ -120,69 +118,67 @@ if __name__ == '__main__':
     
 #########################################################################################################################################
 
-    if os == "Windows":
-        print("starting windows c++ algoritmes")
-        d_algo_type={}
-        windows_algorithm = open("windows_algorithm.txt", "r")
-        algorithm_lines = windows_algorithm.readlines ()
-        for line in algorithm_lines:
-            d_data_windows={}
-            d_res_windows={}
-            if line[0][0] == "#":
-                algo=line.split('#')[1]
-                algo= algo.split(' ')
-                algo_name=algo[0]#get the name of the algoritme
-            elif line[0][0] != "#":
-                spl=line.split(' ')
-                if algo_name == "facedetection":
-                    res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
-                elif algo_name =="Matrixmul":
-                    print(spl[1])
-                    res= spl[1]
+        if os == "Windows":
+            print("starting windows c++ algoritmes")
+            windows_algorithm = open("windows_algorithm.txt", "r")
+            algorithm_lines = windows_algorithm.readlines ()
+            for line in algorithm_lines:
+                d_data_windows={}
+                d_res_windows={}
+                if line[0][0] == "#":
+                    algo=line.split('#')[1]
+                    algo= algo.split(' ')
+                    algo_name=algo[1]#get the name of the algoritme
+                elif line[0][0] != "#":
+                    spl=line.split(' ')
+                    if algo[0] == "camera":
+                        res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
+                    elif algo_name =="Matrixmul":
+                        print(spl[1])
+                        res= spl[1]
 
-                cpu_perc = []
-                cpu_info_time (5,array_cpu_perc=cpu_perc)
-                p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True)
-                cpu_info_time (1)
-                while p.poll () is None:
-                    cpu_info_time (array_cpu_perc=cpu_perc)
-                cpu_info_time (5,array_cpu_perc=cpu_perc)
-                """
-                d_windows_out={}
-                for line in iter(p.stdout.readline,''):
+                    cpu_perc = []
+                    cpu_info_time (5, array_cpu_perc=cpu_perc,
+                                   )
+                    p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=False,
+                                          stderr=subprocess.PIPE)
+                    print("starting Windows " + algo_name + " " + res)
+                    counter = 0
+                    while p.poll () is None:
+                        if algo[0] == "camera":
+                            cpu_info_time (array_cpu_perc=cpu_perc,
+                                           algorithme=algo_name + "_windows", counter=counter,
+                                           resolution=int(res.split (",")[0]))  # whats cpu does during subprocess
+                        else:
+                            cpu_info_time (array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
+                                           algorithme=algo_name, counter=counter)
+                    counter = counter + 1
 
-                    out=line.rstrip()
-                    out=out.split(",")
-
-                    for data in out[1:len(out)-1]:
-                        if not out[0] in d_windows_out:
-                            d_windows_out[out[0]] = []
-                        d_windows_out[out[0]].append(int(data))
-
-                p.wait () #wait untill subprosess stops
-
-
-                d_data_windows["cpu %"]= cpu_perc
-                #d_data["cpu temp"]=cpu_temp
-                d_res_windows[res] = d_windows_out.items() + d_data_windows.items()
-
-                if not algo_name in d_algo_type:
-                    d_algo_type[algo_name]= []
-                d_algo_type[algo_name].append(d_res_windows)
-
-                if not "windows c++" in performance:
-                    performance["windows c++"]=[]
-                performance["windows c++"]= d_algo_type
-
-                jsonperf= json.dumps(performance,indent=4)
-                # print(jsonperf)
-                time.sleep (3)
+                    cpu_info_time (5, array_cpu_perc=cpu_perc,
+                                   algorithme="after")
+                    filenameOutput =  'result/'+ algo_name + "_Windows_" +str(spl[3])+"_" + str(timesnow)+ '.json'
+                    with jsonlines.open(filenameOutput,mode='w') as outputfileRes:
+                        for line in iter(p.stdout.readline,''):
+                            out=line.strip()
+                            out=out.split(",")
+                            counter = 1
+                            for data in out[2:len(out)-1]:
+                                if out[0] == "fps":
+                                    result ={}
+                                    result["algoritme"]= algo_name + "_Windows"
+                                    result["fps"] = data
+                                    result["Type"] = "windows"
+                                    result["Second"] = counter
+                                    result["resolution"] = spl[3]
+                                    counter = counter +1
+                                    outputfileRes.write(result)
 
 
 
-        #########################################################################################################################################
 
 
+            #########################################################################################################################################
+"""
     elif os == "Linux":
         print("starting Linux c++ algoritmes")
         d_algo_type={}
@@ -241,12 +237,5 @@ if __name__ == '__main__':
                 jsonperf= json.dumps(performance,indent=4)
                 # print(jsonperf)
                 time.sleep (3)
-
-
-
-    filename = 'result/'+node+'_'+ os+ '.json'
-    saveFile= open(filename,'w')
-    saveFile.write(jsonperf)
-    saveFile.close()
-    print("benchmarkt done")
-  """
+    """
+    #print("benchmarkt done")

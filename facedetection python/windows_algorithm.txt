@@ -1,4 +1,4 @@
-#facedetection  camera number second widht height
+#camera facedetection  camera number second widht height
 facedetect.exe 0 5 220 176
 facedetect.exe 0 5 320 240
 facedetect.exe 0 5 640 480

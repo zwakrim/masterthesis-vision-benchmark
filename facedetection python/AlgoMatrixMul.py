@@ -34,11 +34,12 @@ if __name__ == '__main__':
     ops= n/times/math.pow(10,9) #n /s / 10^9 to have evething in GOp/s
     ticks =  (freq/math.pow(10,3)) * times #MHz * s 10^3 to have it in Ghz
     Bw=ops*np.dtype(float).itemsize*3 #ops * 8 * 3 (B/s)
-
+    """
     print("time(s)," + str(times)+",")
     print("ops(Gops),"+str(ops)+",")
     print("ticks,"+str(ticks)+",")
     print("Bw(Gb/s),"+str(Bw)+",")
+    """
 
     timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
     filename =  'result/'+ "AlgoMatrixMul_"+ str(timesnow)+ '.json'
