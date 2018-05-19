@@ -12,7 +12,10 @@ import serial
 def readCurrent(): #read value from multimeter
 
     try:
-        ser = serial.Serial(sys.argv[1], 2400, timeout=1)
+        if platform.system () == "Windows":
+            ser = serial.Serial(sys.argv[1], 2400, timeout=1)
+        else:
+            ser = serial.Serial("/dev/"+sys.argv[1], 2400, timeout=1)
         data = ser.read(14)
         val = float(data[1:5]) #we dont care first byte cause +-
         point = data[6].encode('hex') #point byte for decimal location
