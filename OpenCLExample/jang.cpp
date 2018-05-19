@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 		if (PLATFORM_ID >= platforms.size()) {
 			std::cerr << "Platform " << PLATFORM_ID << " does not exist on this computer" << std::endl;
 			std::cerr << "OpenCL platforms & devices on this computer: " << std::endl;
-			showAllOpenCLDevices();
+			//showAllOpenCLDevices();
 			std::cout << std::endl << "Press ENTER to close window...";
 			char c = std::cin.get();
 			exit(-1);
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 				  << " of platform " << PLATFORM_ID
 				  << " does not exist on this computer (#=" << devices.size()<< ")" << std::endl;
 			std::cerr << "OpenCL platforms & devices on this computer: " << std::endl;
-			showAllOpenCLDevices();
+			//	showAllOpenCLDevices();
 			std::cout << std::endl << "Press ENTER to close window...";
 			char c = std::cin.get();
 			exit(-1);
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 		cl::Context context(devices);
 		cl::CommandQueue queue(context, devices[DEVICE_ID], CL_QUEUE_PROFILING_ENABLE);
 
-		showPlatformAndDeviceInfo(platforms[PLATFORM_ID], PLATFORM_ID, devices[DEVICE_ID], DEVICE_ID);
+		//showPlatformAndDeviceInfo(platforms[PLATFORM_ID], PLATFORM_ID, devices[DEVICE_ID], DEVICE_ID);
 
 		// Allocate memory on the device
 		cl::Buffer source_buf1(context, CL_MEM_READ_ONLY, data_count*sizeof(cl_float));

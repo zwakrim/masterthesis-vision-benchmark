@@ -1,0 +1,6 @@
+{"machine": "armv7l", "bits": "32bit", "os": "Linux", "node": "odroid", "cores": 8}
+{"node": "odroid", "Temp": {}, "counter": 0, "percent cpu": [0.0, 0.0, 0.0, 0.0, 0.0, 14.0, 0.0, 0.0], "Current": 0.788, "algoritme": "before", "resulotion": 0}
+{"node": "odroid", "Temp": {}, "counter": 1, "percent cpu": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "Current": 0.795, "algoritme": "before", "resulotion": 0}
+{"node": "odroid", "Temp": {}, "counter": 2, "percent cpu": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "Current": 0.762, "algoritme": "before", "resulotion": 0}
+{"node": "odroid", "Temp": {}, "counter": 3, "percent cpu": [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], "Current": 0.791, "algoritme": "before", "resulotion": 0}
+{"node": "odroid", "Temp": {}, "counter": 4, "percent cpu": [0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0], "Current": 0.793, "algoritme": "before", "resulotion": 0}

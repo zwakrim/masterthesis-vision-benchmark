@@ -3,8 +3,6 @@ from time import sleep
 import sys
 
 
-
-
 def readCurrent(serial):
     data = serial.read(14)
     val = float(data[1:5]) #we dont care first byte cause +-
@@ -18,12 +16,13 @@ def readCurrent(serial):
         val= val /10
     return val
 
-ser = serial.Serial()
-try:
-    ser = serial.Serial(sys.argv[2], 2400, timeout=1)
-    open = True
-except:
-    open = False
+#ser = serial.Serial()
+#sys.argv[2]
+#try:
+ser = serial.Serial("/dev/ttyUSB0", 2400, timeout=1)
+open = True
+#except:
+#    open = False
 
 #http://shaddack.brutowave.com/projects/reveng_multimeters/chips/FS9922-DMM4-DS-11_EN.pdf
 while True:

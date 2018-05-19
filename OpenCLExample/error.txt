@@ -1,0 +1,55 @@
+/tmp/ccFCpFcN.o: In function `main':
+main.cpp:(.text+0x908): undefined reference to `showAllOpenCLDevices()'
+main.cpp:(.text+0xa2a): undefined reference to `showAllOpenCLDevices()'
+main.cpp:(.text+0xad2): undefined reference to `showPlatformAndDeviceInfo(cl::Platform const&, int, cl::Device const&, int)'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_context*>::release(_cl_context*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP11_cl_contextE7releaseES3_[_ZN2cl6detail16ReferenceHandlerIP11_cl_contextE7releaseES3_]+0xa): undefined reference to `clReleaseContext'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_command_queue*>::release(_cl_command_queue*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP17_cl_command_queueE7releaseES3_[_ZN2cl6detail16ReferenceHandlerIP17_cl_command_queueE7releaseES3_]+0xa): undefined reference to `clReleaseCommandQueue'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_mem*>::retain(_cl_mem*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP7_cl_memE6retainES3_[_ZN2cl6detail16ReferenceHandlerIP7_cl_memE6retainES3_]+0xa): undefined reference to `clRetainMemObject'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_mem*>::release(_cl_mem*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP7_cl_memE7releaseES3_[_ZN2cl6detail16ReferenceHandlerIP7_cl_memE7releaseES3_]+0xa): undefined reference to `clReleaseMemObject'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_program*>::release(_cl_program*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP11_cl_programE7releaseES3_[_ZN2cl6detail16ReferenceHandlerIP11_cl_programE7releaseES3_]+0xa): undefined reference to `clReleaseProgram'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_kernel*>::release(_cl_kernel*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP10_cl_kernelE7releaseES3_[_ZN2cl6detail16ReferenceHandlerIP10_cl_kernelE7releaseES3_]+0xa): undefined reference to `clReleaseKernel'
+/tmp/ccFCpFcN.o: In function `cl::detail::ReferenceHandler<_cl_event*>::release(_cl_event*)':
+main.cpp:(.text._ZN2cl6detail16ReferenceHandlerIP9_cl_eventE7releaseES3_[_ZN2cl6detail16ReferenceHandlerIP9_cl_eventE7releaseES3_]+0xa): undefined reference to `clReleaseEvent'
+/tmp/ccFCpFcN.o: In function `cl::Platform::getDevices(unsigned long long, std::vector<cl::Device, std::allocator<cl::Device> >*) const':
+main.cpp:(.text._ZNK2cl8Platform10getDevicesEyPSt6vectorINS_6DeviceESaIS2_EE[_ZNK2cl8Platform10getDevicesEyPSt6vectorINS_6DeviceESaIS2_EE]+0x38): undefined reference to `clGetDeviceIDs'
+main.cpp:(.text._ZNK2cl8Platform10getDevicesEyPSt6vectorINS_6DeviceESaIS2_EE[_ZNK2cl8Platform10getDevicesEyPSt6vectorINS_6DeviceESaIS2_EE]+0x88): undefined reference to `clGetDeviceIDs'
+/tmp/ccFCpFcN.o: In function `cl::Platform::get(std::vector<cl::Platform, std::allocator<cl::Platform> >*)':
+main.cpp:(.text._ZN2cl8Platform3getEPSt6vectorIS0_SaIS0_EE[_ZN2cl8Platform3getEPSt6vectorIS0_SaIS0_EE]+0x22): undefined reference to `clGetPlatformIDs'
+main.cpp:(.text._ZN2cl8Platform3getEPSt6vectorIS0_SaIS0_EE[_ZN2cl8Platform3getEPSt6vectorIS0_SaIS0_EE]+0x64): undefined reference to `clGetPlatformIDs'
+/tmp/ccFCpFcN.o: In function `cl::Context::Context(std::vector<cl::Device, std::allocator<cl::Device> > const&, int*, void (*)(char const*, void const*, unsigned int, void*), void*, int*)':
+main.cpp:(.text._ZN2cl7ContextC2ERKSt6vectorINS_6DeviceESaIS2_EEPiPFvPKcPKvjPvESC_S7_[_ZN2cl7ContextC5ERKSt6vectorINS_6DeviceESaIS2_EEPiPFvPKcPKvjPvESC_S7_]+0x4a): undefined reference to `clCreateContext'
+/tmp/ccFCpFcN.o: In function `cl::Event::wait() const':
+main.cpp:(.text._ZNK2cl5Event4waitEv[_ZNK2cl5Event4waitEv]+0xe): undefined reference to `clWaitForEvents'
+/tmp/ccFCpFcN.o: In function `cl::Buffer::Buffer(cl::Context const&, unsigned long long, unsigned int, void*, int*)':
+main.cpp:(.text._ZN2cl6BufferC2ERKNS_7ContextEyjPvPi[_ZN2cl6BufferC5ERKNS_7ContextEyjPvPi]+0x48): undefined reference to `clCreateBuffer'
+/tmp/ccFCpFcN.o: In function `cl::Program::Program(cl::Context const&, std::vector<std::pair<char const*, unsigned int>, std::allocator<std::pair<char const*, unsigned int> > > const&, int*)':
+main.cpp:(.text._ZN2cl7ProgramC2ERKNS_7ContextERKSt6vectorISt4pairIPKcjESaIS8_EEPi[_ZN2cl7ProgramC5ERKNS_7ContextERKSt6vectorISt4pairIPKcjESaIS8_EEPi]+0xb2): undefined reference to `clCreateProgramWithSource'
+/tmp/ccFCpFcN.o: In function `cl::Program::build(std::vector<cl::Device, std::allocator<cl::Device> > const&, char const*, void (*)(_cl_program*, void*), void*) const':
+main.cpp:(.text._ZNK2cl7Program5buildERKSt6vectorINS_6DeviceESaIS2_EEPKcPFvP11_cl_programPvESB_[_ZNK2cl7Program5buildERKSt6vectorINS_6DeviceESaIS2_EEPKcPFvP11_cl_programPvESB_]+0x30): undefined reference to `clBuildProgram'
+/tmp/ccFCpFcN.o: In function `cl::Kernel::Kernel(cl::Program const&, char const*, int*)':
+main.cpp:(.text._ZN2cl6KernelC2ERKNS_7ProgramEPKcPi[_ZN2cl6KernelC5ERKNS_7ProgramEPKcPi]+0x32): undefined reference to `clCreateKernel'
+/tmp/ccFCpFcN.o: In function `cl::CommandQueue::CommandQueue(cl::Context const&, cl::Device const&, unsigned long long, int*)':
+main.cpp:(.text._ZN2cl12CommandQueueC2ERKNS_7ContextERKNS_6DeviceEyPi[_ZN2cl12CommandQueueC5ERKNS_7ContextERKNS_6DeviceEyPi]+0x44): undefined reference to `clCreateCommandQueue'
+/tmp/ccFCpFcN.o: In function `cl::CommandQueue::enqueueReadBuffer(cl::Buffer const&, unsigned int, unsigned int, unsigned int, void*, std::vector<cl::Event, std::allocator<cl::Event> > const*, cl::Event*) const':
+main.cpp:(.text._ZNK2cl12CommandQueue17enqueueReadBufferERKNS_6BufferEjjjPvPKSt6vectorINS_5EventESaIS6_EEPS6_[_ZNK2cl12CommandQueue17enqueueReadBufferERKNS_6BufferEjjjPvPKSt6vectorINS_5EventESaIS6_EEPS6_]+0x64): undefined reference to `clEnqueueReadBuffer'
+/tmp/ccFCpFcN.o: In function `cl::CommandQueue::enqueueWriteBuffer(cl::Buffer const&, unsigned int, unsigned int, unsigned int, void const*, std::vector<cl::Event, std::allocator<cl::Event> > const*, cl::Event*) const':
+main.cpp:(.text._ZNK2cl12CommandQueue18enqueueWriteBufferERKNS_6BufferEjjjPKvPKSt6vectorINS_5EventESaIS7_EEPS7_[_ZNK2cl12CommandQueue18enqueueWriteBufferERKNS_6BufferEjjjPKvPKSt6vectorINS_5EventESaIS7_EEPS7_]+0x64): undefined reference to `clEnqueueWriteBuffer'
+/tmp/ccFCpFcN.o: In function `cl::CommandQueue::enqueueNDRangeKernel(cl::Kernel const&, cl::NDRange const&, cl::NDRange const&, cl::NDRange const&, std::vector<cl::Event, std::allocator<cl::Event> > const*, cl::Event*) const':
+main.cpp:(.text._ZNK2cl12CommandQueue20enqueueNDRangeKernelERKNS_6KernelERKNS_7NDRangeES6_S6_PKSt6vectorINS_5EventESaIS8_EEPS8_[_ZNK2cl12CommandQueue20enqueueNDRangeKernelERKNS_6KernelERKNS_7NDRangeES6_S6_PKSt6vectorINS_5EventESaIS8_EEPS8_]+0xa6): undefined reference to `clEnqueueNDRangeKernel'
+/tmp/ccFCpFcN.o: In function `int cl::Program::getBuildInfo<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(cl::Device const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*) const':
+main.cpp:(.text._ZNK2cl7Program12getBuildInfoINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEiRKNS_6DeviceEjPT_[_ZNK2cl7Program12getBuildInfoINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEiRKNS_6DeviceEjPT_]+0x34): undefined reference to `clGetProgramBuildInfo'
+main.cpp:(.text._ZNK2cl7Program12getBuildInfoINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEiRKNS_6DeviceEjPT_[_ZNK2cl7Program12getBuildInfoINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEiRKNS_6DeviceEjPT_]+0x38): undefined reference to `clGetProgramBuildInfo'
+/tmp/ccFCpFcN.o: In function `int cl::Event::getProfilingInfo<unsigned long long>(unsigned int, unsigned long long*) const':
+main.cpp:(.text._ZNK2cl5Event16getProfilingInfoIyEEijPT_[_ZNK2cl5Event16getProfilingInfoIyEEijPT_]+0x12): undefined reference to `clGetEventProfilingInfo'
+main.cpp:(.text._ZNK2cl5Event16getProfilingInfoIyEEijPT_[_ZNK2cl5Event16getProfilingInfoIyEEijPT_]+0x16): undefined reference to `clGetEventProfilingInfo'
+/tmp/ccFCpFcN.o: In function `int cl::Kernel::setArg<cl::Memory>(unsigned int, cl::Memory)':
+main.cpp:(.text._ZN2cl6Kernel6setArgINS_6MemoryEEEijT_[_ZN2cl6Kernel6setArgINS_6MemoryEEEijT_]+0x26): undefined reference to `clSetKernelArg'
+/tmp/ccFCpFcN.o: In function `int cl::Kernel::setArg<unsigned int>(unsigned int, unsigned int)':
+main.cpp:(.text._ZN2cl6Kernel6setArgIjEEijT_[_ZN2cl6Kernel6setArgIjEEijT_]+0x2a): undefined reference to `clSetKernelArg'
+collect2: error: ld returned 1 exit status

@@ -1,0 +1,164 @@
+__kernel void
+matrix_vector(__global float* result,
+              __global float* matrix,
+              __global float* vector,
+              int m,
+              int n)
+
+{
+  int i = get_global_id(0);
+  if (i >= m)
+    return;
+
+  __global float* matrix_row = matrix + i * n;
+
+  float r = 0.0f;
+  for (int j = 0; j < n; ++j)
+    r += matrix_row[j] * vector[j];
+
+  result[i] = r;
+}
+
+__kernel void
+erosion(__global int* result, __global int* image, int m, int n)
+{
+  int i = get_global_id(0);
+  if (i >= n)
+    return;
+
+  int curr_min = INT_MAX;
+  for (int j = i - m / 2; j <= i + m / 2; ++j)
+    if (j >= 0 && j < n)
+      curr_min = min(image[j], curr_min);
+
+  result[i] = curr_min;
+}
+
+__kernel void
+local_erosion(__global unsigned int* dst,
+              __global unsigned int* src,
+              int mask_size,
+              int size,
+              __local unsigned int* shared)
+{
+  int global_index = get_global_id(0);
+  int local_index = get_local_id(0);
+  int local_size = get_local_size(0);
+
+  int mask_radius = mask_size / 2;
+  int local_memory_size = local_size + 2 * mask_radius;
+
+  int curr_global_index = global_index - mask_radius;
+  for (int curr_local_index = local_index; curr_local_index < local_memory_size;
+       curr_local_index += local_size, curr_global_index += local_size) {
+    int clamped_index = clamp(curr_global_index, 0, size - 1);
+    shared[curr_local_index] = src[clamped_index];
+  }
+  barrier(CLK_LOCAL_MEM_FENCE);
+
+  unsigned int curr_min = shared[local_index];
+  for (int i = 1; i < mask_size; ++i)
+    curr_min = min(curr_min, shared[local_index + i]);
+
+  if (global_index < size)
+    dst[global_index] = curr_min;
+}
+
+// Take 1: straightforward
+// Assumes vector size == work group size
+__kernel void
+efficient_matrix_vector1(__global float* result,
+                         __global float* matrix,
+                         __global float* vector,
+                         int m,
+                         int n,
+                         __local float* shared)
+
+{
+  int col = get_local_id(0);
+  int row = get_group_id(0);
+
+  int row_index = row * n;
+  // populate local memory
+  shared[col] = matrix[row_index + col] * vector[col];
+  barrier(CLK_LOCAL_MEM_FENCE);
+
+  // sum the contents of local memory
+  for (int delta = 1; delta < n; delta *= 2) {
+    if (col % (2 * delta) == 0)
+      shared[col] += shared[col + delta];
+    barrier(CLK_LOCAL_MEM_FENCE);
+  }
+
+  // sum is in shared[0]
+  if (col == 0)
+    result[row] = shared[0];
+}
+
+// Take 2: reduce branching ...
+// Assumes vector size == work group size
+__kernel void
+efficient_matrix_vector2(__global float* result,
+                         __global float* matrix,
+                         __global float* vector,
+                         int m,
+                         int n,
+                         __local float* shared)
+
+{
+  int col = get_local_id(0);
+  int row = get_group_id(0);
+  int group_size = get_local_size(0);
+
+  int row_index = row * n;
+  // populate local memory
+  shared[col] = matrix[row_index + col] * vector[col];
+  barrier(CLK_LOCAL_MEM_FENCE);
+
+  // sum the contents of local memory
+  for (int delta = group_size / 2; delta > 0; delta /= 2) {
+    if (col < delta)
+      shared[col] += shared[col + delta];
+    barrier(CLK_LOCAL_MEM_FENCE);
+  }
+
+  // sum is in shared[0]
+  if (col == 0)
+    result[row] = shared[0];
+}
+
+// Take 3: no assumptions
+// Let's us assign multiple data elements to a single work item
+__kernel void
+efficient_matrix_vector3(__global float* result,
+                         __global float* matrix,
+                         __global float* vector,
+                         int m,
+                         int n,
+                         __local float* shared)
+
+{
+  int col = get_local_id(0);
+  int row = get_group_id(0);
+  int group_size = get_local_size(0);
+
+  int row_index = row * n;
+  // populate local memory
+  float my_sum = 0.0f;
+  for (int my_col = col; my_col < n; my_col += group_size)
+    my_sum += matrix[row_index + my_col] * vector[my_col];
+  shared[col] = my_sum;
+  barrier(CLK_LOCAL_MEM_FENCE);
+
+  // sum the contents of local memory
+  // same as before
+  for (int delta = 1; delta < n; delta *= 2) {
+    if (col % (2 * delta) == 0)
+      shared[col] += shared[col + delta];
+    barrier(CLK_LOCAL_MEM_FENCE);
+  }
+
+  // sum is in shared[0]
+  if (col == 0)
+    result[row] = shared[0];
+}
