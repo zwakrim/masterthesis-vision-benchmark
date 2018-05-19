@@ -1,5 +1,8 @@
 import serial
 from time import sleep
+import sys
+
+
 
 
 def readCurrent(serial):
@@ -17,7 +20,7 @@ def readCurrent(serial):
 
 ser = serial.Serial()
 try:
-    ser = serial.Serial('COM3', 2400, timeout=1)
+    ser = serial.Serial(sys.argv[2], 2400, timeout=1)
     open = True
 except:
     open = False
