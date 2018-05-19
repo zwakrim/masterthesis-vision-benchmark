@@ -6,6 +6,29 @@ import jsonlines
 import psutil
 import sys
 import datetime
+import serial
+
+
+def readCurrent(): #read value from multimeter
+
+    try:
+        ser = serial.Serial(sys.argv[1], 2400, timeout=1)
+        data = ser.read(14)
+        val = float(data[1:5]) #we dont care first byte cause +-
+        point = data[6].encode('hex') #point byte for decimal location
+        #check where is the point and adapt
+        if point == "31":
+            val = val / 1000
+        elif point =="32":
+            val = val / 100
+        elif point =="34":
+            val= val /10
+        ser.close()
+    except:
+        print "no serial connection with multimeter"
+        val = 99999
+
+    return val
 
 
 def cpu_info_time(time_max=1, array_cpu_perc=[], array_temperature=[], algorithme="before", counter=0, resolution=0):
@@ -28,21 +51,30 @@ def cpu_info_time(time_max=1, array_cpu_perc=[], array_temperature=[], algorithm
         perf["resulotion"] = resolution
         if algorithme is not "before" and algorithme is not "after":
             perf["algoritme"] = algorithme
-        outputfile.write(perf)
+
 
         array_cpu_perc.append (perc)
+
+        perf["Current"] = readCurrent()
+        #print perf["Current"]
 
         if platform.system () == "Linux":
             perf["Temp"] = psutil.sensors_temperatures ()
             array_temperature.append (psutil.sensors_temperatures ())
         if do_or_not:
             break
+        outputfile.write(perf)
 
 
 info = {}
 counter = 0
 
 if __name__ == '__main__':
+    #check if there is a multimeter
+
+###########################################################################################################
+
+
     os = platform.system ()
     machine = platform.machine ()
     bits = platform.architecture ()[0]
