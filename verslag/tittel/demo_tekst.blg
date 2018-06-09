@@ -1,0 +1,90 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'demo_tekst.blg'
+[47] biber-MSWIN64:303> INFO - === 
+[91] Biber.pm:359> INFO - Reading 'demo_tekst.bcf'
+[246] Biber.pm:835> INFO - Found 15 citekeys in bib section 0
+[276] Biber.pm:3670> INFO - Processing section 0
+[309] Biber.pm:3840> INFO - Looking for bibtex format file 'IEEEexample.bib' for section 0
+[328] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[355] bibtex.pm:1292> INFO - Found BibTeX data source 'IEEEexample.bib'
+[376] Utils.pm:164> WARN - month field 'February' in entry 'Benchmar1:online' is not an integer - this will probably not sort properly.
+[378] Utils.pm:164> WARN - month field 'March' in entry 'Benchmar96:online' is not an integer - this will probably not sort properly.
+[392] Utils.pm:164> WARN - Name "Maksimović,MirjanaandVujović,VladimirandDavidović,NikolaandMilošević,VladimirandPerišić,Branko" has too many commas: skipping name
+[394] Utils.pm:164> WARN - Name "Abdullah,MuhammadFadhilandWijayanto,InungandRusdinar,Angga" has too many commas: skipping name
+[409] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 63, warning: 1945 characters of junk seen at toplevel
+[409] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 90, warning: 34 characters of junk seen at toplevel
+[409] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 100, warning: 45 characters of junk seen at toplevel
+[409] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 112, warning: 189 characters of junk seen at toplevel
+[409] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 123, warning: 30 characters of junk seen at toplevel
+[409] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 134, warning: 29 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 144, warning: 25 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 155, warning: 9 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 165, warning: 24 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 176, warning: 31 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 259, warning: 315 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 277, warning: 223 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 263, warning: undefined macro "IEEE_J_EDL"
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 293, warning: 162 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 308, warning: 77 characters of junk seen at toplevel
+[410] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 330, warning: 457 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 347, warning: 139 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 364, warning: 225 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 351, warning: undefined macro "IEEE_J_IA"
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 380, warning: 249 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 367, warning: undefined macro "IEEE_M_SP"
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 395, warning: 106 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 384, warning: undefined macro "IEEE_J_IT"
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 417, warning: 566 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 431, warning: 103 characters of junk seen at toplevel
+[411] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 448, warning: 271 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 462, warning: 187 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 479, warning: 103 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 493, warning: 99 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 508, warning: 124 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 529, warning: 413 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 554, warning: 240 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 562, warning: 53 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 576, warning: 172 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 593, warning: 240 characters of junk seen at toplevel
+[412] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 612, warning: 279 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 628, warning: 145 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 649, warning: 190 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 667, warning: 253 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 680, warning: 108 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 698, warning: 138 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 716, warning: 95 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 732, warning: 148 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 749, warning: 181 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 766, warning: 210 characters of junk seen at toplevel
+[413] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 783, warning: 193 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 796, warning: 122 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 809, warning: 123 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 821, warning: 120 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 846, warning: 416 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 866, warning: 92 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 885, warning: 364 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 907, warning: 120 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 924, warning: 176 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 908, warning: undefined macro "IEEE_M_PCOM"
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 939, warning: 205 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 952, warning: 116 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 968, warning: 182 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 981, warning: 164 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 993, warning: 97 characters of junk seen at toplevel
+[414] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1009, warning: 200 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1021, warning: 218 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1035, warning: 174 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1049, warning: 242 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1060, warning: 169 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1078, warning: 246 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1092, warning: 150 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1106, warning: 85 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1121, warning: 161 characters of junk seen at toplevel
+[415] Utils.pm:164> WARN - BibTeX subsystem: C:\Users\zwakr\AppData\Local\Temp\FpVbMaon7V\IEEEexample.bib_18716.utf8, line 1356, warning: 1893 characters of junk seen at toplevel
+[441] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[441] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[441] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'en-US'
+[441] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[458] bbl.pm:608> INFO - Writing 'demo_tekst.bbl' with encoding 'UTF-8'
+[460] bbl.pm:712> INFO - Output to demo_tekst.bbl
+[461] Biber.pm:109> INFO - WARNINGS: 74

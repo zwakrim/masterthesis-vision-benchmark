@@ -1,0 +1,2659 @@
+<html><head>
+		<title>Benchmarks Of Many ARM Boards From The Raspberry Pi To NVIDIA Jetson TX2 - Phoronix</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="phoronix-10.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" async="" src="plusone.js" gapi_processed="true"></script><script src="osd.js"></script><script src="ca-pub-0253814508491313.js"></script><script type="text/javascript" async="" src="ga.js"></script><script src="cbgapi.loaded_0" async=""></script><script src="cbgapi.loaded_1" async=""></script><script src="cbgapi_002.loaded_0" async=""></script><script id="twitter-wjs" src="widgets.js"></script><script type="text/javascript" async="" src="plusone.js" gapi_processed="true"></script><script type="text/javascript" async="" src="ga.js"></script><script type="text/javascript" src="jquery.js"></script>
+		<link href="shadowbox.css" rel="stylesheet" type="text/css">
+		<script src="shadowbox.js" type="text/javascript"></script>
+		<meta name="keywords" content="Phoronix, Linux Hardware Reviews, Linux hardware benchmarks, Linux Hardware, Linux benchmarking, Desktop Linux, GNU/Linux benchmarks, Open Source AMD, Linux How To, X.Org drivers, Ubuntu hardware, Phoronix Test Suite">
+		<meta name="Description" content="Phoronix is the leading technology website for Linux hardware reviews, open-source news, Linux benchmarks, open-source benchmarks, and computer hardware tests.">
+		<link rel="alternate" type="application/rss+xml" title="Phoronix" href="https://www.phoronix.com/rss.php">
+		<link rel="shortcut icon" href="https://www.phoronix.com/favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="https://www.phoronix.com/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="https://www.phoronix.com/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://www.phoronix.com/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://www.phoronix.com/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://www.phoronix.com/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://www.phoronix.com/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="https://www.phoronix.com/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://www.phoronix.com/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://www.phoronix.com/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="https://www.phoronix.com/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="https://www.phoronix.com/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="https://www.phoronix.com/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="https://www.phoronix.com/favicon-16x16.png" sizes="16x16">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+				<!-- PHXCMS-11 (phoronix.com) -->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-1978569-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+
+		    Shadowbox.init({
+		       skipSetup: true
+		   });
+		</script>
+
+		<!-- AA -->
+		<script async="" src="adsbygoogle.js"></script>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({
+			  google_ad_client: "ca-pub-0253814508491313",
+			  enable_page_level_ads: true
+		     });
+		</script>
+		<!-- AA -->
+			<script type="text/javascript" charset="utf-8" async="" src="button.js"></script><link rel="preload" href="integrator.js"><script type="text/javascript" src="integrator.js"></script><link rel="preload" href="integrator_002.js"><script type="text/javascript" src="integrator_002.js"></script><script src="moatad.js"></script></head>
+	<body style="overflow: initial !important;">
+		<div id="headerwrap">
+			<div class="wcontainer defpadding">
+				<a href="https://www.phoronix.com/scan.php?page=home"><img id="logo" alt="Phoronix" src="phoronix.png" style="height: 40px; margin-top: 5px;margin-left: 5px;"></a>
+				<div id="headerright">
+					<div id="social">
+					    <a href="https://www.phoronix.com/rss.php" class="icon-rss"></a>
+					    <a href="https://www.google.com/+phoronix" class="icon-gplus"></a>
+					    <a href="https://twitter.com/Phoronix" class="icon-twitter"></a>
+					    <a href="https://www.facebook.com/Phoronix" class="icon-facebook"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="litemenu">
+		    <ul>
+		        <li><a href="https://www.phoronix.com/scan.php?page=phoronix_articles">Articles &amp; Reviews</a></li>
+		        <li><a href="https://www.phoronix.com/scan.php?page=phoronix_news">News Archive</a></li>
+		        <li><a href="https://www.phoronix.com/forums/">Forums</a></li>
+		        <li><a href="https://www.phoronix.com/scan.php?page=phoronix_premium">Premium</a></li>		        <li class="categ icon-angle-circled-down"><span> Categories</span></li>
+		        <li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Computers">Computers</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Display+Drivers">Display Drivers</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Graphics+Cards">GPUs / Graphics Cards</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Linux+Gaming">Linux Gaming</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Memory">Memory</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Motherboards">Motherboards</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Processors">CPUs / Processors</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Software">Software</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Storage">Storage</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Operating+Systems">Operating Systems</a></li>
+				<li><a href="https://www.phoronix.com/scan.php?page=category&amp;item=Peripherals">Peripherals</a></li>
+				<li id="closelid">Close</li>
+		    </ul>		    
+		</div>
+		<div id="menuwrap">
+			<div class="wcontainer">
+				<ul id="linklist">
+					<li id="menubutton"><span class="icon-menu"></span>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="https://www.phoronix.com/scan.php?page=phoronix_articles">Articles &amp; Reviews</a>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="https://www.phoronix.com/scan.php?page=phoronix_news">News Archive</a>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="https://www.phoronix.com/forums/">Forums</a>
+					</li>
+					<li class="menulink">
+						<a class="linknode" href="https://www.phoronix.com/scan.php?page=phoronix_premium">Premium</a>
+					</li>					<li id="categories-link" class="menulink">
+						<span class="menunolink icon-angle-circled-down"> Categories</span>
+						<div id="categories-list">
+							<div id="categories-content">
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Computers">Computers</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Graphics+Cards">GPUs / Graphics Cards</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Linux+Gaming">Linux Gaming</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Memory">Memory</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Motherboards">Motherboards</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Processors">CPUs / Processors</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Software">Software</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Storage">Storage</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Operating+Systems">Operating Systems</a>
+								<a href="https://www.phoronix.com/scan.php?page=category&amp;item=Peripherals">Peripherals</a>
+							</div>
+						</div>
+					</li>
+					<li id="searchbox">
+						<div id="search">
+							<form action="https://www.google.com" id="cse-search-box" target="_blank">
+							  <div>
+							    <input name="cx" value="partner-pub-0253814508491313:1305299758" type="hidden">
+							    <input name="ie" value="UTF-8" type="hidden">
+							    <input name="q" placeholder="Custom Search" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: rgb(255, 255, 255) url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) no-repeat scroll left center; text-indent: 48px;" type="text">
+							    <input name="sa" value="Search" type="submit">
+							  </div>
+							<input name="siteurl" value="www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=2" type="hidden"><input name="ref" value="" type="hidden"><input name="ss" value="" type="hidden"><input name="siteurl" value="www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=2" type="hidden"><input name="ref" type="hidden"><input name="ss" type="hidden"></form>
+
+							<script type="text/javascript" src="brand"></script>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div><ins class="adsbygoogle adsbygoogle-noablate" style="display: none;" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:NaNpx;margin:0;padding:0;position:relative;visibility:visible;width:NaNpx;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:NaNpx;height:NaNpx;" frameborder="0"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_3790253804822" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe>
+		<div id="content-bg">
+			<div id="content">
+										<div id="main-wrap">
+					<div id="main">
+						<div style="text-align: center; overflow: hidden; margin-bottom: 30px;">
+								<script type="text/javascript" src="gpt.js">
+		googletag.pubads().definePassback('8456/IDG.Phoronix.com_Homepage', [[728,90]]).display();
+	</script><script id="gpt-impl-0.07161860357373473" src="pubads_impl_199.js"></script>
+
+						</div>
+						<!-- google_ad_section_start -->
+<article class="full">
+<header>Benchmarks Of Many ARM Boards From The Raspberry Pi To NVIDIA Jetson TX2</header>
+<div class="author">Written by <a href="https://www.phoronix.com/scan.php?page=michaellarabel">Michael Larabel</a> in <a href="https://www.phoronix.com/scan.php?page=category&amp;item=Computers">Computers</a> on 19 March 2017. <strong>Page 2 of 5</strong>. <a href="https://www.phoronix.com/forums/node/939576">37 Comments</a></div>
+<div class="content">
+
+<div style="text-align: center; overflow: auto;"><script src="embed_004.html" type="text/javascript"></script><object data="embed.svg" type="image/svg+xml"></object><img type="image/svg+xml" src="embed.svg" width="auto" height="auto"><noscript><a
+ 
+href="http://openbenchmarking.org/prospect/1703199-RI-ARMYARM4104/59367d32551929d8fedfaa1acd6d82aabfe4585a"><img
+ 
+src="//openbenchmarking.org/embed.php?i=1703199-RI-ARMYARM4104&sha=945376b&c=59367d32551929d8fedfaa1acd6d82aabfe4585a&p=1"
+ /></a></noscript></div>
+<p>To little surprise, the Jetson boards were many times faster than 
+these other -- generally very inexpensive -- ARM SBCs. This isn't even 
+showing the full potential of Tegra/Jetson either with the tests in this
+ article being CPU-only focused and not taking advantage of any 
+graphics/compute capabilities considering these other cheap ARM boards 
+aren't designed for such workloads.</p>
+<div style="text-align: center; overflow: auto;"><script src="embed_003.html" type="text/javascript"></script><object data="embed_002.svg" type="image/svg+xml"></object><img type="image/svg+xml" src="embed_002.svg" width="auto" height="auto"><noscript><a
+ 
+href="http://openbenchmarking.org/prospect/1703199-RI-ARMYARM4104/f0b5f30095f18fb4dd17a8ec3ea01a9952fb354a"><img
+ 
+src="//openbenchmarking.org/embed.php?i=1703199-RI-ARMYARM4104&sha=64c39b2&c=f0b5f30095f18fb4dd17a8ec3ea01a9952fb354a&p=1"
+ /></a></noscript></div>
+<p>With John The Ripper, the other ARM boards were still behind Jetson but not by as big of margins as in the FFTW workload.</p>
+<div style="text-align: center; overflow: auto;"><script src="embed.html" type="text/javascript"></script><object data="embed_003.svg" type="image/svg+xml"></object><img type="image/svg+xml" src="embed_003.svg" width="auto" height="auto"><noscript><a
+ 
+href="http://openbenchmarking.org/prospect/1703199-RI-ARMYARM4104/90c619324fe40626154ebb0a68445c6eb32752e9"><img
+ 
+src="//openbenchmarking.org/embed.php?i=1703199-RI-ARMYARM4104&sha=4d6f0c2&c=90c619324fe40626154ebb0a68445c6eb32752e9&p=1"
+ /></a></noscript></div>
+<p>It's interesting to look at the ARM performance spectrum. Adding in x86 comparison points will also be fun.</p>
+<div style="text-align: center; overflow: auto;"><script src="embed_002.html" type="text/javascript"></script><object data="embed_004.svg" type="image/svg+xml"></object><img type="image/svg+xml" src="embed_004.svg" width="auto" height="auto"><noscript><a
+ 
+href="http://openbenchmarking.org/prospect/1703199-RI-ARMYARM4104/882da322bff7139d50d45607144197b854a7f762"><img
+ 
+src="//openbenchmarking.org/embed.php?i=1703199-RI-ARMYARM4104&sha=ccf3828&c=882da322bff7139d50d45607144197b854a7f762&p=1"
+ /></a></noscript></div>
+<p>The Orange Pi One is the slowest ARM board in this comparison, but it's also the cheapest at around $10 USD.</p>
+</div>
+<div id="sharebar"><div style="float: left; overflow: hidden;"><div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 52px; height: 15px;"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 52px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" id="I0_1525215348761" name="I0_1525215348761" src="https://apis.google.com/se/0/_/+1/sharebutton?plusShare=true&amp;usegapi=1&amp;action=share&amp;annotation=bubble&amp;height=15&amp;origin=https%3A%2F%2Fwww.phoronix.com&amp;url=http%3A%2F%2Fwww.phoronix.com%2Fscan.php%3Fpage%3Darticle%26item%3Dmarch-2017-arm%26num%3D1&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.pSDax_UbHJ4.O%2Fm%3D__features__%2Fam%3DAQE%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCOzcr2O0Op7DxtPy3WOW7hdoZJ6KQ#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1525215348761&amp;_gfid=I0_1525215348761&amp;parent=https%3A%2F%2Fwww.phoronix.com&amp;pfname=&amp;rpctoken=38848654" data-gapiattached="true" title="G+" width="100%" frameborder="0"></iframe></div><script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script></div>
+
+<div style="float: left; overflow: hidden;"><iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.8e64fb971a1b22efbf633db166113ae6.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fwww.phoronix.com%2Fscan.php%3Fpage%3Darticle%26item%3Dmarch-2017-arm%26num%3D2&amp;related=michaellarabel&amp;size=m&amp;text=Benchmarks%20Of%20Many%20ARM%20Boards%20From%20The%20Raspberry%20Pi%20To%20NVIDIA%20Jetson%20TX2&amp;time=1525215349004&amp;type=share&amp;url=http%3A%2F%2Fwww.phoronix.com%2Fscan.php%3Fpage%3Darticle%26item%3Dmarch-2017-arm%26num%3D1&amp;via=phoronix" style="position: static; visibility: visible; width: 60px; height: 20px;" data-url="http://www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=1" frameborder="0"></iframe>
+<script>!function(d,s,id){var 
+js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
+ 'script', 'twitter-wjs');</script></div>
+
+<div style="float: left; overflow: hidden;"><iframe src="//www.facebook.com/plugins/like.php?href=http://www.phoronix.com/scan.php%3Fpage%3Darticle%26item%3Dmarch-2017-arm%26num%3D1&amp;width=200&amp;height=46&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=true" scrolling="no" style="border:none; overflow:hidden; width:200px; height:46px;" allowtransparency="true" frameborder="0"></iframe></div>
+</div>							<div style="text-align: center; overflow: hidden; margin: 10px auto 30px;">
+								<script async="async" src="gpt.js"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<div id="div-pg-ad-1506416552-3">
+  <script type="text/javascript">
+        googletag.cmd.push(function() { 
+googletag.pubads().display('/8095840/.2_6876.3_phoronix.com_tier1', 
+[728, 90], 'div-pg-ad-1506416552-3'); });
+  </script><div id="google_ads_iframe_/8095840/.2_6876.3_phoronix.com_tier1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8095840/.2_6876.3_phoronix.com_tier1_0" title="3rd party ad content" name="google_ads_iframe_/8095840/.2_6876.3_phoronix.com_tier1_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" width="728" frameborder="0" height="90"></iframe></div>
+</div>
+<br>							</div>
+
+<div style="margin: 0 0 10px 0;"><select id="phx_article_page_selector" onchange="javascript:document.location.href = document.getElementById('phx_article_page_selector').options[document.getElementById('phx_article_page_selector').options.selectedIndex].value;"><option value="?page=article&amp;item=march-2017-arm&amp;num=1">Page 1 - Introduction</option><option value="?page=article&amp;item=march-2017-arm&amp;num=2" selected="selected">Page 2 - ARM Linux Benchmarks</option><option value="?page=article&amp;item=march-2017-arm&amp;num=3">Page 3 - ARM Linux Benchmarks</option><option value="?page=article&amp;item=march-2017-arm&amp;num=4">Page 4 - ARM Linux Benchmarks</option><option value="?page=article&amp;item=march-2017-arm&amp;num=5">Page 5 - ARM Performance-Per-Dollar</option></select></div>
+					<div class="foot">
+								<div class="pagination">
+Page: <a href="https://www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=1">1</a><span>2</span><a href="https://www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=3">3</a><a href="https://www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=4">4</a><a href="https://www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=5">5</a><a href="https://www.phoronix.com/scan.php?page=article&amp;item=march-2017-arm&amp;num=3" title="Go To Next Page">Next Page</a>								</div>
+								<div class="comments-label">
+									<a href="https://www.phoronix.com/forums/node/939576">37 Comments</a>								</div>
+							</div>
+						</article>
+						<div class="after-article">
+<div style="text-align: center; overflow: hidden; margin-bottom: 20px;"><p align="center"><script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "728x90";
+//--></script>
+<script type="text/javascript" src="tags.js"></script><script type="text/javascript" src="displayAd.js"></script></p><div id="richmedia_2" align="center"><script type="text/javascript" src="j_002.js"></script><iframe src="https://s.tribalfusion.com/p.media?clickID=axmPgrVmXw4AQgPmfC2WYO1trZamHEN4mBW5cv8TVJkUVBlRAFNTWMPUF705bIwUarpVTJcSEJZdSGBCPb6tRWU7WsQS2U6vnWqm0q2M4dMZdQGbA2mrEptPpVWZbhXFU6YF7g1TqsPbQZbUFBYTtUWoFQsQFbr1TUn3TZbl2an3mqZbLXFYcWWBPnPfBMrMBoKB7rH&amp;mediaDataID=6530936&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aymPgroA3BnVMuodYL5qY72WEy5PZbKmbbKXVMRYVFUXsFynEvR2bMQVrjEUArVRTM1QcZbqSd3O1dfuVmMM2crXXrvAT6iu56ZbdR6JE4WUO0WQZapd6n4mJV3sngTGr9WsFhS6FvWd33UbM05bAuUEjqWEr8PEJIQVJJRresRdQlVcfP2U2pntqOTHqIqsf1DL&amp;mediaDataID=6546596&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe>
+<iframe src="https://s.tribalfusion.com/p.media?clickID=aMmPgrodAOXamn2H3ZbPs7Za5mnJpd6tUHQbXrMcYbY6XTImRrJBTbv4VHU2orFvRFjqYEFr3E3k4qnRmEbGYb7aUdJ1m6fDms7rmH3H5EU73t6o3AFFmbjL0Gr0YGvX0VBumavU5U32VUnEUAMTRqb3PVYrPt7uYt7pT6ry2VnVYbBZaV6Po5AZbe2S7nqZbwlRa&amp;mediaDataID=7423766&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aNmPgr2PvePmbA2dBm0tUAmHPx56MR4cjaTs3bWVM7P6vOUtFQTFF33UAoUqvxTEQbQTBZaQGYIPbevRWv8WGQR4bTumdqMYEey4dQBSGjZa4mYLmdaOUHYa0brkYrbj0qZaqSUJGWUYSVdJ3orZbxRbrpXaJt5Ebf2avYoTjHYUbgTtnWoPUJmV7wNqroqxJZd64&amp;mediaDataID=6680176&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aOmP8qpGUwmWQG2q3e3Wmm4PrJpbYK0GQPYGU3XGromaZbT5UrSWUFFWmMTPajSQsUrStBtYd7oV6bv2cv5YrvKUP6r2PFdR6BK3trO0HBIndio4PZbW3cQgTVJaVVFeSAQMWdY3UbM05bEuWEjwTTn6QarKRVbCPbavRH3bVVfP2r2vnWan0qeIxBPXMr&amp;mediaDataID=5406476&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aQmPgrR6JK2HUs1t3ZamtIo4AJV3cn6UsJ9WsfgR6FnWWvPUbM22UarWEnoTT3jSEYZdSVQLRbmpRWniWGMQ4UTsmHAyYaen3WbASGBC2mQHodImVWjeYr771UF90EIpRrnETbBXTtQWmbQnRUfN1qFn3aJe5TU5oTbD1rFcUdZb1nmbZcpV3opWfJQtQ0sci6D6&amp;mediaDataID=6807466&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aRmP8qmH3J5TMk2tao56vImrYHXsQT1cM20cfwpTr32bnVTFBBVPU5PqvQQGFOQdZbMYtjwTmMv2sB5XFrJUPXp5mBhR6rF4WnO1tvAnt2w56nY4G7aVsrjWVMhS6MuTtQRWr7P3r2oUqrvVaJiSTvLRV3KQFZavRWMiWVYV5FiqoWIMYEuM4dbqw9ATK2&amp;mediaDataID=5578346&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aSmP8q4dQZdSVZbC2AvJoHXoUtJ9XFQ61U7f0EasPbFZcTbrYTtvXnbbmPbfNYaZbN5EZbi2arPoEbCYrU9UWFRn63ImcjumH7G5En72WIN5PvZcnrUEYsbT1svV0svumaBT2FQSTFjZcWP74REMQQVZbNStjw1tZbtVAQp2c3UXUnKUm6r26ngQPjE4WZbExD9OZaW&amp;mediaDataID=5436426&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aTmPgr4WvO0HYKmHIO4PUY4V7dTGr8VsMiRAQwUWF4WFB33r2qVEUqVaUbSTUHQGJIPrumPWfcWGr54UurmtAoXT2n2tbZbPsrD2mMJmdAyTWBd0bUjXFQiXaeMRFrDUFv0WHJ2orJxPFrq1EYy3aUf5avPnTBF1rZb8WHjWm6YCmsjrmWUB2TZb7QEiFrZbrrZc9&amp;mediaDataID=6719746&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe></div>
+
+<p></p>
+</div><br><div class="article-box">
+								<header>Related Articles</header>
+								<div class="node"><a href="https://www.phoronix.com/vr.php?view=26125">Raspberry Pi 3 Model B+ Benchmarks</a></div><div class="node"><a href="https://www.phoronix.com/vr.php?view=26090">CompuLab Fitlet 2 Is A Mighty Fine, Low-Power PC Preloaded With Linux Mint</a></div><div class="node"><a href="https://www.phoronix.com/vr.php?view=25926">The Fastest Linux Distribution For Ryzen: A 10-Way Linux OS Comparison On Ryzen 7 &amp; Threadripper</a></div><div class="node"><a href="https://www.phoronix.com/vr.php?view=25791">Wine Takes Minor Performance Hit Running Windows Programs On Linux With KPTI</a></div><div class="node"><a href="https://www.phoronix.com/vr.php?view=25651">Is PowerTop / TLP Still Useful To Save Power On Linux Laptops?</a></div>
+	                             
+							</div>
+							<div class="article-box"><header>Trending Linux News</header><div class="node"><a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Linux-Kernel-Weighing-Intel-MPX">The Linux Kernel Might Drop Memory Protection Extensions Support</a></div><div class="node"><a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=OpenIndiana-2018.04-Released">OpenIndiana Hipster 2018.04, Drops GNOME 2 For MATE + Adds KPTI For Meltdown</a></div><div class="node"><a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=WebP-1.0-Released">WebP 1.0 Image Format Released</a></div><div class="node"><a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Red-Hat-NIR-Work-OpenCL">Red Hat Developers Continue Working On OpenCL/Compute For Nouveau</a></div><div class="node"><a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=AMD-AOCC-1.2-Released">AMD AOCC 1.2 Compiler Released For Zen Systems, Brings FLANG &amp; Retpolines</a></div></div>		</div>
+<!-- google_ad_section_end -->
+					</div>
+				</div>
+				<div id="sidebar-wrap">
+					<div id="sidebar">
+					    <aside>
+						<div style="text-align: center;">
+                           					<script type="text/javascript" src="gpt.js">
+		googletag.pubads().definePassback('8456/IDG.Phoronix.com_Homepage', [[300,250]]).display();
+	</script>
+                        </div>
+                        </aside>
+                        <aside class="widget">
+			<header>Latest Linux News</header><div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=GNU-Emacs-Emms-5.0-Released">Emms 5.0 Released As A Big Update To The Emacs Multimedia System</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Britannia-Linux-Month-Or-Two">Total War Saga: Thrones of Britannia Coming To Linux In A Month Or Two</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=DXUP-D3D10-D3D11-Vulkan">DXUP: Taking Direct3D 10 To 11 For Running On Vulkan</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Mir-X11-XWayland-Support">Mir Working On X11 Support Via XWayland</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Fedora-28-Released">Fedora 28 Is Now Available For Download</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Void-Linux-Infrastructure-Limbo">Void Linux Infrastructure In Limbo With Project Leader M.I.A.</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Fedora-28-Releases-Today">Fedora Workstation 28 Is A Brilliant Release</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=GIMP-GTK3-Moving-Forward-2018">GIMP Now Moving Full Steam Ahead With Their GTK3 Port</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=April-2018-Highlights"><span style="font-weight: 600;">Linux 4.17, Ryzen, Valve &amp; Apple Looking For Kernel Devs Topped April</span></a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Debian-UEFI-SecureBoot-2018">Debian Making Progress On UEFI SecureBoot Support In 2018</a>
+                            </div>
+                        </aside>
+			<aside>
+			<div style="text-align: center;">
+                          <script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "300x250,160x600,300x600";
+//--></script>
+<script type="text/javascript" src="tags.js"></script><div id="richmedia_4" align="center"><script type="text/javascript" src="j.js"></script>
+<script language="javascript" defer="defer">
+  (function() {
+    var 	tf_adchoice_width;
+    var 	tf_adchoice_height;
+
+    if (typeof(e9AdChoice) === "undefined")
+     {
+       tf_adchoice_width = 300;
+       tf_adchoice_height = 600;
+     }
+    else
+     {
+       tf_adchoice_width = e9AdChoice.width;
+       tf_adchoice_height = e9AdChoice.height; 
+       e9AdChoice = undefined;
+     }
+
+    var adChoiceObj = {
+        adWidth			: tf_adchoice_width,
+        adHeight		: tf_adchoice_height,
+        adChoiceIconPos 	: "UR".toLowerCase(),
+        adChoiceIconDir 	: 
+"https://cdnx.tribalfusion.com/media/common//adChoice/icon/",
+        adChoiceOptOutPage 	: 
+"https://s.tribalfusion.com/j.u?rnd=1151672019&redirect=http://exponential.com/ad-choices-fromad/",
+
+        adChoiceDivId		: "tfac_3006001151672019",
+        adChoiceIconVisibility	: "true",
+        rnd                     : "1151672019"
+    };
+
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = 
+"https://cdnx.tribalfusion.com/media/common/adChoice/tf_adChoice11.js";
+
+    if (script.readyState) //IE 
+     { 
+       script.onreadystatechange = function() {
+         if (    script.readyState == "loaded" 
+	      || script.readyState == "complete")
+	  {
+            script.onreadystatechange = null;
+   	    window.setTimeout(function() 
+{tf_e9AdChoice.showAdChoiceIcon(adChoiceObj)},2000);
+          }
+       };
+     } 
+    else 
+     { 
+       script.onload = function() {
+   	  window.setTimeout(function() 
+{tf_e9AdChoice.showAdChoiceIcon(adChoiceObj)},2000);
+       };
+     }
+
+    
+document.getElementById(adChoiceObj.adChoiceDivId).appendChild(script);
+  })();
+</script>
+
+
+
+    <style>
+        .animate {
+            -webkit-transition-property: all;
+            -webkit-transition-duration: 1s;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="2015.2.1.352">
+
+
+
+
+
+    <script>
+        var metaTags = document.getElementsByTagName('meta');
+        if (metaTags) {
+            for (var i = 0; i < metaTags.length; i++) {
+                console.log(metaTags[i].name + " : " + metaTags[i].content);
+            }
+        }
+    </script>
+
+    <script>
+        var customPageConfig = '';
+        customPageConfig = customPageConfig ? JSON.parse("{" + customPageConfig.split("/{")[1]) : {};
+        var moatToken = 'https://cdnx.tribalfusion.com/media/{"isEnableMoat":"true"}',
+            isMoatEnabled = "";
+        var richMedia_FrameworkVersion = 'https://cdnx.tribalfusion.com/media/{"version":"3.8.1"}',
+            richMediaFV = "";
+
+
+        var flashFile; // = '';
+        // if(flashFile){
+        //     flashFile = window.location.protocol+"//"+ JSON.parse("{" + flashFile .split("/{")[1]).path;
+        // }else {
+        flashFile = "ieTemplate.swf";
+        // }
+
+        var dynamicData = {
+            rawData: null
+        };
+
+        function richMediaRegularExpressionFrameWork() {
+            var regExp = /\{([^)]+)\}/;
+            var matches = regExp.exec(richMedia_FrameworkVersion);
+            if (matches && matches[0]) {
+                richMediaFV = JSON.parse(matches[0]).version;
+            }
+        }
+
+        function parseMoatTokenInformation() {
+            var regExp = /\{([^)]+)\}/;
+            var matches = regExp.exec(moatToken);
+            if (matches && matches[0]) {
+                isMoatEnabled = JSON.parse(matches[0]).isEnableMoat;
+            }
+
+        }
+        richMediaRegularExpressionFrameWork();
+        parseMoatTokenInformation();
+    </script>
+    <script type="text/javascript">
+        var isFiredComScore = false;
+        var comScorePixelUrl = 
+"https://cdnx.tribalfusion.com/media/common/floating/comscore.html";
+        var debug2 = new Image();
+        debug2.src =
+            
+"//s.tribalfusion.com/insights/impression?client=710153&campaign=Zwitserland.RON.BEL.VDX.HPA_V68(7979715)&mediaSource=VDX&mediaSubSource=Display&creative=300x600&event=Debug2&ord1151672019&custom1=jsver:1.0.0&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470&custom4=fv:"
+ + richMediaFV + ";";
+    </script>
+    <script src="publisher.js"></script>
+    <!-- plugins -->
+
+    <script type="text/javascript">
+        if (!window.EUGUIDGenerator) {
+            var EUGUIDGenerator = function guid() {
+                function s4() {
+                    return Math.floor((1 + Math.random()) * 0x10000)
+                        .toString(16)
+                        .substring(1);
+                }
+                return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+                    s4() + '-' + s4() + s4() + s4();
+            }
+        }
+        (function() {
+            var rnd = EUGUIDGenerator();
+            var location = 
+'https://cdnx.tribalfusion.com/media/7851826/';
+            var assetUrl = 
+'https://cdnx.tribalfusion.com/media/common/richmedia/html5/7.1.1-0/manifest/';
+
+            var museUrl = 
+'https://cdnx.tribalfusion.com/media/7851826/';
+            var common = 'https://cdnx.tribalfusion.com/media/common/';
+            var isFiredComScore = true;
+            var comScorePixelUrl = 
+"https://cdnx.tribalfusion.com/media/common/floating/comscore.html";
+            window['teaserTracker' + rnd] = {
+                "impression": {
+                    "imp": {
+                        "trackers": [{
+                            "pixel": 
+"https://s.tribalfusion.com/play?clickID=aamQgM1cnV0VjvmqjW5bQ2WFvCUPQ4QTb5QsYrQHUsYHFrVmbx2cvYXUYZbT6is4AQ8QmjK3WUq0HvIpdEu4mYT4sv7TsBjUsB8S6FuTWYVWrbP3bZaqUqQwWEB6ST3FSsjZaPbAmSt7dUVrT4r6smWeOXEeu4dnGSGFZd56QEoHiyTHZbhXbUdXUUiXTIOSUYDWUBex2Osf9&redirect=",
+
+                            "type": "img"
+                        }, {
+                            "pixel": "impLive",
+                            "type": "img"
+                        }]
+                    }
+                },
+                "debugging_pixel": {
+                    fire: false,
+                    'muse_mainunit_error': {
+                        custom4: 'mm:0;',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'debug'
+                        }]
+                    },
+                    'muse_mainunit_image_error': {
+                        custom4: 'mi:0;',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'debug'
+                        }]
+                    },
+                    'java_script_error': {
+                        custom4: '',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'debug'
+                        }]
+                    },
+                },
+                "phaze": {
+                    'paused-teaser_vpm_closebtnclick': { //done
+                        custom1: ['PausedTeaser', 'VPM'],
+                        'referrer': 'VPM',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }, {
+                            "type": "img",
+                            pixel: 'CloseLive'
+                        }]
+                    },
+                    'paused-teaser_mainunit_closebtnclick': { //done
+                        custom1: ['PausedTeaser', 'MainUnit'],
+                        'referrer': 'MainUnit',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }, {
+                            "type": "img",
+                            pixel: 'CloseLive'
+                        }]
+                    },
+                    'paused-collapsed-teaser_vpm_closebtnclick': { 
+//done
+                        custom1: ['PausedCollapsedTeaser', 'VPM'],
+                        'referrer': 'VPM',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }, {
+                            "type": "img",
+                            pixel: 'CloseLive'
+                        }]
+                    },
+                    'paused-collapsed-teaser_mainunit_closebtnclick': { 
+//done
+                        custom1: ['PausedCollapsedTeaser', 'MainUnit'],
+                        'referrer': 'MainUnit',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }, {
+                            "type": "img",
+                            pixel: 'CloseLive'
+                        }]
+                    },
+                    'teaser_loading_loaded': { //done
+                        custom1: 'teaser',
+                        'referrer': 'loading',
+                        'trigger': 'loaded',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+
+                    
+'paused-collapsed-teaser_paused-teaser_transitioncomplete': { //done
+                        custom1: 'PausedCollapsedTeaser',
+                        'referrer': 'PausedTeaser',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'vpm_teaser_timecomplete': {
+                        custom1: 'VPM',
+                        'referrer': 'Transition2VPM',
+                        'trigger': 'TransitionComplete',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'vpm_collapsed-teaser_timecomplete': {
+                        custom1: 'VPM',
+                        'referrer': 'Transition2VPM',
+                        'trigger': 'TransitionComplete',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'mainunit_vpm_timecomplete': {
+                        custom1: 'MainUnit',
+                        'referrer': 'Transition2MainUnit',
+                        'trigger': 'TransitionComplete',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+
+
+                    //                
+'collapsed-teaser_teaser_transitioncomplete': {
+                    //                    custom1: 'collapsedTeaser',
+                    //                    'referrer': 'Teaser',
+                    //                    'trigger': 'CloseAd',
+                    //                    trackers: [{
+                    //                        "type": "img",
+                    //                        pixel: 'Stage'
+                    //                    }]
+                    //                },
+
+                }
+
+            };
+
+            window['fullscreenTracker' + rnd] = {
+
+                "engagement": {
+                    'eng': {
+                        "trackers": [{
+                            "pixel": "ExpandLive",
+                            "type": "img"
+                        }, {
+                            "pixel": "EngLive",
+                            "type": "img"
+                        }]
+                    }
+
+                },
+                "billable": {
+                    "trackers": [{
+                        "pixel": 
+"https://s.tribalfusion.com/h.click/aamQgM1cnV0VjvmqjW5bQ2WFvCUPQ4QTb5QsYrQHUsYHFrVmbx2cvYXUYZbT6is4AQ8QmjK3WUq0HvIpdEu4mYT4sv7TsBjUsB8S6FuTWYVWrbP3bZaqUqQwWEB6ST3FSsjZaPbAmSt7dUVrT4r6smWeOXEeu4dnGSGFZd56QEoHiyTHZbhXbUdXUUiXTIOSUYDWUBex2Osf9/",
+
+                        "type": "img"
+                    },{
+                        "pixel": 
+"https://a.tribalfusion.com/i.visitor?clientName=Audience%20Pixel%20VDX%20-%20Engagers%202018&clientID=756523&segmentNumber=0&segmentName=Audience",
+
+                        "type": "img"
+                    }]
+                },
+                "deepEngagement": {
+                    "eng": {
+                        "trackers": [{
+                            "pixel": "DeepEng",
+                            "type": "img"
+                        }]
+                    }
+                },
+                "videos": {
+                    trackers: {
+                        "click": {
+                            "trackers": [{
+                                "pixel": "clickLive",
+                                "type": "img"
+                            }, {
+                                "pixel": "",
+                                "type": "js"
+                            }]
+                        }
+
+                    },
+                    "video1": {
+                        "custom1": "video1",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video2": {
+                        "custom1": "video2",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video3": {
+                        "custom1": "video3",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video4": {
+                        "custom1": "video4",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video5": {
+                        "custom1": "video5",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video6": {
+                        "custom1": "video6",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video7": {
+                        "custom1": "video7",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video8": {
+                        "custom1": "video8",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video9": {
+                        "custom1": "video9",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video10": {
+                        "custom1": "video10",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video11": {
+                        "custom1": "video11",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video12": {
+                        "custom1": "video12",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video13": {
+                        "custom1": "video13",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video14": {
+                        "custom1": "video14",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    },
+                    "video15": {
+                        "custom1": "video15",
+                        "start": {
+                            "trackers": [{
+                                "pixel": "0pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "firstquartile": {
+                            "trackers": [{
+                                "pixel": "25pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "secondquartile": {
+                            "trackers": [{
+                                "pixel": "50pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "thirdquartile": {
+                            "trackers": [{
+                                "pixel": "75pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "complete": {
+                            "trackers": [{
+                                "pixel": "100pcLive",
+                                "type": "img"
+                            }]
+                        },
+                        "mute": {
+                            "trackers": [{
+                                "pixel": "MuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "unmute": {
+                            "trackers": [{
+                                "pixel": "UnmuteLive",
+                                "type": "img"
+                            }]
+                        },
+                        "paused": {
+                            "trackers": [{
+                                "pixel": "PauseLive",
+                                "type": "img"
+                            }]
+                        },
+                        "rewind": {
+                            "trackers": [{
+                                "pixel": "RewindLive",
+                                "type": "img"
+                            }]
+                        },
+                        "resume": {
+                            "trackers": [{
+                                "pixel": "ResumeLive",
+                                "type": "img"
+                            }]
+                        },
+                        "replay": {
+                            "trackers": [{
+                                "pixel": "ReplayLive",
+                                "type": "img"
+                            }]
+                        },
+                        "fullscreen": {
+                            "trackers": [{
+                                "pixel": "FSLive",
+                                "type": "img"
+                            }]
+                        }
+                    }
+
+
+                },
+                'phaze': {
+                    //                'exploremore_mainunit_click': {
+                    //                    custom1: 'ExploreMore',
+                    //                    'referrer': 'MainUnit',
+                    //                    'trigger': 'Click',
+                    //                    trackers: [{
+                    //                        "type": "img",
+                    //                        pixel: 'Stage'
+                    //                    }]
+                    //                },
+                    'transition_teaser_closead': {
+                        custom1: 'collapsedTeaser',
+                        'referrer': 'Teaser',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_paused-teaser_closead': {
+                        custom1: 'PausedCollapsedTeaser',
+                        'referrer': 'PausedTeaser',
+                        'trigger': 'CloseAd',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_paused-collapsed-teaser_click': {
+                        custom1: 'Transition2VPM',
+                        'referrer': 'PausedCollapsedTeaser',
+                        'trigger': 'Click',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_collapsed-teaser_click': {
+                        custom1: 'VPM',
+                        'referrer': 'Transition2VPM',
+                        'trigger': 'Click',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_teaser_mouseover': {
+                        custom1: 'Transition2VPM',
+                        'referrer': 'Teaser',
+                        'trigger': 'MouseOver',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_collapsed-teaser_mouseover': {
+                        custom1: 'Transition2VPM',
+                        'referrer': 'CollapsedTeaser',
+                        'trigger': 'MouseOver',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+
+                    //                'transition_teaser_timecomplete': {
+                    //                    custom1: 'VPM',
+                    //                    'referrer': 'Transition2VPM',
+                    //                    'trigger': 
+'TransitionComplete',
+                    //                    trackers: [{
+                    //                        "type": "img",
+                    //                        pixel: 'Stage'
+                    //                    }]
+                    //                },
+                    'transition_teaser_click': { //not done
+                        custom1: 'VPM',
+                        'referrer': 'Transition2VPM',
+                        'trigger': 'Click',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    //Jordi, transition_transition_mouseout do you want 
+to have this pixel, we can fire this event when user MouseOut before 
+reaching VPM
+                    'transition_teaser_mouseout': { //not done
+                        custom1: 'Teaser',
+                        'referrer': 'Transition2Teaser',
+                        'trigger': 'MouseOut',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_collapsed-teaser_mouseout': {
+                        custom1: 'Teaser',
+                        'referrer': 'Transition2Teaser',
+                        'trigger': 'MouseOut',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_vpm_click': {
+                        custom1: 'Transition2MainUnit',
+                        'referrer': 'VPM',
+                        'trigger': 'Click',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    'transition_vpm_timecomplete': {
+                        custom1: 'Transition2MainUnit',
+                        'referrer': 'VPM',
+                        'trigger': 'TimeComplete',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+
+                    'transition_paused-teaser_click': {
+                        custom1: 'Transition2VPM',
+                        'referrer': 'PausedTeaser',
+                        'trigger': 'Click',
+                        trackers: [{
+                            "type": "img",
+                            pixel: 'Stage'
+                        }]
+                    },
+                    //                'mainunit_loaded': {
+                    //                    custom1: 'MainUnit',
+                    //                    'referrer': 'VPM',
+                    //                    'trigger': 'loaded',
+                    //                    trackers: [{
+                    //                        "type": "img",
+                    //                        pixel: 'Stage'
+                    //                    }]
+                    //                }
+
+                }
+            };
+
+
+            
+/*============================================================== Pixel 
+configuration ends 
+========================================================*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            /*-------------------------------------------------------- 
+DON'T TOUCH ANYTHING BELOW THIS LINE 
+--------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            
+/*----------------------------------------------------------------------
+ WARNING 
+-----------------------------------------------------------------*/
+            /*-------------------------------------------------------- 
+DON'T TOUCH ANYTHING BELOW THIS LINE 
+--------------------------------------------------*/
+
+
+            var pixelInfo = {
+                host: "s.tribalfusion.com",
+                campaignName: 
+"Zwitserland.RON.BEL.VDX.HPA_V68(7979715)",
+                insPrefixUrl: 
+"/insights/impression?client=710153&campaign=",
+                insMidUrl: 
+"&mediaSource=VDX&mediaSubSource=Display&creative=300x600&event=",
+                insSuffixUrl: 
+"&ord=1151672019&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;td:@TIMEDIFFERENCE@;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;mediaDataId:7851826;&custom4=fv:"
+ + richMediaFV + ";dm:www.phoronix.com;",
+                deviceProperties: 
+"deviceID:170080;osID:210998;browserID:223470"
+            };
+            var pixelInfoConnect = {
+                custom1: 
+"exp:expand;env:web;pl:web;v:1.0.0;fr:@FROM@;st:@STATE@",
+                host: "s.tribalfusion.com",
+                campaignName: 
+"Zwitserland.RON.BEL.VDX.HPA_V68(7979715)",
+                insPrefixUrl: 
+"/insights/impression?client=710153&campaign=",
+                insMidUrl: 
+"&mediaSource=vdxconnect&mediaSubSource=iab&creative=300x600&event=",
+                insSuffixUrl: 
+"&ord=1151672019&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;adspaceId:88461;td:@TIMEDIFFERENCE@&custom3=deviceID:170080;osID:210998;browserID:223470;mediaDataId:7851826;&custom4=dm:www.phoronix.com;fv:"
+ + richMediaFV + ";",
+                deviceProperties: 
+"deviceID:170080;osID:210998;browserID:223470"
+            };
+
+            var customPixel = {
+                "videoStart": {
+                    "pixel": "customPixel",
+                    "customPixelStr": 
+"&custom1=videoStart&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;td:@TIMEDIFFERENCE@;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;bn:{browserName};bv:{browserVersion};dn:{deviceName};osn:{osName};osv:{osVersion}&custom4=vst:{timeDiffVideoStart};vlt:{timeDiffVideoLoaded};vb:{videoBuffered};vs:{videoState};inview:{isInView};if:{inFocus};tdi:{timeWRTInitialTimeStamp};ce:{isCanvasEnabled}",
+
+                    "type": "img"
+                },
+                "videoInitialLoad": {
+                    "pixel": "customPixel",
+                    "customPixelStr": 
+"&custom1=videoInitialLoad&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;td:@TIMEDIFFERENCE@;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;bn:{browserName};bv:{browserVersion};dn:{deviceName};osn:{osName};osv:{osVersion}&custom4=vpvp:{timeDiffVideoStartViewPort};vb:{videoBuffered};inview:{isInView};if:{inFocus};ce:{isCanvasEnabled}",
+
+                    "type": "img"
+                },
+                "videoLoaded": {
+                    "pixel": "customPixel",
+                    "customPixelStr": 
+"&custom1=videoloaded&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;td:@TIMEDIFFERENCE@;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;bn:{browserName};bv:{browserVersion};dn:{deviceName};osn:{osName};osv:{osVersion}&custom4=vlt:{timeDiffVideoLoaded};vb:{videoBuffered};inview:{isInView};if:{inFocus};ce:{isCanvasEnabled}",
+
+                    "type": "img"
+                },
+                "renderCbLoaded": {
+                    "pixel": "customPixel",
+                    "customPixelStr": 
+"&custom1=maintUnitLoaded&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;td:@TIMEDIFFERENCE@;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;bn:{browserName};bv:{browserVersion};dn:{deviceName};osn:{osName};osv:{osVersion}&custom4=tdi:{timeWRTInitialTimeStamp};clickType:{clickType}",
+
+                    "type": "img"
+                },
+
+                "videoReport": {
+                    "pixel": "customPixel",
+                    "customPixelStr": 
+"&custom1=videoreport&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;bn:{browserName};bv:{browserVersion};dn:{deviceName};osn:{osName};osv:{osVersion}&custom4=pt:{playTime};wt:{waitTime};state:{currentState};tt:{totalVideoTime};ints:{timeWRTInitialTimeStamp};lc:{loopCount}",
+
+                    "type": "img"
+
+                },
+                "detectfocus": {
+                    "pixel": "customPixel",
+                    "customPixelStr": 
+"&custom1=detectfocus&custom2=buyID:12362282;mediaID:7979715;ord:1151672019;td:@TIMEDIFFERENCE@;adspaceId:88461&custom3=deviceID:170080;osID:210998;browserID:223470;bn:{browserName};bv:{browserVersion};dn:{deviceName};osn:{osName};osv:{osVersion}&custom4=tdi:{timeWRTInitialTimeStamp};state:{currentState};clickType:{clickType};inview:{isInView};if:{inFocus};;pt:{playTime};wt:{waitTime};state:{currentState};tt:{totalVideoTime};isEngaged:{isUserEngaged}",
+
+                    "type": "img"
+                }
+            };
+
+            window['currentE9' + rnd] = this.e9;
+
+            window['adUnitReadConfig_' + rnd] = function(sandbox, done) {
+                var adID = rnd;
+                var initWindow = window;
+                var tokens = 
+"?namejs=https://cdnx.tribalfusion.com/media/common/richmedia/html5/7.1.1-0/js/creative.js&namecss=https://cdnx.tribalfusion.com/media/common/richmedia/html5/7.1.1-0/css/creative.css&rnd=1151672019";
+
+                window['adConfig_' + rnd] = {
+                    "customPageConfig": customPageConfig,
+                    "debug6Interval": 2000,
+                    "isFireDebug6": false,
+                    "isViewableTimeSpend": false,
+                    "env": "prod",
+                    "divid": (this.env === "dev" ? "adContainer" : 
+"richmedia_4"),
+                    "initWindow": initWindow,
+                    "productName": "VDX_1.1",
+                    "id": adID,
+                    "uniqueId": '1151672019',
+                    "e9": window['currentE9' + rnd],
+                    "mediaWidth": 300 + "px",
+                    "mediaHeight": 600 + "px",
+                    "location": (this.env === "dev" ? "./" : location),
+                    "assetUrl": (this.env === "dev" ? "./" : assetUrl),
+                    "museUrl": (this.env === "dev" ? "./" : museUrl),
+                    "plugins": [{
+                            "type": 'plugin',
+                            name: "externalCom"
+                        },
+                        {
+                            "type": 'plugin',
+                            name: "videoLibrary"
+                        }
+                    ],
+                    "tagOptions": typeof({}) !==
+                        "undefined" ? {} : {},
+                    //   "pixelInfo": pixelInfo,
+                    "isFireCustomPixel": false,
+                    "customPixel": customPixel,
+                    "style": {
+                        'border': '1px solid #000000'
+                    },
+                    "isEnableFloat": true,
+                    "resetLayoutTime": 8000,
+                    "locale": 'en',
+                    "videoReportingPixelsEnabled": false,
+                    "branding": undefined,
+                    "peelBrandingDuration": 2000,
+                    "dynamicData": dynamicData || {},
+                    "engagementType": "CPM",
+                    "CPVengagementPixelTime": 5,
+                    "loadVideoInPctView": 1, //move this to config.js 
+later
+                    "inViewPercentage": 50,
+                    "playVideoInPctView": 50,
+                    "isMaintainAspectRatio": false,
+                    "vizu": {
+                        "enabled": false,
+                        "vizuCampaign": "9682",
+                        "placementId": "12362282",
+                        "adId": "VDX_Display",
+                        "queryParam": "",
+                        "protocol": "https",
+                        "src": 
+"://secure-gl.imrworldwide.com/u/t/00/00/96/82/300x250_survey.html?ca=9682&pc=12362282&ci=nlsnci174&am=3&ce=exponential&#WILDCARD_PARAMS#r=1151672019",
+
+                        "height": "250",
+                        "width": "300",
+                        "marginheight": "0",
+                        "marginwidth": "0",
+                        "frameborder": "0",
+                        "scrolling": "0"
+                    },
+                    "media": {
+                        "dir": 
+"https://cdnx.tribalfusion.com/media/7851826/creative.html" + tokens,
+                        "parseDir": 
+"https://s.tribalfusion.com/p.media?clickID=abmQgM1Uj90q6rSF3EWbUSWtB1ob7nQFrmYTQq5aUd2T35mEMAYbjbUHfVmPfZbnVMmpWvJ2EUg3dIs3A7ZambMJYGMQYsZbVXVFnmavT2bYWTFfZcWAnXREYRPsFoStJr1WFsVm3w3GB40U3ITAit46QePPMB4WYsXWnDmtEn5ArY5cngTcraVcnjP6vmTWUSWrMhx2O7Zdh&mediaDataID=7851826&mediaName=",
+
+                        "commonDir": 
+"https://cdnx.tribalfusion.com/media/common/",
+                        "manifestDir": 
+"https://cdnx.tribalfusion.com/media/common/richmedia/vde/manifest/0.1.5/",
+
+                    },
+                    "teaser": {
+                        "970x250": {
+                            standard: {
+                                video: {
+                                    id: "video1", //defined in videos 
+section
+                                    x: -50,
+                                    y: -100,
+                                    scaledWidth: 1020,
+                                    scaledHeight: 600
+                                }
+                            },
+                            collapsed: {
+                                video: {
+                                    id: "video2", //defined in videos 
+section
+                                    x: -50,
+                                    y: -313,
+                                    scaledWidth: 1020,
+                                    scaledHeight: 600
+                                }
+                            }
+                        },
+                        "160x600": {
+                            standard: {
+                                video: {
+                                    id: "video1", //defined in videos 
+section
+                                    x: -50,
+                                    y: -100,
+                                    scaledWidth: 300,
+                                    scaledHeight: 700
+                                },
+                            }
+                        },
+                        "728x90": {
+                            standard: {
+                                video: {
+                                    id: "video1", //defined in videos 
+section
+                                    x: -50,
+                                    y: -100,
+                                    scaledWidth: 900,
+                                    scaledHeight: 200
+                                },
+                            }
+                        },
+                        "300x250": {
+                            standard: {
+                                video: {
+                                    id: "video1", //defined in videos 
+section
+                                    x: -50,
+                                    y: -100,
+                                    scaledWidth: 400,
+                                    scaledHeight: 400
+                                },
+                            }
+                        },
+                        "300x600": {
+                            standard: {
+                                video: {
+                                    id: "video1", //defined in videos 
+section
+                                    x: -50,
+                                    y: -100,
+                                    scaledWidth: 400,
+                                    scaledHeight: 700
+                                },
+                            }
+                        },
+                        "zindex": 10,
+                        "width": 300,
+                        "height": 600,
+                        "sizes": [{
+                            "width": 1024,
+                            "height": 90
+                        }, {
+                            "width": 768,
+                            "height": 90
+                        }, {
+                            "width": 2048,
+                            "height": 180
+                        }, {
+                            "width": 1536,
+                            "height": 180
+                        }],
+                        "background": {
+                            "color": "#000000"
+                        },
+
+                        "biteImage": false,
+                        "template": {
+                            "isTrueClickEnable": true,
+                            "trueClickSpan": -1,
+                            "closeButtonScale": 4
+                        },
+
+                        "clicks": {},
+                        "videos": {
+                            "TabletPortrait": {
+                                "name": "TabletPortrait.mpg",
+                                'device': 'tablet'
+                            },
+                            "TabletLandscape": {
+                                "name": "TabletLandscape.mpg",
+                                'device': 'tablet'
+                            }
+                        }
+                    },
+                    "fullscreen": {
+                        'width': 970,
+                        'height': 546,
+                        "zindex": 2147483635,
+                        "disableScroll": true,
+                        "mainUnitBGColor": "",
+                        "transitionToMainUnit": 1000,
+                        "VPMSpeedPerMs": 5,
+                        "enableExploreMore": false,
+                        "closeBtnImg": {
+                            "src": '<svg version="1.1" id="Layer_1" 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37px" 
+height="38px" viewBox="0 0 37 38" enable-background="new 0 0 37 38" 
+xml:space="preserve"><image overflow="visible" width="37" height="38" 
+xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAmCAYAAAE0DWI7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAACItJREFUeNpiYMACGKF0kLdfiAWIsXXTmjKwiJmlfdd/IADRQG4KE0jw7ZvXDCpq2t3mZsaSQO5OmDEsQAxSpQ3iAAQQVsQMIoCWdKmpa7nevnmNF8i9DhJLQbMIbNZOoEVqIIvQjdGCWgRSxAAQQIxokmxA7AJl7wHiXyiWAwGvg7NnS3pGZtzf/8xCCkqqCjeuX1l/5PhZ/gf375wAaYCZmK+jbyzNxMTEcP7MiWIgzaRrYAJ2y5WLZ58CqYkwhaBQaZKWVWRDdsfTx/dBVtcB8T8GYgFAABGFmNGiTgeIbaHir9HjlC06Lrnjw4ePf2ASAgL8LEsXza0A+RQcnRZWthVPnz77s37NsvyvX78yrFy2IAvEB4nDooLt338mnm/fvjHUNbSs2r9nW2l+Yel8EB/oeR6QPMgkpm/fvjCAcG5Ohuus2XO3dne2RsPEQPLMkLBgdGJiYgG578vUaTNu3b13/9GN6ze/vH/75t/Xr593wRwuBQzQAnSvAwN1ApB6hhzpIkDsB8QmQHwGiDcB8RuiAxMggKiKGLGIgYLPLDg00kFIWET048dPf379+vWflZWVERQR74BJfO3q5QeAak4B8R9choGC1wGYcTx///79n5ArQIYDc/B2IPMALPUxIRlkbWPv4vHx44f/3759ZVBTVRbcuW1D6ZaNq/NB/O1b1peA+E6OdnIgPkgdSD1IH8wcmMs4gDjHyMRCDNl2ERERttUrlybyAQHQtb8trOwmoLvw3JkTr4DUFCD+wQIVAznz1tdv3+GG1dZUGkVFhDm3tnetWbJ0+X13N1fJs6ePl/4FAm094z4k827BvIkcZqDCJVJeSVWF2Nh7eO/2HSC1HIg/4ypZxIE4gI9fUIGTm+cvugHfv35h+fTx/X0gcwMQv0QufRjxJBlWIOaEhicoj4AM/gnEoOz1G4gxYhwggAYfYsRTVglA6wQhqNg7IL4KxB+gXsVrEIgPKmE8CoorbN++ffv769dvYE1cnJzMIqIirBN6Ow4DuTtA5QlyWDGiGSLq7uGdyMLGKYzPG39+fX+7c8fW+dCS9D96cctlZWOXxsbOLfLv3z8GbFhdTVXg5atXPxgYmbjEJcTVHj96eB4ai/A8CDLQBWQIsCRgAOEJvZ1+5mamEjC+j7en0oS+zlQYH6QWWqsxIxvEoaKmof3nz28GGFZRUVZqaqiOtbYyl4iPi9LKzU4P/vz5y2cUNUA90LQGDyMRfSPzInZ2DhbksDhycHcBsCgBJU6GV69ev/INCF2ILP/z548/F8+dBOXDNzAXsTIzMbL8+f2TARmvWLlqH0xTd0/fTnR5kB5oLoB7jeHL1y9/f/3+zQDDISFBijHRUe43b926BypWurvaY+3sbCWQ1YD0oEe/iKCwaIGYuBS8br5x9ULpo0ePn/oHha38/v3738sXToO9qaFtAG9ovHr57Nf7t69B5dYbWJh8Bwo8FxISlYcpQm+ZaGobTDh2ZH/Cn9+/4WIgPSC9yC4CRaEMsAjJFhQWISpvAWtGBmCxMhXIfALKMrAECUqdv4Gx8P7/v//arKxs/3ElShD++OEdE9CQdUA992DlEnoNA8pnykCcKC4l+wObS14+ewxKNwuA+A40v/3DlWlBBZooEIPCywaIJaByL0BJC1TaQvPYd1yZFr0Y4YAaygoV+w3V/ANbMUI1ABBgQ6q0JaSHERrRTEh8BqTU9B8aof+Q+FR1FCNSjQcqiNVAtLOLu4yklDQ/EPAACyFWFiD4AwS/fv38/fHDhy/Pnj39uHfPTlDafwut7N8i1Yz/yXUUEzRhCYJaaI7ObmqaWjry7z98+PPly1eiExQPDzezkKAgy7Wrlx/u37vrFrQl9x6aKP8R6yhGqGNAedDR2dVDnYdPUPjnz58U1/3s7OyMXz69f7t3946bQO5+aL79ix5yzFgcBCo05YDY3cs3yOjv33+cwChh+Pf3Lwq2sjCXePDgwRd0cRDm5eFhS4iL1q0sKw64eOnS3RcvXvwAiYPMAVaRnJpaurK3b10HJYWPQPwVPcQYsbSUQE0wDztHN1Vsvu3v7fQwMjTQBRcQv3//amppX3no8FFQocPAx8vLGhTkr+Lr7WkmLCwsxsjIyPDy5asXYZGxi7GZdWj/rtvQlsVL5JYYI1rrnhuIXTV19HUEBIS4cEWDo4O9ZENddTgrKwsrzHEbNm4+ZGdroysuLiYOLKP/Pnz46PHS5SuP79i568m/f9hjHliOf7t25SKo/bQbGpV/0B3FDm10hQHb5jJMzMwEc6azk6Nka3NDBDMzM7wJ8OHDh3fzFy4+sH7Dxgffv//AmyGAUfof2KYH5dBV0IbdT/Q0xQoNKQNhUXFuoO8YgemJARdOTkxQLyspDAQVBeDCCQiA0cXIwcHBaWxkqHzt+s37d+7c/YLPjD9//wAr8uc/oK3NH/hCykdWXkmJl5efFZvvens6bT3cXS1g/Ddv3r5tbmnbumfv/pdubi6SXR2t4bCGErC59ququm719h27nmEz6/Pnj38eP7x3F8jcghxS2NIUqOYMUdPQ4cAV7HPnzHSVkZYWKSuv2gbMXR/R5d3d3SR7uzvAjrt9584DH9/A1djMuXXjCih01kJrZaxpCpb7+IFYA4i9FJU1mCkpl+ztbEUPHjr8Gpvc/bs3QOltG6i5Bi0asOY+5HKKF9rGCOIXEOIFNq+o1mkCtpoYgbkO1CVcB22/fIa2oP4TU6JzQUNNFlRucfPw8vAJCP0h2zEf3rN8/fLpC7RcegwNnW/YSnRCdR8LtFEFqnL4oOnNGDTywsnF/YeVjf0fCwvrX2ZmJmDOYwLmQGA78u8/RmAXgglYejN///YVlBxA42BnoenmEzTtwHLaP2q0EtigjoRhNqjDmaFqYE2W39Ao+YGEf1GjlTBg7alBCQDmEPDCdJyn3QAAAABJRU5ErkJggg=="></image></svg>',
+
+                            "width": 37,
+                            "height": 38,
+                            "top": 23,
+                            "right": 23
+                        },
+                        "trackers": window['fullscreenTracker' + rnd],
+                    }
+
+
+                };
+                window['adConfig_' + rnd].pixelInfo = window['adConfig_'
+ + rnd].engagementType === "CPV" ? pixelInfoConnect : pixelInfo;
+
+                sandbox.adConfig = window['adConfig_' + rnd];
+                sandbox.widzardConfig = {
+                    "defaults": {
+                        "parameters": {
+                            "language": "nl",
+                            "branding": "VDX BY EXPONENTIAL"
+                        }
+                    },
+                    "teaser": {
+                        "execution": {
+                            "display": {
+                                "logo": "teaserlogo.png",
+                                "160x600": {
+                                    "standard": {
+                                        "video": {
+                                            "x": -454,
+                                            "y": 0,
+                                            "scaledWidth": 1068,
+                                            "scaledHeight": 601
+                                        }
+                                    }
+                                },
+                                "300x250": {
+                                    "standard": {
+                                        "video": {
+                                            "x": -76,
+                                            "y": -2,
+                                            "scaledWidth": 452,
+                                            "scaledHeight": 254
+                                        }
+                                    }
+                                },
+                                "300x600": {
+                                    "standard": {
+                                        "video": {
+                                            "x": -384,
+                                            "y": 0,
+                                            "scaledWidth": 1068,
+                                            "scaledHeight": 601
+                                        }
+                                    }
+                                },
+                                "970x250": {
+                                    "standard": {
+                                        "video": {
+                                            "x": -4,
+                                            "y": -150,
+                                            "scaledWidth": 977,
+                                            "scaledHeight": 550
+                                        }
+                                    },
+                                    "collapsed": {
+                                        "video": {
+                                            "x": -4,
+                                            "y": -205,
+                                            "scaledWidth": 977,
+                                            "scaledHeight": 550
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
+
+                done();
+            };
+
+            var pubCore = {};
+            pubCore.name = "VDX_" + rnd;
+            pubCore.testParam = "lookForThis";
+            pubCore.env = "prod";
+            pubCore.id = rnd;
+            pubCore.richmediaCommonDir = 
+"https://cdnx.tribalfusion.com/media/common/richmedia/plugins/2.0.7/";
+            pubCore.core_version = "1.0.3";
+            pubCore.plugin_version = "1.9.0";
+            pubCore.render_version = "1.9.0";
+            pubCore.isCountAfterPlay = true;
+            pubCore.pixelInfo = pixelInfo;
+            pubCore.teaser = {};
+            pubCore.fullScreen = {};
+            pubCore.teaser.trackers = window["teaserTracker" + rnd];
+            //---CustomTrackers: Start---
+
+            pubCore.urlConfig = {
+                "Meet_Informatie_Niet_Tab": 
+"https://www.myswitzerland.com/nl/hoehenweg-vom-rinderberg-nach-schoenried.html?utm_source=Exponential&utm_medium=banner&utm_campaign=summer18&utm_content=bern",
+
+                "Logo": 
+"https://www.myswitzerland.com/nl-nl/zomerverhalen/bijna-zoals-in-lang-vervlogen-tijden.html",
+
+                "Meer_informatie_Video_tab": 
+"https://www.myswitzerland.com/nl-nl/rennvelo.html?nodeid=80082&regionid=006&history=false&utm_source=Exponential&utm_medium=banner&utm_campaign=summer18&utm_content=Bern"
+
+            };
+
+            pubCore.customTrackers = {
+                "Video_tab": {
+                    "custom1": "Video_tab",
+                    "multi": true,
+                    "trackers": [{
+                        "pixel": "intLive",
+                        "type": "img"
+                    }]
+                },
+                "Fotos_Tab": {
+                    "custom1": "Fotos_Tab",
+                    "multi": true,
+                    "trackers": [{
+                        "pixel": "intLive",
+                        "type": "img"
+                    }]
+                },
+                "Niet_missen_Tab": {
+                    "custom1": "Niet_missen_Tab",
+                    "multi": true,
+                    "trackers": [{
+                        "pixel": "intLive",
+                        "type": "img"
+                    }]
+                },
+                "Meet_Informatie_Niet_Tab": {
+                    "custom1": "Meet_Informatie_Niet_Tab",
+                    "multi": false,
+                    "trackers": [{
+                        "pixel": "clickLive",
+                        "type": "img"
+                    }]
+                },
+                "Logo": {
+                    "custom1": "Logo",
+                    "multi": false,
+                    "trackers": [{
+                        "pixel": "clickLive",
+                        "type": "img"
+                    }]
+                },
+                "Meer_informatie_Video_tab": {
+                    "custom1": "Meer_informatie_Video_tab",
+                    "multi": false,
+                    "trackers": [{
+                        "pixel": "clickLive",
+                        "type": "img"
+                    }]
+                }
+            };
+            //---CustomTrackers: End---
+            pubCore.fullScreen.trackers = window['fullscreenTracker' + 
+rnd];
+
+            pubCore.dependencies = [
+
+                {
+                    "type": 'plugin',
+                    name: 'dummyLogger',
+                    "version": "1.9.0"
+                },
+
+                {
+                    "type": 'plugin',
+                    name: 'messages',
+                    "version": "1.0.0"
+                },
+                {
+                    "type": 'plugin',
+                    name: 'dimensionHelper',
+                    "version": "1.0.0"
+                },
+
+                {
+                    "type": 'plugin',
+                    name: 'framebuster',
+                    "version": "1.9.0"
+                },
+
+                {
+                    "type": 'render',
+                    name: 'render',
+                    "version": "1.9.0"
+                },
+                {
+                    "type": 'plugin',
+                    name: 'sniffer',
+                    "version": "1.0.0"
+                },
+                {
+                    type: 'plugin',
+                    name: 'InView',
+                    "version": "1.0.0"
+                },
+                {
+                    "type": 'plugin',
+                    name: 'selfServeAdapter',
+                    "version": "1.9.0"
+                },
+                {
+                    "type": 'plugin',
+                    name: 'adChoice',
+                    "version": "1.9.0"
+                },
+                {
+                    "type": 'plugin',
+                    name: 'pubEventManager',
+                    "version": "1.0.0"
+                }
+            ];
+
+            
+//pubCore.jsFiles=["https://cdnx.tribalfusion.com/media/common/richmedia/plugins/2.0.7/unified_rectangle.js"];
+
+
+            var e9_AdSlots = null;
+            try {
+                e9_AdSlots = this.e9AdSlots || (window.top ? 
+window.top.e9AdSlots : null);
+            } catch (e) {}
+
+
+            pubCore.init_load_callback = window["adUnitReadConfig_" + 
+rnd];
+            window["tf_richmedia"] = window["tf_richmedia"] || [];
+            window["tf_richmedia"].push(pubCore);
+            if (typeof EXPO_PUB !== "undefined") {
+                EXPO_PUB.initPub(pubCore);
+            }
+            if (((e9_AdSlots) || (this.e9 && !this.e9.saleskit && 
+!this.e9.environment)) && isMoatEnabled === "true") {
+                var src = 
+"https://z.moatads.com/exponential54894892/moatad.js#moatClientLevel1=710153&moatClientLevel2=12362282&moatClientLevel3=7979715&moatClientLevel4=300x600&moatClientSlicer1=51230&moatClientSlicer2=88461&zMoatRND=1151672019&zMoatCT=BELGIUM&zMoatDEV=deviceID:170080;osID:210998;browserID:223470&zMoatCtn=teaser_"
+ + rnd;
+                var script = document.createElement("script");
+                script.src = src;
+                document.head.appendChild(script);
+            }
+            // version 2
+
+        })();
+    </script><div id="static_teaser_db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="margin:0 auto;position:relative;visibility:visible;width:300px;height:600px;"></div>
+
+
+
+
+<iframe src="https://s.tribalfusion.com/p.media?clickID=acmPgrUcJ8RAQuWWZb4TFfP2biwVTUpWEJ7QEUZbScQBRFEqRW76Vc3R4rymod6M0amv2dbGSVMG46YHotAoTHbdXFrdYrY71TqoPbMDWUYSVtY1orjuQFMn1EYy5qfg4qY1naMD1rZbfUWMRoArBps7spd3H2qFi5ter3AfJnUUHYsbU1sv41VvnMdbbspTX3R&amp;mediaDataID=7665496&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=admPgrXGZbnnEbV3FJ5WbbZcVmn3QEj3PsZbpQdBM1HvxTPYN2cBYYbrZcTAmn2PYgRmbA2WZbsXHJKntZao5mYW5cYcTGUaVsM6S6FMWdnSWrbP3bZaqUqQwWEB6ST3FSsjZaPbAmSt7dUVM54U6nodeO0Eey2W3CQGMB2mQZamdIpTt7eYUb71Fbh1qqM4VUssEKfkD&amp;mediaDataID=4056396&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=aemPgrXaAMRrUZcUFZb0VW3WnUfvRFFsXTFo5EBi4T7QoaBFYbUbTtFUmmrKpGrumWnD3EZbe5duq5PfGnbMKXV3VYGY51GvpmavQ5UnRTFfZcWAnXREYRPsFoStJr1WFsVm3w3GB40UUDT6im2PQeRPMH3drt0HJZbpdEv36QV5V3fUVF8UsBgSAFoYTYcrJRTu4&amp;mediaDataID=6453196&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe><iframe src="https://s.tribalfusion.com/p.media?clickID=afmPgrPPnoUtYPWb7X3FIuVTQxWEY6PEBLSGFKPFuwPt37WGbS5rXsmWeq0qyn4tMFQGrF26BZbotIyTHJbXr38YrFh0TqOSUJCWUr3TtQWmrBtRUJMXTZbp3TJa4E32mEFBXFU8WHbXmPfLpGMwmtfE3Enj3d6p3A7ZbprrLXcYYXVJYXVFvmEv4QcYdsZc9Xxl&amp;mediaDataID=6347136&amp;mediaName=frame.html" style="visibility:hidden;position: absolute;top: -15000px;left: -15000px;" marginheight="0" marginwidth="0" scrolling="no" width="0" frameborder="0" height="0"></iframe></div>
+
+                        </div>
+                        </aside>
+
+                        <aside class="widget">
+			<header>Latest Featured Articles</header><div class="popular-list">
+                                <a href="https://www.phoronix.com/vr.php?view=26247">Ubuntu 12.04 To Ubuntu 18.04 Benchmarks On An Intel Laptop</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/vr.php?view=26243">Core i7 8700K vs. Ryzen 7 2700X With Rise of The Tomb Raider On Linux</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/vr.php?view=26237">Checking Out Ubuntu 18.04's Hardware/Software Software Survey</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/vr.php?view=26235">AMD Ryzen 7 2700X Linux Performance Boosted By Updated BIOS/AGESA</a>
+                            </div>
+<div class="popular-list">
+                                <a href="https://www.phoronix.com/vr.php?view=26233">DragonFlyBSD 5.2, TrueOS 18.03, FreeBSD 11.1, Ubuntu 16.04/18.04 &amp; Clear Linux Tests</a>
+                            </div>
+                        </aside>
+			<aside>
+						<div style="text-align: center;">
+                           				<script async="async" src="gpt.js"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<div id="div-pg-ad-1506416552-2">
+  <script type="text/javascript">
+        googletag.cmd.push(function() { 
+googletag.pubads().display('/8095840/.2_6875.7_phoronix.com_tier1', 
+[300, 600], 'div-pg-ad-1506416552-2'); });
+  </script><div id="google_ads_iframe_/8095840/.2_6875.7_phoronix.com_tier1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8095840/.2_6875.7_phoronix.com_tier1_0" title="3rd party ad content" name="google_ads_iframe_/8095840/.2_6875.7_phoronix.com_tier1_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" width="300" frameborder="0" height="600"></iframe></div>
+</div>
+
+                       				 </div>
+                        </aside>
+                        <aside class="widget">
+                            <header>Support Phoronix</header>
+                            <p>The mission at Phoronix since 2004 has 
+centered around enriching the Linux hardware experience. In addition to 
+supporting our site through advertisements, you can help by <a href="https://www.phoronix.com/scan.php?page=phoronix_premium">subscribing to Phoronix Premium</a>. You can also use our <a href="http://www.tkqlhce.com/click-3677526-10515887-1435708588000">NewEgg.com</a> shopping links when making online purchases or contribute to Phoronix through a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=3778540">PayPal tip</a>.</p>
+                        </aside>
+					</div>
+				</div>
+			</div>
+		</div><div id="teaser_db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="overflow: hidden; position: absolute; width: 300px; height: 600px; outline: 1px solid rgb(0, 0, 0); top: 606px; left: 662px; opacity: 1;"><div id="tfac_3006001151672019" style="position:relative;z-index:1005000"><script type="text/javascript" src="tf_adChoice11.js"></script></div><div id="gridDiv_db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="position: absolute; z-index: 10; width: 1640px; height: 600px; clip: rect(0px, 970px, 600px, 670px); left: -670px; top: 0px;"><div id="wrapperDiv_db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="position: absolute; z-index: 10; width: 300px; height: 600px; top: 0px; left: 670px;"><div id="expo_point1db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="position: absolute; width: 10px; height: 10px; opacity: 0; z-index: 100;"></div><div id="expo_point2db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="position: absolute; width: 10px; height: 10px; opacity: 0; z-index: 100;"></div><div id="expo_point3db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="position: absolute; width: 10px; height: 10px; opacity: 0; z-index: 100;"></div></div><iframe marginheight="0" marginwidth="0" scrolling="no" hspace="0" vspace="0" id="appsnack_teaser_iframe_db3814bc-1fcc-8fb6-fe33-b55c4f210996" src="https://cdnx.tribalfusion.com/media/7851826/creative.html?namejs=https://cdnx.tribalfusion.com/media/common/richmedia/html5/7.1.1-0/js/creative.js&amp;namecss=https://cdnx.tribalfusion.com/media/common/richmedia/html5/7.1.1-0/css/creative.css&amp;rnd=db3814bc-1fcc-8fb6-fe33-b55c4f210996" allowfullscreen="true" style="background-color: transparent; width: 970px; height: 600px; left: 12.5px; top: 0px; position: absolute;" width="100%" frameborder="0" height="100%"></iframe></div></div><div id="backGroundFadedDiv_db3814bc-1fcc-8fb6-fe33-b55c4f210996" style="display: none; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; transition: opacity 1s linear; opacity: 0.5; z-index: 2147483625; background-color: rgb(0, 0, 0);"></div>
+		<div id="footer">
+		    <div id="footer-content">
+			<p align="center"></p>
+		        <div id="footer-left">
+		        <div id="footer-left-content">
+		            <div class="extra-info">
+		                <header>Phoronix Media</header>
+		                <hr>
+		                <ul>
+		                    <li><a href="http://www.phoronix-test-suite.com/">Phoronix Test Suite</a></li>
+		                    <li><a href="http://openbenchmarking.org/">OpenBenchmarking.org</a></li>
+		                    <li><a href="http://www.phoromatic.com/">Phoromatic</a></li>
+		                    <li><a href="http://www.linuxbenchmarking.com/">LinuxBenchmarking.com</a></li>
+		                </ul>
+		            </div>
+		            <div class="extra-info">
+		                <header>Phoronix Premium</header>
+		                <hr>
+		                <a href="https://www.phoronix.com/scan.php?page=phoronix_premium"><ul>
+                            <li>Support Phoronix</li>
+		                    <li>While Having Ad-Free Browsing,</li>
+                            <li>Single-Page Article Viewing</li>
+                        </ul></a>
+		            </div>
+		            <div class="extra-info">
+		                <header>Share</header>
+		                <hr>
+		                <ul>
+		                    <li><a href="https://facebook.com/Phoronix">Facebook</a></li>
+		                    <li><a href="https://twitter.com/Phoronix">Twitter</a></li>
+		                    <li><a href="https://www.google.com/+phoronix">Google Plus</a></li>
+		                </ul>
+		            </div>
+		       </div>
+		       </div>
+		       <div id="footer-right">
+		            <div class="extra-info">
+		                <ul>
+		                <li><p><a href="https://www.phoronix.com/scan.php?page=legal">Legal Disclaimer</a> | <a href="http://www.phoronix-media.com/?k=contact">Contact</a> | <a href="https://www.phoronix.com/scan.php?page=cookies">Cookie Policy</a></p></li>
+                        <li><p>Copyright © 2004 - 2018 by <a href="http://www.phoronix-media.com/">Phoronix Media</a>.</p></li>
+                        <li><p>All trademarks used are properties of their respective owners. All rights reserved.</p></li>
+				</ul>
+		            </div>
+		        </div>
+		     </div>		   
+		</div>
+				<script type="text/javascript">
+		    function lmm () {
+		        if (litemenu.style.zIndex > 0)
+		            litemenu.style.zIndex = -1;
+		        else
+		            litemenu.style.zIndex = 1;
+		    }
+		    	    
+            menubutton.addEventListener('click', function() { lmm(); }, false);
+            closelid.addEventListener('click', function() { litemenu.style.zIndex = -1;}, false);
+		</script>
+					
+
+<div id="sb-container"><div id="sb-overlay"></div><div id="sb-wrapper"><div id="sb-title"><div id="sb-title-inner"></div></div><div id="sb-wrapper-inner"><div id="sb-body"><div id="sb-body-inner"></div><div id="sb-loading"><div id="sb-loading-inner"><span>loading</span></div></div></div></div><div id="sb-info"><div id="sb-info-inner"><div id="sb-counter"></div><div id="sb-nav"><a id="sb-nav-close" title="Close" onclick="Shadowbox.close()"></a><a id="sb-nav-next" title="Next" onclick="Shadowbox.next()"></a><a id="sb-nav-play" title="Play" onclick="Shadowbox.play()"></a><a id="sb-nav-pause" title="Pause" onclick="Shadowbox.pause()"></a><a id="sb-nav-previous" title="Previous" onclick="Shadowbox.previous()"></a></div></div></div></div></div><iframe scrolling="no" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.8e64fb971a1b22efbf633db166113ae6.html?origin=https%3A%2F%2Fwww.phoronix.com&amp;settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><iframe name="oauth2relay1870073547" id="oauth2relay1870073547" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fwww.phoronix.com&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.pSDax_UbHJ4.O%2Fm%3D__features__%2Fam%3DAQE%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCOzcr2O0Op7DxtPy3WOW7hdoZJ6KQ#rpctoken=1691584175&amp;forcesecure=1" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div id="rtcc-nm-installed"></div><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" frameborder="0"></iframe><iframe scrolling="no" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.8e64fb971a1b22efbf633db166113ae6.html?origin=https%3A%2F%2Fwww.phoronix.com&amp;settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><div id="sb-container"><div id="sb-overlay"></div><div id="sb-wrapper"><div id="sb-title"><div id="sb-title-inner"></div></div><div id="sb-wrapper-inner"><div id="sb-body"><div id="sb-body-inner"></div><div id="sb-loading"><div id="sb-loading-inner"><span>loading</span></div></div></div></div><div id="sb-info"><div id="sb-info-inner"><div id="sb-counter"></div><div id="sb-nav"><a id="sb-nav-close" title="Close" onclick="Shadowbox.close()"></a><a id="sb-nav-next" title="Next" onclick="Shadowbox.next()"></a><a id="sb-nav-play" title="Play" onclick="Shadowbox.play()"></a><a id="sb-nav-pause" title="Pause" onclick="Shadowbox.pause()"></a><a id="sb-nav-previous" title="Previous" onclick="Shadowbox.previous()"></a></div></div></div></div></div><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" frameborder="0"></iframe><style type="text/css">.csptesti1525216217620789289 { visibility: hidden; }</style><div style="display: none;" class="csptesti1525216217620789289"></div></body></html>

@@ -1,0 +1,61 @@
+/* track outbound links - from this page: https://www.axllent.org/docs/view/track-outbound-links-with-analytics-js/ */
+Menu
+Skip to content
+
+    Home
+    Products
+    About
+
+Pixy (CMUcam5)
+
+
+“This is the single most important robotics product since the Arduino.” — Ted Macy, Robot Magazine
+Pixy lets your robot track colored objects. It’s fast, easy to use, and works with your favorite microcontroller. Make something fun 🙂
+
+ 
+ 
+Robot vision made easy
+
+Pixy is a fast vision sensor for DIY robotics and similar applications. You can teach Pixy an object  just by pressing a button. Use Pixy for lots of different applications!   It’s capable of tracking hundreds of objects simultaneously and only provides the data you are interested in.
+
+48912-arduinouno_r3_front
+Connect directly to Arduino
+
+No need to futz around with tiny wires – Pixy comes with a cable to plug in to Arduino,  so you can quickly get started. No Arduino? No problem! Pixy has a multitude of ways to talk to other devices .
+
+getBlocks();
+Simplify your programming
+
+To get you up and running as fast as possible, we offer free software libraries for Arduino, Raspberry Pi and BeagleBone Black . Pixy also makes your life easier by only sending  the data you’re looking for . For example, if you teach Pixy a purple object, you will only receive data (X-Y coordinates, size, and unique ID) about purple objects.
+
+Open Source Hardware logo
+Want to dig deeper? Pixy is entirely open-source ( hardware , firmware and software ). We offer a helpful wiki , and you can always ask a question on our forums .
+
+find a distributor
+
+Pixy is a collaboration between Charmed Labs and Carnegie Mellon University.
+Need help?
+Check the wiki for great info and FAQs, or ask a question in our forums !
+
+
+Stay in touch!
+Follow me
+Recent
+
+    Pixy now available on Sparkfun!
+    4 awesome videos from Pixy robot builders
+    Up and coming vlogger reviews Pixy
+    Pixy now available at Jameco!
+    Circuit Cellar Interview
+
+Email
+First Name
+Last Name
+Email
+7 plus 9 = ?
+
+
+Loading
+Loading - Please wait
+© 2018 Charmed Labs
+Leaf Theme powered by WordPress

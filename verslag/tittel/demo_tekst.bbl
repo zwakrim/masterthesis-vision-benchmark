@@ -1,0 +1,187 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{Benchmar1:online}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0bdc525fd72eead36451ae8d4abdecb6}{%
+           family={NickPowers},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bdc525fd72eead36451ae8d4abdecb6}
+      \strng{fullhash}{0bdc525fd72eead36451ae8d4abdecb6}
+      \strng{authornamehash}{0bdc525fd72eead36451ae8d4abdecb6}
+      \strng{authorfullhash}{0bdc525fd72eead36451ae8d4abdecb6}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.arrow.com/en/research-and-events/articles/benchmarking-popular-single-board-computers}}
+      \field{month}{2}
+      \field{note}{(Accessedon05/09/2018)}
+      \field{title}{BenchmarkingPopularSingleBoardComputers|Arrow.com}
+      \field{year}{2017}
+    \endentry
+    \entry{Phoronix88:online}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c6ecd1d20de38f5e2b28d543080af308}{%
+           family={MichaelLarabelandMatthewTippett},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6ecd1d20de38f5e2b28d543080af308}
+      \strng{fullhash}{c6ecd1d20de38f5e2b28d543080af308}
+      \strng{authornamehash}{c6ecd1d20de38f5e2b28d543080af308}
+      \strng{authorfullhash}{c6ecd1d20de38f5e2b28d543080af308}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.phoronix-test-suite.com/documentation/phoronix-test-suite.pdf}}
+      \field{note}{(Accessedon05/14/2018)}
+      \field{title}{PhoronixTestSuitev7.8.0}
+      \field{year}{}
+    \endentry
+    \entry{Benchmar96:online}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5120e76d953c77feac91d61dd17426bf}{%
+           family={MichaelLarabel},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5120e76d953c77feac91d61dd17426bf}
+      \strng{fullhash}{5120e76d953c77feac91d61dd17426bf}
+      \strng{authornamehash}{5120e76d953c77feac91d61dd17426bf}
+      \strng{authorfullhash}{5120e76d953c77feac91d61dd17426bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.phoronix.com/scan.php?page=article&item=march-2017-arm&num=5}}
+      \field{month}{3}
+      \field{note}{(Accessedon05/14/2018)}
+      \field{title}{BenchmarksOfManyARMBoardsFromTheRaspberryPiToNVIDIAJetsonTX2-Phoronix}
+      \field{year}{2017}
+    \endentry
+    \entry{OpenBenc27:onlineCRAY}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://openbenchmarking.org/test/pts/c-ray-1.1.0}}
+      \field{note}{(Accessed on 06/04/2018)}
+      \field{title}{OpenBenchmarking.org - C-Ray Test Profile}
+      \field{year}{}
+    \endentry
+    \entry{pixy}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{title}{Overview-{CMUcam}5{Pixy}-{CMUcam}:{Open}{Source}{Programmable}{Embedded}{Color}{Vision}{Sensors}}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Overview-CMUcam5Pixy-CMUcam\:OpenSourceProgrammableEmbeddedColorVisionSensors:files/47/cmucam5.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://cmucam.org/projects/cmucam5
+      \endverb
+    \endentry
+    \entry{Raspberr76:online}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.raspberrypi.org/help/faqs/}}
+      \field{note}{(Accessedon05/02/2018)}
+      \field{title}{RaspberryPiFAQs-FrequentlyAskedQuestions}
+      \field{year}{}
+    \endentry
+    \entry{DUALQUAD20:online}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://shop.udoo.org/eu/quad-dual.html?___from_store=other&popup=no}}
+      \field{note}{(Accessedon05/02/2018)}
+      \field{title}{DUALQUAD-Shop–Udoo}
+      \field{year}{}
+    \endentry
+    \entry{ODROIDHa46:online}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.hardkernel.com/main/products/prdt_info.php}}
+      \field{note}{(Accessedon05/02/2018)}
+      \field{title}{ODROID|Hardkernel}
+      \field{year}{}
+    \endentry
+    \entry{DRAGONBO86:online}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.arrow.com/en/products/dragonboard410c/arrow-development-tools}}
+      \field{note}{(Accessedon05/02/2018)}
+      \field{title}{DRAGONBOARD410CbyArrowDevelopmentTools|EmbeddedSystemDevelopmentBoardsandKits|Arrow.com}
+      \field{year}{}
+    \endentry
+    \entry{JetsonFA42:online}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://developer.nvidia.com/embedded/faq}}
+      \field{note}{(Accessedon05/04/2018)}
+      \field{title}{JetsonFAQ|NVIDIADeveloper}
+      \field{year}{}
+    \endentry
+    \entry{SamsungE46:online}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.notebookcheck.net/Samsung-Exynos-5420-Octa-SoC.103633.0.html}}
+      \field{note}{(Accessedon05/04/2018)}
+      \field{title}{SamsungExynos5420OctaSoC-NotebookCheck.netTech}
+      \field{year}{}
+    \endentry
+    \entry{VideoCor59:online}{misc}{}
+      \list{location}{1}{%
+        {5300CaliforniaAvenue•Irvine,CA92617}%
+      }
+      \list{organization}{1}{%
+        {BROADCOM}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.broadcom.com/docs/12358545}}
+      \field{note}{(Accessedon05/04/2018)}
+      \field{title}{VideoCore®IV3DArchitectureReferenceGuide}
+      \field{year}{}
+    \endentry
+    \entry{iMX6Solo72:online}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.nxp.com/docs/en/data-sheet/IMX6SDLIEC.pdf}}
+      \field{note}{(Accessedon05/04/2018)}
+      \field{title}{i.MX6Solo/6DualLiteApplicationsProcessorsforIndustrialProductsDataSheet}
+      \field{year}{}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

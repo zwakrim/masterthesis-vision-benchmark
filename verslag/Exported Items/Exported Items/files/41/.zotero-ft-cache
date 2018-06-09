@@ -1,0 +1,103 @@
+
+Phoronix
+
+    Articles & Reviews
+    News Archive
+    Forums
+    Premium
+    Categories
+    Computers
+    Display Drivers
+    GPUs / Graphics Cards
+    Linux Gaming
+    Memory
+    Motherboards
+    CPUs / Processors
+    Software
+    Storage
+    Operating Systems
+    Peripherals
+    Close
+
+    Articles & Reviews
+    News Archive
+    Forums
+    Premium
+    Categories
+    Computers GPUs / Graphics Cards Linux Gaming Memory Motherboards CPUs / Processors Software Storage Operating Systems Peripherals
+
+Benchmarks Of Many ARM Boards From The Raspberry Pi To NVIDIA Jetson TX2
+Written by Michael Larabel in Computers on 19 March 2017. Page 2 of 5 . 37 Comments
+
+To little surprise, the Jetson boards were many times faster than these other -- generally very inexpensive -- ARM SBCs. This isn't even showing the full potential of Tegra/Jetson either with the tests in this article being CPU-only focused and not taking advantage of any graphics/compute capabilities considering these other cheap ARM boards aren't designed for such workloads.
+
+With John The Ripper, the other ARM boards were still behind Jetson but not by as big of margins as in the FFTW workload.
+
+It's interesting to look at the ARM performance spectrum. Adding in x86 comparison points will also be fun.
+
+The Orange Pi One is the slowest ARM board in this comparison, but it's also the cheapest at around $10 USD.
+
+Page: 1 2 3 4 5 Next Page
+37 Comments
+
+
+Related Articles
+Raspberry Pi 3 Model B+ Benchmarks
+CompuLab Fitlet 2 Is A Mighty Fine, Low-Power PC Preloaded With Linux Mint
+The Fastest Linux Distribution For Ryzen: A 10-Way Linux OS Comparison On Ryzen 7 & Threadripper
+Wine Takes Minor Performance Hit Running Windows Programs On Linux With KPTI
+Is PowerTop / TLP Still Useful To Save Power On Linux Laptops?
+Trending Linux News
+The Linux Kernel Might Drop Memory Protection Extensions Support
+OpenIndiana Hipster 2018.04, Drops GNOME 2 For MATE + Adds KPTI For Meltdown
+WebP 1.0 Image Format Released
+Red Hat Developers Continue Working On OpenCL/Compute For Nouveau
+AMD AOCC 1.2 Compiler Released For Zen Systems, Brings FLANG & Retpolines
+Latest Linux News
+Emms 5.0 Released As A Big Update To The Emacs Multimedia System
+Total War Saga: Thrones of Britannia Coming To Linux In A Month Or Two
+DXUP: Taking Direct3D 10 To 11 For Running On Vulkan
+Mir Working On X11 Support Via XWayland
+Fedora 28 Is Now Available For Download
+Void Linux Infrastructure In Limbo With Project Leader M.I.A.
+Fedora Workstation 28 Is A Brilliant Release
+GIMP Now Moving Full Steam Ahead With Their GTK3 Port
+Linux 4.17, Ryzen, Valve & Apple Looking For Kernel Devs Topped April
+Debian Making Progress On UEFI SecureBoot Support In 2018
+Latest Featured Articles
+Ubuntu 12.04 To Ubuntu 18.04 Benchmarks On An Intel Laptop
+Core i7 8700K vs. Ryzen 7 2700X With Rise of The Tomb Raider On Linux
+Checking Out Ubuntu 18.04's Hardware/Software Software Survey
+AMD Ryzen 7 2700X Linux Performance Boosted By Updated BIOS/AGESA
+DragonFlyBSD 5.2, TrueOS 18.03, FreeBSD 11.1, Ubuntu 16.04/18.04 & Clear Linux Tests
+Support Phoronix
+
+The mission at Phoronix since 2004 has centered around enriching the Linux hardware experience. In addition to supporting our site through advertisements, you can help by subscribing to Phoronix Premium . You can also use our NewEgg.com shopping links when making online purchases or contribute to Phoronix through a PayPal tip .
+
+Phoronix Media
+
+    Phoronix Test Suite
+    OpenBenchmarking.org
+    Phoromatic
+    LinuxBenchmarking.com
+
+Phoronix Premium
+
+    Support Phoronix
+    While Having Ad-Free Browsing,
+    Single-Page Article Viewing
+
+Share
+
+    Facebook
+    Twitter
+    Google Plus
+
+    Legal Disclaimer | Contact | Cookie Policy
+
+    Copyright © 2004 - 2018 by Phoronix Media .
+
+    All trademarks used are properties of their respective owners. All rights reserved.
+
+loading
+loading

@@ -1,0 +1,55 @@
+\documentclass{article}
+
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\usepackage[active,pdftex,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\begin{tikzpicture}
+\tikzstyle{object}=[rectangle,draw=black,fill=white,minimum width=12mm,minimum height=18mm,align=center]
+\tikzstyle{operation}=[circle,draw=black,fill=white,minimum size=12mm,align=center]
+\tikzstyle{arrow} = [->,black,thick]
+
+  
+\node [object] (A) at (0,0) {*.c \\ code};
+\node [object] (B) at (-0.2,-0.2) {*.c \\ code};
+\node [object] (C) at (-0.4,-0.4) {*.c \\ code};
+
+\node [object] (D) at (0,-3) {*.h \\ header};
+\node [object] (E) at (-0.2,-3.2) {*.h \\ header};
+\node [object] (F) at (-0.4,-3.4) {*.h \\ header};
+
+
+\node [object] (G) at (5,-1.5) {*.o/*.obj \\ object \\ bestanden};
+\node [object] (H) at (4.8,-1.7) {*.o/*.obj \\ object \\ bestanden};
+\node [object] (I) at (4.6,-1.9) {*.o/*.obj \\ object \\ bestanden};
+
+\node [operation] (J) at (2.1,-1.9) {gcc -c}; 
+
+\draw (C) edge[arrow,out=0,in=90] (J);
+\draw (F) edge[arrow,out=0,in=270] (J);
+\draw (J) edge[arrow,out=0,in=180] (I);
+
+\node [object] (K) at (8.5,-4.5) {bibliotheken};
+\node [object] (L) at (8.3,-4.7) {bibliotheken};
+\node [object] (M) at (8.1,-4.9) {bibliotheken};
+
+\node [operation] (N) at (8.1,-1.9) {gcc -o};
+
+\draw (I) edge[arrow,out=0,in=180] (N);
+\draw (M) edge[arrow,out=90,in=270] (N);
+
+\node [object] (O) at (11.6,-1.9) {programma};
+
+\draw (N) edge[arrow,out=0,in=180] (O);
+
+\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (0,1.2) -- (5,1.2)node [black,midway,yshift=12pt] {Compileren};
+\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (5.2,1.2) -- (11.2,1.2)node [black,midway,yshift=12pt] {Linken};
+\end{tikzpicture}
+\end{document}

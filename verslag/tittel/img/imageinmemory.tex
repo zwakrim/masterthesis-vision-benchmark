@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\usepackage[active,pdftex,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\begin{tikzpicture}
+\tikzstyle{cel}=[rectangle,fill=white,minimum width=5mm,minimum height=5mm,align=center,thick]
+\tikzstyle{operation}=[circle,draw=black,fill=white,minimum size=12mm,align=center]
+\tikzstyle{arrow} = [->,black,thick]
+
+\foreach \y in {-1,...,-1}
+{
+	\foreach \x in {1,...,1}
+	{		
+		\node [draw=none][cel] at (2.35+3*\x*0.53+0.53,\y/2) {...};		
+	}
+}
+
+\foreach \y in {0,...,2}
+{
+	\foreach \x in {0,...,2}
+	{
+		\node [draw=red][cel] at (2.35+3*\x*0.53,\y/2) {R};
+		\node [draw=green][cel] at (2.35+3*\x*0.53+0.53,\y/2) {G};
+		\node [draw=blue][cel] at (2.35+3*\x*0.53+1.06,\y/2) {B};
+	}
+	\node [draw=none][cel] at (1.5,1-\y/2){Rij \y};
+}
+
+
+
+\draw[line width=0.5mm,-implies,double, double distance=2mm] (4.5,-1) -- (4.5,-2);
+
+
+\foreach \y in {0,...,1}
+{
+	
+	\foreach \x in {0,...,2}
+	{
+		\node [draw=red][cel] at (3*\x*0.53 + 9*\y*0.53,-3) {R};
+		\node [draw=green][cel] at (3*\x*0.53+0.53+9*\y*0.53,-3) {G};
+		\node [draw=blue][cel] at (3*\x*0.53+1.06+9*\y*0.53,-3) {B};
+	}
+	
+}
+
+
+\foreach \y in {2,...,2}
+{
+	\foreach \x in {0,...,0}
+	{
+		\node [draw=none][cel] at (3*\x*0.53 + 9*\y*0.53,-3) {...};		
+	}
+}
+
+\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (-0.1,-2.5) -- (4.62,-2.5)node [black,midway,yshift=12pt] {Rij 0};
+\draw [decorate,decoration={brace,amplitude=5pt},xshift=-4pt,yshift=0pt] (4.67,-2.5) -- (9.39,-2.5)node [black,midway,yshift=12pt] {Rij 1};
+
+\end{tikzpicture}
+\end{document}

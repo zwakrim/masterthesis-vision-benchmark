@@ -1,0 +1,35 @@
+\documentclass{article}
+
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\usepackage[active,pdftex,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\begin{tikzpicture}[box/.style={draw,minimum width=3cm,text width=20mm,align=center,minimum height=8mm,minimum width=25mm}]
+\tikzstyle{box_correlator}=[box,draw=black,fill=white,minimum width=60mm]
+\tikzstyle{box_module}=[draw,draw=black,fill=white,minimum width=75mm,minimum height=60mm]
+\tikzstyle{box_results}=[draw,draw=black,fill=white,minimum width=25mm,minimum height=20mm, align=center]
+\tikzstyle{arrow} = [->, >=triangle 60,black]
+\tikzstyle{twosidedarrow} = [<->, >=triangle 60,black]
+\tikzstyle{label} = [draw,minimum width=2mm,align=center,draw=none,minimum height=10mm,text width=2cm,align=center]
+
+%% draw the buffer
+\draw (0,0) -- (0,3.5);
+\draw (2,0) -- (2,3.5);
+\foreach \x in {0,...,7}    
+ 	\draw (0,\x/2) -- (2,\x/2);   
+%% draw the arrow for in and out
+\draw[arrow](0.5,5)--(0.5,3.5);
+\draw[arrow](1.5,3.5)--(1.5,5);
+
+\node[label](a) at(0,4.25){Push};
+\node[label](b) at(2,4.25){Pop};
+
+\end{tikzpicture}
+\end{document}
