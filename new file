@@ -1,2 +1,7 @@
 g++ -std=c++11 -I ./include -L . matrix_vector.cpp -lOpenCL ^C
+https://github.com/bobtiki/kilaueacove/wiki/Installing-OpenCV-3.1.0
 
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_JPEG=ON -DBUILD_JPEG=OFF -DJPEG_INCLUDE_DIR=/opt/libjpeg-turbo/include -D BUILD_OPENCV_DNN=OFF -D BUILD_EXAMPLES=OFF INSTALL_PYTHON_EXAMPLES=OFF -D WITH_GSTREAMER=OFF ..
+
+make -j4
+sudo make install

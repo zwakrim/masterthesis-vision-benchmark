@@ -129,9 +129,8 @@ if __name__ == '__main__':
 
                 cpu_info_time (5, array_cpu_perc=cpu_perc,
                                array_temperature=cpu_temp)  # begin to see what cpu does before openening process
-
                 # starting process
-                p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=False,
+                p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True,
                                       stderr=subprocess.PIPE)  # opensubprocess
 
                 print("starting python " + algo_name + " " + res)
