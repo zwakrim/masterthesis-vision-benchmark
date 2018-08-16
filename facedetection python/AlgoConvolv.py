@@ -2,6 +2,8 @@ import cv2
 import sys
 import time
 import numpy as np
+import jsonlines
+import datetime
 
 def convolvimg(width , heigh, fpsArray):
     video_capture = cv2.VideoCapture(camera)
@@ -48,13 +50,9 @@ def convolvimg(width , heigh, fpsArray):
         cv2.putText(frame, "FPS: {}" .format(fps), (15,80) ,font,1,color)
         cv2.putText(filter, "FPS: {}" .format(fps), (15,80) ,font,1,color)
 
-        cv2.imshow('originel',frame)
-        #cv2.imshow('hsv',hsv)
-        #cv2.imshow('mask',mask)
-        #cv2.imshow('result', result)
-        #cv2.imshow('smoothed',# median)
-        #cv2.imshow('blur', blur
-        cv2.imshow('filter',filter)
+        cv2.imshow('original',frame)
+
+        cv2.imshow('filtered',filter)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -72,8 +70,20 @@ fpsArrayshared2 = []
 
 if __name__ == '__main__':
 
-#print("start")
-#facedetect(220,176,fpsArrayshared2)
     convolvimg(width,height,fpsArrayshared2)
-    print("fps,"+",".join(str(x) for x in fpsArrayshared2)+ ",")
+    #print("fps,"+",".join(str(x) for x in fpsArrayshared2)+ ",")
+    timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
+
+    filename =  'result/'+ "AlgoConvolution_python_"+str(width) + str(timesnow)+ '.json'
+    with jsonlines.open(filename,mode='w') as outputfile:
+        counter =1
+        for item in fpsArrayshared2:
+            result ={}
+            result["algoritme"]= "Convolution_python"
+            result["fps"] = item
+            result["Type"] = "Python"
+            result["Second"] = counter
+            result["resolution"] = width
+            counter = counter +1
+            outputfile.write(result)
 

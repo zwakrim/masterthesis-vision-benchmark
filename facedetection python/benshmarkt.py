@@ -7,6 +7,8 @@ import psutil
 import sys
 import datetime
 import serial
+from zipfile import *
+import os as OS
 
 
 def readCurrent(): #read value from multimeter
@@ -28,17 +30,19 @@ def readCurrent(): #read value from multimeter
             val= val /10
         ser.close()
     except:
-        print "no serial connection with multimeter"
+        #print "no serial connection with multimeter"
         val = 99999
 
     return val
 
 
 def cpu_info_time(time_max=1, array_cpu_perc=[], array_temperature=[], algorithme="before", counter=0, resolution=0):
+    """
     if time_max == 1:
         do_or_not = True
     else:
         do_or_not = False
+    """
 
     ##start timer
     start = time.time ()
@@ -48,25 +52,29 @@ def cpu_info_time(time_max=1, array_cpu_perc=[], array_temperature=[], algorithm
         perf = {}
         perf["counter"] = counter
         counter += 1
-        perf["percent cpu"] = perc
+        perf["percent_cpu"] = perc
         perf["node"] = node
         perf["algoritme"] = algorithme
         perf["resulotion"] = resolution
         if algorithme is not "before" and algorithme is not "after":
             perf["algoritme"] = algorithme
+        #print(perf)
 
 
         array_cpu_perc.append (perc)
 
         perf["Current"] = readCurrent()
-        #print perf["Current"]
+
 
         if platform.system () == "Linux":
             perf["Temp"] = psutil.sensors_temperatures ()
             array_temperature.append (psutil.sensors_temperatures ())
-        if do_or_not:
-            break
+        perf["time"] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         outputfile.write(perf)
+        #if do_or_not:
+         #   break
+
+
 
 
 info = {}
@@ -92,7 +100,8 @@ if __name__ == '__main__':
 
     # time = dt.now() #to get time info
     timesnow = datetime.datetime.now ().strftime ('%Y_%m_%d_%H_%M_%S')
-    filename = 'result/' + node + '_' + os + '_' + str (timesnow) + '.json'
+    filename = 'result/benchmarkt_' + node + '_' + os + '_' + str (timesnow) + '.json'
+
 
     # print info
     with jsonlines.open (filename, mode='w') as outputfile:
@@ -149,9 +158,22 @@ if __name__ == '__main__':
                 cpu_info_time (5, array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
                                algorithme="after")  # whats cpu does after subprocess
 
+    lsfile = OS.listdir("./result")
+    zip_archive = ZipFile("./result/benchmarket_" +str(machine)+"_" + str(node)+ "_"+ str (timesnow) + ".zip","w")
+    print("zipping files")
+    for f in lsfile:
+        file = './result/' + f
+        ext = OS.path.splitext(file)[-1].lower()
+        if ext == ".json":
+            zip_archive.write(file)
+            OS.remove(file)
+
+    zip_archive.close()
+    print("benchmarkt done")
+
     
 #########################################################################################################################################
-
+"""
         if os == "Windows":
             print("starting windows c++ algoritmes")
             windows_algorithm = open("windows_algorithm.txt", "r")
@@ -213,6 +235,7 @@ if __name__ == '__main__':
 
             #########################################################################################################################################
 """
+"""
     elif os == "Linux":
         print("starting Linux c++ algoritmes")
         d_algo_type={}
@@ -272,4 +295,12 @@ if __name__ == '__main__':
                 # print(jsonperf)
                 time.sleep (3)
     """
-    #print("benchmarkt done")
+
+
+    # calling function to get all file paths in the directory
+
+
+
+
+
+
