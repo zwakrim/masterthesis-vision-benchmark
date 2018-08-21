@@ -27,7 +27,8 @@ static void help()
 
 void detectAndDraw( Mat& img,  CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
-                    double scale, bool tryflip, int fps );
+                    double scale, bool tryflip, int fps
+                    );
 
 string cascadeName;
 string nestedCascadeName;

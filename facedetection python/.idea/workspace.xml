@@ -2,43 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4488d454-c0de-4417-b94f-26b1694fcb5a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pixeltransformation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/benchmarket_AMD64_LAPTOP-TPLGCH9G_2018_08_13_01_49_37.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/result/AlgoConvolution_python_144_2018_08_13_01_50_17.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/result/AlgoMatrixMul__2018_08_13_01_50_00.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/result/Algofacedetection_python_144_2018_08_13_01_49_49.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/result/Algopixeltransform_python144_2018_08_13_01_50_34.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/result/benchmarkt_LAPTOP-TPLGCH9G_Windows_2018_08_13_01_49_37.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testZip.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018_05_08_07_51_06_result_LAPTOP-TPLGCH9G_Windows.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018_05_08_07_51_17_result_LAPTOP-TPLGCH9G_Windows.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018_05_08_07_51_20_result_LAPTOP-TPLGCH9G_Windows.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018_05_08_07_52_07_result_LAPTOP-TPLGCH9G_Windows.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018_05_08_07_52_15_result_LAPTOP-TPLGCH9G_Windows.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018_05_08_09_59_57_result_LAPTOP-TPLGCH9G_Windows.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlgoConvolv.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlgoConvolv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlgoFacedect.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlgoFacedect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benshmarkt.py" beforeDir="false" afterPath="$PROJECT_DIR$/benshmarkt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/facedetect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/facedetect.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_algorithm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python_algorithm.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Algofacedetection_python_220_2018_05_20_18_51_18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Algofacedetection_python_320_2018_05_20_18_37_37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Algofacedetection_python_320_2018_05_20_18_37_47.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/LAPTOP-TPLGCH9G_Windows_2018_05_19_15_16_49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/LAPTOP-TPLGCH9G_Windows_2018_05_19_15_18_07.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_19_13_21_32.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_19_13_22_35.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_19_13_23_16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_19_14_25_25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_20_18_40_46.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_20_18_41_05.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_20_18_41_48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_20_18_43_34.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/odroid_Linux_2018_05_20_18_51_07.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.bbl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.blg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../verslag/tittel/demo_tekst.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,8 +37,37 @@
       <file leaf-file-name="python_algorithm.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="323">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="windows_algorithm.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/windows_algorithm.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facedetect.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facedetect.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+                <element signature="e#0#7413#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,21 +75,20 @@
       <file leaf-file-name="benshmarkt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benshmarkt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
+            <state relative-caret-position="17">
               <caret line="69" column="57" selection-start-line="68" selection-start-column="41" selection-end-line="69" selection-end-column="57" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#184#870#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlgoConvolv.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlgoConvolv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+            <state relative-caret-position="204">
+              <caret line="48" column="29" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="29" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -97,13 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pixelbewerking.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pixelbewerking.py">
+      <file leaf-file-name="linux_algorithm.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/linux_algorithm.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -111,8 +108,20 @@
       <file leaf-file-name="pixeltransformation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pixeltransformation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+            <state relative-caret-position="308">
+              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlgoFacedect.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlgoFacedect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -144,16 +153,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/AlgoFacedect.py" />
         <option value="$PROJECT_DIR$/testZip.py" />
-        <option value="$PROJECT_DIR$/python_algorithm.txt" />
         <option value="$PROJECT_DIR$/pixeltransformation.py" />
         <option value="$PROJECT_DIR$/benshmarkt.py" />
         <option value="$PROJECT_DIR$/AlgoConvolv.py" />
+        <option value="$PROJECT_DIR$/python_algorithm.txt" />
       </list>
     </option>
   </component>
@@ -167,15 +179,16 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="width" value="781" />
-    <option name="height" value="870" />
+    <option name="x" value="-7" />
+    <option name="width" value="782" />
+    <option name="height" value="871" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -189,13 +202,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -275,12 +287,35 @@
       <workItem from="1531169045673" duration="41000" />
       <workItem from="1533310627312" duration="537000" />
       <workItem from="1533311221100" duration="13896000" />
-      <workItem from="1534010687646" duration="5635000" />
+      <workItem from="1534010687646" duration="6802000" />
+      <workItem from="1534495871772" duration="6370000" />
     </task>
+    <task id="LOCAL-00001" summary="commit 8/15">
+      <created>1534456594530</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534456594530</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit 8/15">
+      <created>1534456623552</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534456623552</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit 2 8/15">
+      <created>1534458092779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534458092779</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20162000" />
+    <option name="totallyTimeSpent" value="27699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -291,15 +326,15 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.32963374" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32741398" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24861266" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23240939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23560767" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -314,38 +349,38 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" visible="true" weight="0.43357664" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23240939" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="right" id="Data View" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32741398" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329927" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="10" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23240939" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +389,65 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit 8/15" />
+    <MESSAGE value="commit 2 8/15" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 2 8/15" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benshmarkt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="57" selection-start-line="68" selection-start-column="41" selection-end-line="69" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="32" lean-forward="true" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linux_algorithm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixelbewerking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pixeltransformation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -391,20 +484,10 @@
     <entry file="file://$PROJECT_DIR$/AlgoMatrixMul.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlgoFacedect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testZip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="19" lean-forward="true" selection-start-line="3" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -412,13 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="1751" selection-start-line="1751" selection-end-line="1751" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -431,10 +507,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pixeltransformation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="121" column="36" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
+        <state relative-caret-position="308">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlgoFacedect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -443,22 +539,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/benshmarkt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="17">
           <caret line="69" column="57" selection-start-line="68" selection-start-column="41" selection-end-line="69" selection-end-column="57" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#184#870#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
+    <entry file="file://$PROJECT_DIR$/facedetect.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        <state relative-caret-position="90">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
+            <element signature="e#0#7413#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windows_algorithm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linux_algorithm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>

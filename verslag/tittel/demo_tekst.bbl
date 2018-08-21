@@ -29,8 +29,8 @@
       \strng{fullhash}{0bdc525fd72eead36451ae8d4abdecb6}
       \strng{authornamehash}{0bdc525fd72eead36451ae8d4abdecb6}
       \strng{authorfullhash}{0bdc525fd72eead36451ae8d4abdecb6}
-      \field{sortinit}{7}
-      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.arrow.com/en/research-and-events/articles/benchmarking-popular-single-board-computers}}
@@ -49,8 +49,8 @@
       \strng{fullhash}{c6ecd1d20de38f5e2b28d543080af308}
       \strng{authornamehash}{c6ecd1d20de38f5e2b28d543080af308}
       \strng{authorfullhash}{c6ecd1d20de38f5e2b28d543080af308}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.phoronix-test-suite.com/documentation/phoronix-test-suite.pdf}}
@@ -68,8 +68,8 @@
       \strng{fullhash}{5120e76d953c77feac91d61dd17426bf}
       \strng{authornamehash}{5120e76d953c77feac91d61dd17426bf}
       \strng{authorfullhash}{5120e76d953c77feac91d61dd17426bf}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.phoronix.com/scan.php?page=article&item=march-2017-arm&num=5}}
@@ -79,8 +79,8 @@
       \field{year}{2017}
     \endentry
     \entry{OpenBenc27:onlineCRAY}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://openbenchmarking.org/test/pts/c-ray-1.1.0}}
       \field{note}{(Accessed on 06/04/2018)}
@@ -122,8 +122,8 @@
       \field{year}{}
     \endentry
     \entry{ODROIDHa46:online}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{http://www.hardkernel.com/main/products/prdt_info.php}}
       \field{note}{(Accessedon05/02/2018)}
@@ -131,8 +131,8 @@
       \field{year}{}
     \endentry
     \entry{DRAGONBO86:online}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.arrow.com/en/products/dragonboard410c/arrow-development-tools}}
       \field{note}{(Accessedon05/02/2018)}
@@ -140,8 +140,8 @@
       \field{year}{}
     \endentry
     \entry{JetsonFA42:online}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://developer.nvidia.com/embedded/faq}}
       \field{note}{(Accessedon05/04/2018)}
@@ -149,8 +149,8 @@
       \field{year}{}
     \endentry
     \entry{SamsungE46:online}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.notebookcheck.net/Samsung-Exynos-5420-Octa-SoC.103633.0.html}}
       \field{note}{(Accessedon05/04/2018)}
@@ -164,8 +164,8 @@
       \list{organization}{1}{%
         {BROADCOM}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://docs.broadcom.com/docs/12358545}}
       \field{note}{(Accessedon05/04/2018)}
