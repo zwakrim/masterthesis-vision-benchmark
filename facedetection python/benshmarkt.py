@@ -158,22 +158,11 @@ if __name__ == '__main__':
                 cpu_info_time (5, array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
                                algorithme="after")  # whats cpu does after subprocess
 
-    lsfile = OS.listdir("./result")
-    zip_archive = ZipFile("./result/benchmarket_" +str(machine)+"_" + str(node)+ "_"+ str (timesnow) + ".zip","w")
-    print("zipping files")
-    for f in lsfile:
-        file = './result/' + f
-        ext = OS.path.splitext(file)[-1].lower()
-        if ext == ".json":
-            zip_archive.write(file)
-            OS.remove(file)
 
-    zip_archive.close()
-    print("benchmarkt done")
 
     
 #########################################################################################################################################
-"""
+
         if os == "Windows":
             print("starting windows c++ algoritmes")
             windows_algorithm = open("windows_algorithm.txt", "r")
@@ -213,6 +202,7 @@ if __name__ == '__main__':
                     cpu_info_time (5, array_cpu_perc=cpu_perc,
                                    algorithme="after")
                     filenameOutput =  'result/'+ algo_name + "_Windows_" +str(spl[3])+"_" + str(timesnow)+ '.json'
+
                     with jsonlines.open(filenameOutput,mode='w') as outputfileRes:
                         for line in iter(p.stdout.readline,''):
                             out=line.strip()
@@ -229,72 +219,110 @@ if __name__ == '__main__':
                                     counter = counter +1
                                     outputfileRes.write(result)
 
-
-
-
-
             #########################################################################################################################################
-"""
-"""
-    elif os == "Linux":
-        print("starting Linux c++ algoritmes")
-        d_algo_type={}
-        linux_algorithm = open ("linux_algorithm.txt", "r")
-        algorithm_lines = linux_algorithm.readlines ()
-        for line in algorithm_lines:
-            d_data_linux={}
-            d_res_linux={}
+
+        elif os == "Linux":
+            print("starting Linux c++ algoritmes")
+            d_algo_type={}
+            linux_algorithm = open ("linux_algorithm.txt", "r")
+            algorithm_lines = linux_algorithm.readlines ()
+            for line in algorithm_lines:
+                d_data_linux={}
+                d_res_linux={}
 
 
-            if line[0][0] == "#":
-                algo=line.split('#')[1]
-                algo= algo.split(' ')
-                algo_name=algo[0]#get the name of the algoritme
-            elif line[0][0] != "#":
-                spl=line.split(' ')
-                if algo_name == "facedetection":
-                    res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
+                if line[0][0] == "#":
+                    algo=line.split('#')[1]
+                    algo= algo.split(' ')
+                    algo_name=algo[0]#get the name of the algoritme
+                elif line[0][0] != "#":
+                    spl=line.split(' ')
+                    if algo_name == "facedetection":
+                        res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
 
-                cpu_temp = []
-                cpu_perc = []
-                cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #begin to see what cpu does before openening process
-                p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True) #opensubprocess
-                while p.poll () is None:
-                    cpu_info_time (array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #whats cpu does during subprocess
-                cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #whats cpu does after subprocess
-                #out = p.stdout.readline() #print the communicaiton of the subprocess
+                    cpu_temp = []
+                    cpu_perc = []
+                    cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #begin to see what cpu does before openening process
+                    p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True) #opensubprocess
+
+                    counter = 0
+                    while p.poll () is None:
+                        if algo[0] == "camera":
+                            cpu_info_time (array_cpu_perc=cpu_perc,
+                                           algorithme=algo_name + "_windows", counter=counter,
+                                           resolution=int(res.split (",")[0]))  # whats cpu does during subprocess
+                        else:
+                            cpu_info_time (array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
+                                           algorithme=algo_name, counter=counter)
+                    counter = counter + 1
+
+                    #cpu_info_time (5,array_cpu_perc=cpu_perc,array_temperature=cpu_temp) #whats cpu does after subprocess
+                    #out = p.stdout.readline() #print the communicaiton of the subprocess
+                    cpu_info_time (5, array_cpu_perc=cpu_perc,
+                                   algorithme="after")
+                    filenameOutput =  'result/'+ algo_name + "_Linux_" +str(spl[3])+"_" + str(timesnow)+ '.json'
+
+                    with jsonlines.open(filenameOutput,mode='w') as outputfileRes:
+                        for line in iter(p.stdout.readline,''):
+                            out=line.strip()
+                            out=out.split(",")
+                            counter = 1
+                            for data in out[2:len(out)-1]:
+                                if out[0] == "fps":
+                                    result ={}
+                                    result["algoritme"]= algo_name + "_Linux"
+                                    result["fps"] = data
+                                    result["Type"] = "linux"
+                                    result["Second"] = counter
+                                    result["resolution"] = spl[3]
+                                    counter = counter +1
+                                    outputfileRes.write(result)
 
 
-                d_linux_out={}
-                for line in iter(p.stdout.readline,''):
+                    """
+                    d_linux_out={}
+                    for line in iter(p.stdout.readline,''):
 
-                    out=line.rstrip()
-                    out=out.split(",")
+                        out=line.rstrip()
+                        out=out.split(",")
 
-                    for data in out[1:len(out)-1]:
-                        if not out[0] in d_linux_out:
-                            d_linux_out[out[0]] = []
-                        d_linux_out[out[0]].append(int(data))
-                        #print(d_linux_out)
-                p.wait () #wait untill subprosess stops
+                        for data in out[1:len(out)-1]:
+                            if not out[0] in d_linux_out:
+                                d_linux_out[out[0]] = []
+                            d_linux_out[out[0]].append(int(data))
+                            #print(d_linux_out)
+                    p.wait () #wait untill subprosess stops
 
 
-                d_data_linux["cpu %"]= cpu_perc
-                d_data_linux["cpu temp"]=cpu_temp
-                d_res_linux[res]= d_data_linux.items()+d_linux_out.items()
+                    d_data_linux["cpu %"]= cpu_perc
+                    d_data_linux["cpu temp"]=cpu_temp
+                    d_res_linux[res]= d_data_linux.items()+d_linux_out.items()
 
-                if not algo_name in d_algo_type:
-                    d_algo_type[algo_name]= []
-                d_algo_type[algo_name].append(d_res_linux)
+                    if not algo_name in d_algo_type:
+                        d_algo_type[algo_name]= []
+                    d_algo_type[algo_name].append(d_res_linux)
 
-                if not "linux c++" in performance:
-                    performance["linux c++"]=[]
-                performance["linux c++"]= d_algo_type
+                    if not "linux c++" in performance:
+                        performance["linux c++"]=[]
+                    performance["linux c++"]= d_algo_type
 
-                jsonperf= json.dumps(performance,indent=4)
-                # print(jsonperf)
-                time.sleep (3)
-    """
+                    jsonperf= json.dumps(performance,indent=4)
+                    # print(jsonperf)
+                    time.sleep (3)
+                    """
+
+lsfile = OS.listdir("./result")
+zip_archive = ZipFile("./result/benchmarket_" +str(machine)+"_" + str(node)+ "_"+ str (timesnow) + ".zip","w")
+print("zipping files")
+for f in lsfile:
+    file = './result/' + f
+    ext = OS.path.splitext(file)[-1].lower()
+    if ext == ".json":
+        zip_archive.write(file)
+        OS.remove(file)
+
+zip_archive.close()
+print("benchmarkt done")
 
 
     # calling function to get all file paths in the directory
