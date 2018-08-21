@@ -10,14 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9055c99-0193-4e2b-82a4-dcd972d3384b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/facedetection python/convolv.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facedetection python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/facedetection python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facedetection python/facedetect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/facedetection python/facedetect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facedetection python/AlgoConvolv.py" beforeDir="false" afterPath="$PROJECT_DIR$/facedetection python/AlgoConvolv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facedetection python/benshmarkt.py" beforeDir="false" afterPath="$PROJECT_DIR$/facedetection python/benshmarkt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facedetection python/python_algorithm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/facedetection python/python_algorithm.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.bbl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.blg" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.blg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.tex" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,34 +27,59 @@
     <session id="-426615987">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2" />
+          <entry key="cpp" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="2" />
+          <entry key="ObjectiveC" value="73" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cpp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ObjectiveC" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/facedetection python/facedetect.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="10" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="142">
+              <caret line="197" column="16" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/facedetection python/convolv.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="173" column="28" lean-forward="true" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>captur</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +88,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/facedetection python/facedetect.cpp" />
+        <option value="$PROJECT_DIR$/facedetection python/convolv.cpp" />
       </list>
     </option>
   </component>
@@ -74,7 +98,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -131,23 +155,20 @@
       <option name="presentableId" value="Default" />
       <updated>1534787285333</updated>
       <workItem from="1534787289789" duration="1286000" />
+      <workItem from="1534893702118" duration="1929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1286000" />
+    <option name="totallyTimeSpent" value="3215000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="20" width="1400" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -155,11 +176,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="LuaJ" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,8 +196,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/facedetection python/facedetect.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="10" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="142">
+          <caret line="197" column="16" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facedetection python/convolv.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="173" column="28" lean-forward="true" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -34,17 +34,17 @@ def convolvimg(width , heigh, fpsArray):
             frames = 0
 
         #hsv hue sat value
-        hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV) #convert to hsv color
+        #hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV) #convert to hsv color
 
-        lower_color= np.array([150,150,50])
-        upper_color= np.array([180,255,255])
+        #lower_color= np.array([150,150,50])
+        #upper_color= np.array([180,255,255])
 
-        mask = cv2.inRange(hsv,lower_color,upper_color)
+        #mask = cv2.inRange(hsv,lower_color,upper_color)
         #result = cv2.bitwise_and(frame,frame,mask=mask)
 
         #blur= cv2.medianBlur(frame,5,0)
         #median = cv2.medianBlur(result,15)
-        kernel = np.ones((100,100))/10000
+        kernel = np.ones((5,5),np.float32)/25
 
         filter = cv2.filter2D(frame,-1,kernel)
         cv2.putText(frame, "FPS: {}" .format(fps), (15,80) ,font,1,color)

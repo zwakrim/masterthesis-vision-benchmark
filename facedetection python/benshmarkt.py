@@ -279,38 +279,6 @@ if __name__ == '__main__':
                                     outputfileRes.write(result)
 
 
-                    """
-                    d_linux_out={}
-                    for line in iter(p.stdout.readline,''):
-
-                        out=line.rstrip()
-                        out=out.split(",")
-
-                        for data in out[1:len(out)-1]:
-                            if not out[0] in d_linux_out:
-                                d_linux_out[out[0]] = []
-                            d_linux_out[out[0]].append(int(data))
-                            #print(d_linux_out)
-                    p.wait () #wait untill subprosess stops
-
-
-                    d_data_linux["cpu %"]= cpu_perc
-                    d_data_linux["cpu temp"]=cpu_temp
-                    d_res_linux[res]= d_data_linux.items()+d_linux_out.items()
-
-                    if not algo_name in d_algo_type:
-                        d_algo_type[algo_name]= []
-                    d_algo_type[algo_name].append(d_res_linux)
-
-                    if not "linux c++" in performance:
-                        performance["linux c++"]=[]
-                    performance["linux c++"]= d_algo_type
-
-                    jsonperf= json.dumps(performance,indent=4)
-                    # print(jsonperf)
-                    time.sleep (3)
-                    """
-
 lsfile = OS.listdir("./result")
 zip_archive = ZipFile("./result/benchmarket_" +str(machine)+"_" + str(node)+ "_"+ str (timesnow) + ".zip","w")
 print("zipping files")

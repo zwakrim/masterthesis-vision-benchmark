@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4488d454-c0de-4417-b94f-26b1694fcb5a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/convolv.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlgoConvolv.py" beforeDir="false" afterPath="$PROJECT_DIR$/AlgoConvolv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/benshmarkt.py" beforeDir="false" afterPath="$PROJECT_DIR$/benshmarkt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_algorithm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/python_algorithm.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Algofacedetection_python_144_2018_08_17_11_03_02.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/benchmarket_AMD64_LAPTOP-TPLGCH9G_2018_08_13_01_49_37.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/benchmarkt_LAPTOP-TPLGCH9G_Windows_2018_08_17_11_02_31.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result/AlgoConvolution_python_144_2018_08_13_01_50_17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result/AlgoMatrixMul__2018_08_13_01_50_00.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result/Algofacedetection_python_144_2018_08_13_01_49_49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result/Algopixeltransform_python144_2018_08_13_01_50_34.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/result/benchmarkt_LAPTOP-TPLGCH9G_Windows_2018_08_13_01_49_37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows_algorithm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/windows_algorithm.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +35,8 @@
       <file leaf-file-name="python_algorithm.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="70" selection-start-line="1" selection-start-column="70" selection-end-line="1" selection-end-column="70" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -58,17 +53,20 @@
       <file leaf-file-name="facedetect.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/facedetect.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="175">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#7433#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benshmarkt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="benshmarkt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benshmarkt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="278" column="63" lean-forward="true" selection-start-line="278" selection-start-column="63" selection-end-line="278" selection-end-column="63" />
+            <state relative-caret-position="782">
+              <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -76,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlgoConvolv.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AlgoConvolv.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="48" column="29" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="256">
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="38" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -156,10 +154,10 @@
         <option value="$PROJECT_DIR$/AlgoFacedect.py" />
         <option value="$PROJECT_DIR$/testZip.py" />
         <option value="$PROJECT_DIR$/pixeltransformation.py" />
-        <option value="$PROJECT_DIR$/AlgoConvolv.py" />
-        <option value="$PROJECT_DIR$/python_algorithm.txt" />
         <option value="$PROJECT_DIR$/windows_algorithm.txt" />
+        <option value="$PROJECT_DIR$/python_algorithm.txt" />
         <option value="$PROJECT_DIR$/benshmarkt.py" />
+        <option value="$PROJECT_DIR$/AlgoConvolv.py" />
       </list>
     </option>
   </component>
@@ -173,9 +171,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="width" value="626" />
-    <option name="height" value="697" />
+    <option name="x" value="-1148" />
+    <option name="width" value="979" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -283,7 +281,7 @@
       <workItem from="1533311221100" duration="13896000" />
       <workItem from="1534010687646" duration="6802000" />
       <workItem from="1534495871772" duration="6370000" />
-      <workItem from="1534827280855" duration="2355000" />
+      <workItem from="1534827280855" duration="7956000" />
     </task>
     <task id="LOCAL-00001" summary="commit 8/15">
       <created>1534456594530</created>
@@ -310,10 +308,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30054000" />
+    <option name="totallyTimeSpent" value="35655000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1927" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -326,10 +324,10 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.13207547" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29051095" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18976545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23892617" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -408,6 +406,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#7433#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -552,16 +553,6 @@
     <entry file="file://$PROJECT_DIR$/pixelbewerking.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="48" column="29" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pixeltransformation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -589,17 +580,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
+    <entry file="file://$PROJECT_DIR$/facedetect.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="70" selection-start-line="1" selection-start-column="70" selection-end-line="1" selection-end-column="70" />
+        <state relative-caret-position="175">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#7433#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/facedetect.cpp">
+    <entry file="file://$PROJECT_DIR$/benshmarkt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="782">
+          <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -610,12 +607,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benshmarkt.py">
+    <entry file="file://$PROJECT_DIR$/python_algorithm.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="278" column="63" lean-forward="true" selection-start-line="278" selection-start-column="63" selection-end-line="278" selection-end-column="63" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlgoConvolv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="38" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
