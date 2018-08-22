@@ -8,3 +8,4 @@ sudo make install
 
 g++ -std=c++11 convolv.cpp -o testconv `pkg-config --cflags --libs opencv`
 
+
