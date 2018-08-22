@@ -5,3 +5,7 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_JPEG=O
 
 make -j4
 sudo make install
+
+g++ -std=c++11 convolv.cpp -o testconv `pkg-config --cflags --libs opencv`
+
+
