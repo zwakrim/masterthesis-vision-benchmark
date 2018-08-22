@@ -34,10 +34,16 @@ int main( int argc, const char** argv )
     int frames  = 0 ;
 
     std::vector<int> fpsVector;
+	cv::CommandLineParser parser(argc, argv,
+		    "{help h||}"
+		    "{cascade|data/haarcascades/haarcascade_frontalface_default.xml|}"
+		    "{nested-cascade|data/haarcascades/haarcascade_eye_tree_eyeglasses.xml|}"
+		    "{scale|1|}{try-flip||}{@filename||}"
+		);
 
     if (parser.has("help"))
     {
-        help();
+        //help();
         return 0;
     }
     cascadeName = parser.get<string>("cascade");
@@ -57,7 +63,7 @@ int main( int argc, const char** argv )
     if( !cascade.load( cascadeName ) )
     {
         cerr << "ERROR: Could not load classifier cascade" << endl;
-        help();
+        //help();
         return -1;
     }
     if( inputName.empty() || (isdigit(inputName[0]) && inputName.size() == 1) )
@@ -167,7 +173,8 @@ void convolvimg( Mat& img, CascadeClassifier& cascade,
                     double scale, bool tryflip , int fps)
 {
 
-    Mat dst
+    Mat dst;
+	Mat kernel;
     kernel = Mat::ones( 5, 5, CV_32F )/ 25;
 
     filter2D(img, dst, -1 , kernel, Point(-1,-1), 0, BORDER_DEFAULT );
