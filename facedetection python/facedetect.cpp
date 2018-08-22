@@ -47,8 +47,8 @@ int main( int argc, const char** argv )
     int height  = atof(argv[4]);
     int frames  = 0 ;
 
-    std::vector<int> fpsVector;
 
+    
     cv::CommandLineParser parser(argc, argv,
         "{help h||}"
         "{cascade|data/haarcascades/haarcascade_frontalface_default.xml|}"

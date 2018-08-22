@@ -170,10 +170,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1148" />
-    <option name="width" value="979" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -281,7 +282,7 @@
       <workItem from="1533311221100" duration="13896000" />
       <workItem from="1534010687646" duration="6802000" />
       <workItem from="1534495871772" duration="6370000" />
-      <workItem from="1534827280855" duration="7956000" />
+      <workItem from="1534827280855" duration="8552000" />
     </task>
     <task id="LOCAL-00001" summary="commit 8/15">
       <created>1534456594530</created>
@@ -308,10 +309,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35655000" />
+    <option name="totallyTimeSpent" value="36251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
