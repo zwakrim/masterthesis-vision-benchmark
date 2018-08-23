@@ -195,7 +195,7 @@ void pixeltransform( Mat& img, CascadeClassifier& cascade,
 
     for(int i = 0;i < img.cols;i++){
         for(int j = 0;j < img.rows;j++){
-            Vec3f intensity = img.at<Vec3f>(y, x);
+            Vec3f intensity = img.at<Vec3f>(i, j);
             b=intensity.val[0] * 1.5 + 100;
             g=intensity.val[0] * 1.5 + 100;
             r=intensity.val[0] * 1.5 + 100;

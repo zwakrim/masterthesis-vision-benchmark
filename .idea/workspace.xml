@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9055c99-0193-4e2b-82a4-dcd972d3384b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/benchmarkt/pixeltransform" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/benchmarkt/pixeltransform.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarkt/convolv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/convolv.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarkt/pixeltransformation.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/pixeltransformation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.aux" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.bbl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.blg" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.blg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.out" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.tex" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.toc" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarkt/pixeltransform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/pixeltransform.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +29,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="422" />
+          <entry key="cpp" value="424" />
           <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="422" />
+          <entry key="ObjectiveC" value="424" />
           <entry key="Python" value="2" />
         </counts>
       </usages-collector>
@@ -70,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransform.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="212" column="47" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
+            <state relative-caret-position="140">
+              <caret line="197" column="48" selection-start-line="197" selection-start-column="48" selection-end-line="197" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -134,10 +123,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="325" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="1250" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -198,22 +187,22 @@
       <option name="presentableId" value="Default" />
       <updated>1534787285333</updated>
       <workItem from="1534787289789" duration="1286000" />
-      <workItem from="1534893702118" duration="6695000" />
+      <workItem from="1534893702118" duration="7209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7981000" />
+    <option name="totallyTimeSpent" value="8495000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.4305949" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -300,8 +289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransform.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="212" column="47" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
+        <state relative-caret-position="140">
+          <caret line="197" column="48" selection-start-line="197" selection-start-column="48" selection-end-line="197" selection-end-column="48" />
         </state>
       </provider>
     </entry>
