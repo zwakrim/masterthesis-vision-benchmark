@@ -9,7 +9,7 @@
 ./convolv 0 10 640 480
 ./convolv 0 10 960 720
 #pixeltransform  cameranumber second widht height
-./pixeltransform 0 10 176 144
-./pixeltransform 0 10 320 240
-./pixeltransform 0 10 640 480
-./pixeltransform 0 10 960 720
+./pxltransform 0 10 176 144
+./pxltransform 0 10 320 240
+./pxltransform 0 10 640 480
+./pxltransform 0 10 960 720
