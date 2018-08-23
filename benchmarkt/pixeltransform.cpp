@@ -49,6 +49,8 @@ int main( int argc, const char** argv ) {
     int width = atof(argv[3]);
     int height = atof(argv[4]);
     int frames = 0;
+
+std::vector<int> fpsVector;
     cv::CommandLineParser parser(argc, argv,
                                  "{help h||}"
                                  "{cascade|data/haarcascades/haarcascade_frontalface_default.xml|}"
@@ -187,30 +189,38 @@ void pixeltransform( Mat& img, CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip , int fps) {
 
-    Mat img;
-    Mat imgpixeltransform;
+    
+    cv::Mat imgpixeltransform( img.rows, img.cols,CV_8UC3,Scalar(0,0,0));
 
     int i,j;
-    float r,g,b;
+    int r,g,b;
 
-    for(int i = 0;i < img.cols;i++){
-        for(int j = 0;j < img.rows;j++){
-            Vec3f intensity = img.at<Vec3f>(i, j);
+    for(int i = 0;i < img.rows;i++){
+        for(int j = 0;j < img.cols;j++){
+            Vec3b intensity = img.at<Vec3b>(i, j);
+			
+			
             b=intensity.val[0] * 1.5 + 100;
-            g=intensity.val[0] * 1.5 + 100;
-            r=intensity.val[0] * 1.5 + 100;
-
-            imgpixeltransform.at<Vec3b>(i,j)[0] = b;
-            imgpixeltransform.at<Vec3b>(i,j)[1] = r;
-            imgpixeltransform.at<Vec3b>(i,j)[2] = g; 
+            g=intensity.val[1] * 1.5 + 100;
+            r=intensity.val[2] * 1.5 + 100;
+			intensity.val[0] = b;
+			intensity.val[1] = g;
+			intensity.val[2] = r;
+			imgpixeltransform.at<cv::Vec3b>(i,j) = intensity;
+			
+			//cout << "intensity = "  <<endl <<" " << r << " " << g << " " << b << endl << endl;
+            //imgpixeltransform.at<Vec3b>(i,j)[0] = 0;
+            //imgpixeltransform.at<Vec3b>(i,j)[1] = 200;
+            //imgpixeltransform.at<Vec3b>(i,j)[2] = 0;
+			
 
         }
     }
 
 
     cv::putText(img, cv::format("FPS=%d", fps ), cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0,255,0));
-    imshow( "original", img );
-    imshow( "pixeltransform", imgpixeltransform );
+    cv::imshow( "original", img );
+    cv::imshow( "pixeltransform", imgpixeltransform );
 
 }
 
