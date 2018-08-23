@@ -152,8 +152,8 @@ main(int argc, char* argv[])
 {
   try {
 
-    int m = 256;
-    int n = 256;
+    int m = atof(argv[2];
+    int n = atof(argv[3];
 
     std::vector<float> matrix(m * n);
     std::vector<float> vector(n, 1.0f);
@@ -162,7 +162,7 @@ main(int argc, char* argv[])
         matrix[row * n + col] = 1.0f;
 
     std::vector<float> result1 = matrix_vector(matrix, vector, m, n);
-    std::cout << "Running GPU matrix vector... ";
+    std::cout << "Running CPU matrix vector... \r\n";
     std::vector<float> result2 = gpu_matrix_vector(matrix, vector, m, n);
     std::cout << "Running GPU efficient matrix vector... ";
     std::vector<float> result3 =
