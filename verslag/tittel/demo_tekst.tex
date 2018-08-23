@@ -274,7 +274,7 @@ The Pixy can only be used for color detection not for object detection. The seco
 
 
 
-\chapter{Comparison}
+\chapter{Single board computers}
 \section{board comparison}
 
 This thesis will compare 5 boards. The chosen boards all run an arm architecture. The boaérd are selected because of they popularity, price(depending on use case) and power consumption:
@@ -337,9 +337,23 @@ arduino compatible\newline(connector for Arduino) & yes & no & no & yes & no & y
 \end{table}
 %\section{Camera comparison}
 
+\section{Working and first run experience}
 
-\chapter{Generic vision Benchmark}
-facedetection, colordetection, openCl, edgedetection, convolution, matrixmultiplucation
+A lot of information is available on the internet for most of the boards. Some boards have a bigger community like the Rasperry Pi.
+My personal opinion is that with the Raspberry Pi everything works directly. The most difficult board is the Dragonboard. small community, slow board and less memory. I was not able to install Opencv on this board.
+
+An other point is the fact that all the board used a the same power supply socket except the dragonboard. I suggest to buy the boards with they power supply. As example for the Odroid xu4 i tried an other power supply and on some point it was not working. This is because the Dragonboard needs a maximum of 4 ampere to work. 5V 4A is not an common power supply to find.
+
+About the other boards the installation documents are very complete. 
+
+ 
+\chapter{Benchmark suite}
+
+\section{Algorithms}
+facedetection,  convolution, pixel operation,matrixmultiplucation,openCl
+\section{Working}
+
+\section{Visualization}
 
 \chapter{Results}   
 

@@ -28,7 +28,7 @@ def pixeltransform(width , heigh, fpsArray):
     start = time.time()
     while (time.time() - start <= timeout):
         # Capture frame-by-frame
-        ret, frame = video_capture.read()
+        ret, s = video_capture.read()
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         rows =  frame.shape[0]
         cols = frame.shape[1]
