@@ -1,0 +1,8 @@
+{"machine": "AMD64", "bits": "64bit", "os": "Windows", "node": "LAPTOP-TPLGCH9G", "cores": 4}
+{"node": "LAPTOP-TPLGCH9G", "counter": 0, "percent_cpu": [23.4, 28.1, 31.3, 48.4], "Current": 99999, "algoritme": "before", "time": "2018-08-24 03:13:35", "resulotion": 0}
+{"node": "LAPTOP-TPLGCH9G", "counter": 1, "percent_cpu": [20.3, 20.3, 39.1, 29.7], "Current": 99999, "algoritme": "before", "time": "2018-08-24 03:13:36", "resulotion": 0}
+{"node": "LAPTOP-TPLGCH9G", "counter": 2, "percent_cpu": [20.3, 23.4, 28.1, 39.1], "Current": 99999, "algoritme": "before", "time": "2018-08-24 03:13:37", "resulotion": 0}
+{"node": "LAPTOP-TPLGCH9G", "counter": 3, "percent_cpu": [32.3, 23.4, 40.6, 39.1], "Current": 99999, "algoritme": "before", "time": "2018-08-24 03:13:38", "resulotion": 0}
+{"node": "LAPTOP-TPLGCH9G", "counter": 4, "percent_cpu": [15.6, 32.8, 31.3, 35.9], "Current": 99999, "algoritme": "before", "time": "2018-08-24 03:13:39", "resulotion": 0}
+{"node": "LAPTOP-TPLGCH9G", "counter": 0, "percent_cpu": [45.5, 59.4, 62.5, 40.6], "Current": 99999, "algoritme": "facedetection_python", "time": "2018-08-24 03:13:40", "resulotion": 176}
+{"node": "LAPTOP-TPLGCH9G", "counter": 1, "percent_cpu": [47.7, 65.6, 60.9, 57.8], "Current": 99999, "algoritme": "facedetection_python", "time": "2018-08-24 03:13:41", "resulotion": 176}
