@@ -8,7 +8,7 @@ python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 176 144
 python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 320 240
 python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 640 480
 python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 960 720
-#camera convolution haarcascade cameranumber second widht height
+#camera convolution20 haarcascade cameranumber second widht height
 python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 176 144
 python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 320 240
 python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 640 480
