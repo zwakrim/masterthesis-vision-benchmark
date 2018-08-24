@@ -245,6 +245,8 @@ if __name__ == '__main__':
                     p = subprocess.Popen (line, stdout=subprocess.PIPE, shell=True) #opensubprocess
 
                     counter = 0
+                    print("starting c++ " + algo_name + " " + res)
+
                     while p.poll () is None:
                         if algo[0] == "camera":
                             cpu_info_time (array_cpu_perc=cpu_perc,
