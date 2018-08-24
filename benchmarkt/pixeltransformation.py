@@ -9,6 +9,7 @@ import jsonlines
 import datetime
 import numpy as np
 
+
 def pixeltransform(width , heigh, fpsArray):
 
     video_capture = cv2.VideoCapture(camera)
@@ -25,43 +26,42 @@ def pixeltransform(width , heigh, fpsArray):
     i=0
 
     #print("starting webcam")
+
+
+    global totalCalcTime
+    totalCalcTime=0
     start = time.time()
     while (time.time() - start <= timeout):
         # Capture frame-by-frame
         ret, frame = video_capture.read()
-        #hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
         rows =  frame.shape[0]
         cols = frame.shape[1]
         #print (frame.shape)
         #print (frame.size)
 
-        b,g,r = cv2.split(frame)
+        #b,g,r = cv2.split(frame)
         #print("b "+ str(b))
         #print("type " + str(type(b)))
 
         #frame [0:rows,0:cols] = [255,255,255]
         #print(b)
+        beginCalcTime = time.time()
+        for i in range(0,rows):
+            for j in range(0,cols):
+                #b,g,r = cv2.split(frame)
+                #k = frame[i,j]
+                #print frame[i,j,0]
+                b= frame[i,j,0] * 1.5 + 100
+                g = frame[i,j,1] * 1.5 + 100
+                r = frame[i,j,2] * 1.5 + 100
+                frame[i,j] = [b,g,r]
+        endCalcTime = time.time() - beginCalcTime
+        totalCalcTime = totalCalcTime + endCalcTime
 
-        """
-        for x in np.nditer(b):
-            b = x * 2
-            if b > 255:
-                b = 255
-            #print(b)
-        """
-        #l=0
-        for i in range(rows):
-            for j in range(cols):
-                k = frame[i,j]
-                r = k[0] * 1.5 + 100
-                g = k[1] * 1.5 + 100
-                b = k[2] * 1.5 + 100
-                frame[i,j] = [r,g,b]
 
         #print ("l " + str(l))
         #print ("size " + str(frame.size))
-
-
 
         frames = frames +1
         end = time.time()
@@ -70,7 +70,7 @@ def pixeltransform(width , heigh, fpsArray):
         if seconds-tick >= 1:
             tick = tick + 1
             fps = frames
-            print str(fps)
+            #print str(fps)
             fpsArray.append(fps)
             #fpsArray[i]=fps
             i=i+1
@@ -101,11 +101,17 @@ width= int(sys.argv[4])
 height = int(sys.argv[5])
 fpsArrayshared2 = []
 
+lol=0
+
 if __name__ == '__main__':
 
     #print("start")
     #facedetect(220,176,fpsArrayshared2)
+    beginTime = time.time()
     pixeltransform(width,height,fpsArrayshared2)
+    endTime = time.time() - beginTime
+    #print "total "+str(endTime)
+    #print "calc  "+str(totalCalcTime)
     timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
 
     filename =  'result/'+ "Algopixeltransform_python"+str(width) + str(timesnow)+ '.json'
@@ -118,5 +124,7 @@ if __name__ == '__main__':
             result["Type"] = "Python"
             result["Second"] = counter
             result["resolution"] = width
+            result["ratioCalTime"] = totalCalcTime/endTime * 100
+
             counter = counter +1
             outputfile.write(result)

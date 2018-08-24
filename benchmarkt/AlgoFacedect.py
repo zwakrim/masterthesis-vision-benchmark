@@ -25,8 +25,9 @@ def facedetect(width , heigh, fpsArray):
     tick = 0
     fps =0
     i=0
-    
-    
+
+    global totalCalcTime
+    totalCalcTime=0
     
     #print("starting webcam")
     start = time.time()
@@ -37,7 +38,8 @@ def facedetect(width , heigh, fpsArray):
         ret, frame = video_capture.read()
         frames = frames +1
         end = time.time()
-        seconds = end- start 	
+        seconds = end- start
+        #print (frame.shape)
         
         if seconds-tick >= 1:
           tick = tick + 1
@@ -47,9 +49,10 @@ def facedetect(width , heigh, fpsArray):
           #fpsArray[i]=fps
           i=i+1
           frames = 0
-      
+
+        beginCalcTime = time.time()
+
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        cv2.putText(frame, "FPS: {}" .format(fps), (15,80) ,font,1,color)
 
         faces = faceCascade.detectMultiScale(
             gray,
@@ -70,7 +73,11 @@ def facedetect(width , heigh, fpsArray):
                     #ser.write(prov)
                     cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
+        endCalcTime = time.time() - beginCalcTime
+        totalCalcTime = totalCalcTime + endCalcTime
         # Display the resulting frame
+        cv2.putText(frame, "FPS: {}" .format(fps), (15,80) ,font,1,color)
+
         cv2.imshow('Video', frame)
         
         if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -92,7 +99,9 @@ if __name__ == '__main__':
 
     #print("start")
     #facedetect(220,176,fpsArrayshared2)
+    beginTime = time.time()
     facedetect(width,height,fpsArrayshared2)
+    endTime = time.time() - beginTime
     timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
 
     filename =  'result/'+ "Algofacedetection_python_"+str(width) + str(timesnow)+ '.json'
@@ -105,6 +114,7 @@ if __name__ == '__main__':
             result["Type"] = "Python"
             result["Second"] = counter
             result["resolution"] = width
+            result["ratioCalTime"] = totalCalcTime/endTime * 100
             counter = counter +1
             outputfile.write(result)
 
