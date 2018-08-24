@@ -1,7 +1,6 @@
 //
-// Created by zwakr on 8/23/2018.
+// Created by zwakr on 8/22/2018.
 //
-
 #include "opencv2/objdetect.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
@@ -9,37 +8,20 @@
 #include <ctime>
 #include <iostream>
 
-
 using namespace std;
 using namespace cv;
 
-static void help()
-{
-    cout << "\nThis program demonstrates the cascade recognizer. Now you can use Haar or LBP features.\n"
-            "This classifier can recognize many kinds of rigid objects, once the appropriate classifier is trained.\n"
-            "It's most known use is for faces.\n"
-            "Usage:\n"
-            "./facedetect [--cascade=<cascade_path> this is the primary trained classifier such as frontal face]\n"
-            "   [--nested-cascade[=nested_cascade_path this an optional secondary classifier such as eyes]]\n"
-            "   [--scale=<image scale greater or equal to 1, try 1.3 for example>]\n"
-            "   [--try-flip]\n"
-            "   [filename|camera_index]\n\n"
-            "see facedetect.cmd for one call:\n"
-            "./facedetect --cascade=\"../../data/haarcascades/haarcascade_frontalface_alt.xml\" --nested-cascade=\"../../data/haarcascades/haarcascade_eye_tree_eyeglasses.xml\" --scale=1.3\n\n"
-            "During execution:\n\tHit any key to quit.\n"
-            "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
-}
-void pixeltransform( Mat& img,  CascadeClassifier& cascade,
+string cascadeName;
+string nestedCascadeName;
+std::chrono::duration<double> totalCalcTime;
+
+void convolvimg( Mat& img,  CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip, int fps
 );
 
-string cascadeName;
-string nestedCascadeName;
-//std::time_t totalCalcTime;
-std::chrono::duration<double> totalCalcTime;
-
-int main( int argc, const char** argv ) {
+int main( int argc, const char** argv )
+{
     VideoCapture capture;
     Mat frame, image;
     string inputName;
@@ -48,22 +30,21 @@ int main( int argc, const char** argv ) {
     double scale;
 
     int timeOut = atof(argv[2]);
-    int width = atof(argv[3]);
-    int height = atof(argv[4]);
-    int frames = 0;
+    int width   = atof(argv[3]);
+    int height  = atof(argv[4]);
+    int frames  = 0 ;
 
+    std::vector<int> fpsVector;
+	cv::CommandLineParser parser(argc, argv,
+		    "{help h||}"
+		    "{cascade|data/haarcascades/haarcascade_frontalface_default.xml|}"
+		    "{nested-cascade|data/haarcascades/haarcascade_eye_tree_eyeglasses.xml|}"
+		    "{scale|1|}{try-flip||}{@filename||}"
+		);
 
-
-	std::vector<int> fpsVector;
-    cv::CommandLineParser parser(argc, argv,
-                                 "{help h||}"
-                                 "{cascade|data/haarcascades/haarcascade_frontalface_default.xml|}"
-                                 "{nested-cascade|data/haarcascades/haarcascade_eye_tree_eyeglasses.xml|}"
-                                 "{scale|1|}{try-flip||}{@filename||}"
-    );
     if (parser.has("help"))
     {
-        help();
+        //help();
         return 0;
     }
     cascadeName = parser.get<string>("cascade");
@@ -83,7 +64,7 @@ int main( int argc, const char** argv ) {
     if( !cascade.load( cascadeName ) )
     {
         cerr << "ERROR: Could not load classifier cascade" << endl;
-        help();
+        //help();
         return -1;
     }
     if( inputName.empty() || (isdigit(inputName[0]) && inputName.size() == 1) )
@@ -108,19 +89,14 @@ int main( int argc, const char** argv ) {
     }
 
     if( capture.isOpened() ) {
-
 		std::chrono::time_point<std::chrono::system_clock> beginTime , endTime;
 		beginTime = std::chrono::system_clock::now();
-
-
         capture.set(CV_CAP_PROP_FRAME_WIDTH, width);
         capture.set(CV_CAP_PROP_FRAME_HEIGHT, height);
-
 
         int frameCounter = 0;
         int tick = 0;
         int fps;
-
 
         std::time_t start = std::time(0);
         for(;;){
@@ -137,12 +113,11 @@ int main( int argc, const char** argv ) {
                     frameCounter = 0;
                     fpsVector.push_back(fps);
                 }
-                pixeltransform( frame, cascade, nestedCascade, scale, tryflip,fps );
+                convolvimg( frame, cascade, nestedCascade, scale, tryflip,fps );
                 char c = (char)waitKey(10);
                 if( c == 27 || c == 'q' || c == 'Q' )
                     break;
-            }
-		
+            }			
 			endTime = std::chrono::system_clock::now();
 			std::chrono::duration<double> elapsed_totalTime= endTime -beginTime;
 			
@@ -151,22 +126,18 @@ int main( int argc, const char** argv ) {
 			double ratio = totalCalcTime/ elapsed_totalTime *100;
 			
 			cout << "ratioCalTime,"<<  ratio << "," <<endl;
-
             //std::cout << "myvector stores " << int(fpsVector.size()) << " numbers.\n";
             cout << "fps,";
             for (int i=0; i<fpsVector.size();i++){
                 cout << fpsVector[i] << ",";
             }
             cout << endl;
-			
-			//cout << "totalCalctime,"<<totalCalcTime.count()<< endl;
-			
             break;
         }
     }
     else
     {
-        cout << "not working " << inputName << endl;
+        cout << "Detecting face(s) in " << inputName << endl;
         if( !image.empty() )
         {
             //detectAndDraw( image, cascade, nestedCascade, scale, tryflip );
@@ -208,45 +179,26 @@ int main( int argc, const char** argv ) {
     return 0;
 }
 
-void pixeltransform( Mat& img, CascadeClassifier& cascade,
+void convolvimg( Mat& img, CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
-                    double scale, bool tryflip , int fps) {
+                    double scale, bool tryflip , int fps)
+{
 
-    
-    cv::Mat imgpixeltransform( img.rows, img.cols,CV_8UC3,Scalar(0,0,0));
-
-    int i,j;
-    int r,g,b;
+    Mat dst;
+	Mat kernel;
 	std::chrono::time_point<std::chrono::system_clock> beginCalcTime , endCalcTime;
 	beginCalcTime = std::chrono::system_clock::now();
-    for(int i = 0;i < img.rows;i++){
-        for(int j = 0;j < img.cols;j++){
-            Vec3b intensity = img.at<Vec3b>(i, j);
-            b=intensity.val[0] * 1.5 + 100;
-            g=intensity.val[1] * 1.5 + 100;
-            r=intensity.val[2] * 1.5 + 100;
-			intensity.val[0] = b;
-			intensity.val[1] = g;
-			intensity.val[2] = r;
-			imgpixeltransform.at<cv::Vec3b>(i,j) = intensity;
-			
-			//cout << "intensity = "  <<endl <<" " << r << " " << g << " " << b << endl << endl;
-            //imgpixeltransform.at<Vec3b>(i,j)[0] = 0;
-            //imgpixeltransform.at<Vec3b>(i,j)[1] = 200;
-            //imgpixeltransform.at<Vec3b>(i,j)[2] = 0;
-		
-        }
-    }
+    kernel = Mat::ones( 20, 20, CV_32F )/ 400;
+
+    filter2D(img, dst, -1 , kernel, Point(-1,-1), 0, BORDER_DEFAULT );
 	endCalcTime = std::chrono::system_clock::now();
 	std::chrono::duration<double> elapsed_seconds= endCalcTime -beginCalcTime;
 	//std::time_t end_time = std::chrono::system_clock::to_time_t(
 	totalCalcTime = totalCalcTime + elapsed_seconds;
-	//cout << "lol,"<<totalCalcTime.count()<< endl;
-
 
     cv::putText(img, cv::format("FPS=%d", fps ), cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0,255,0));
-    cv::imshow( "original", img );
-    cv::imshow( "pixeltransform", imgpixeltransform );
+    cv::putText(dst, cv::format("FPS=%d", fps ), cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0,255,0));
 
+    imshow( "original", img );
+    imshow( "convolv", dst );
 }
-

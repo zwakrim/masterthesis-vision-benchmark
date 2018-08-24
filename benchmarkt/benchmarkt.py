@@ -233,11 +233,11 @@ if __name__ == '__main__':
                 if line[0][0] == "#":
                     algo=line.split('#')[1]
                     algo= algo.split(' ')
-                    algo_name=algo[0]#get the name of the algoritme
+                    algo_name=algo[1]#get the name of the algoritme
 
                 elif line[0][0] != "#":
                     spl=line.split(' ')
-                    if algo_name == "camera":
+                    if algo[0] == "camera":
                         res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
 
                     cpu_temp = []
@@ -263,22 +263,32 @@ if __name__ == '__main__':
                     cpu_info_time (5, array_cpu_perc=cpu_perc,
                                    algorithme="after")
                     filenameOutput =  'result/'+ algo_name + "_Linux_" +str(spl[3])+"_" + str(timesnow)+ '.json'
-
+		    ratiocalc=0
                     with jsonlines.open(filenameOutput,mode='w') as outputfileRes:
                         for line in iter(p.stdout.readline,''):
                             out=line.strip()
+			    #print out
                             out=out.split(",")
+			    #print out
                             counter = 1
+			    
+			    if out[0] == "ratioCalTime":
+				ratiocalc = out[1]
+				#print ratiocalc			    
                             for data in out[2:len(out)-1]:
+				
                                 if out[0] == "fps":
                                     result ={}
                                     result["algoritme"]= algo_name + "_Linux"
                                     result["fps"] = data
                                     result["Type"] = "linux"
                                     result["Second"] = counter
+				    result["ratioCalTime"] = ratiocalc
                                     result["resolution"] = spl[3]
                                     counter = counter +1
                                     outputfileRes.write(result)
+				
+
 
 
 lsfile = OS.listdir("./result")

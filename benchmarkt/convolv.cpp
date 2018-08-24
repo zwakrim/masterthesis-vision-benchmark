@@ -13,6 +13,7 @@ using namespace cv;
 
 string cascadeName;
 string nestedCascadeName;
+std::chrono::duration<double> totalCalcTime;
 
 void convolvimg( Mat& img,  CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
@@ -88,6 +89,8 @@ int main( int argc, const char** argv )
     }
 
     if( capture.isOpened() ) {
+		std::chrono::time_point<std::chrono::system_clock> beginTime , endTime;
+		beginTime = std::chrono::system_clock::now();
         capture.set(CV_CAP_PROP_FRAME_WIDTH, width);
         capture.set(CV_CAP_PROP_FRAME_HEIGHT, height);
 
@@ -114,7 +117,15 @@ int main( int argc, const char** argv )
                 char c = (char)waitKey(10);
                 if( c == 27 || c == 'q' || c == 'Q' )
                     break;
-            }
+            }			
+			endTime = std::chrono::system_clock::now();
+			std::chrono::duration<double> elapsed_totalTime= endTime -beginTime;
+			
+			//std::time_t endtime = std::time(0) - beginTime;
+			//cout << "totaltime," << elapsed_totalTime.count() << endl;
+			double ratio = totalCalcTime/ elapsed_totalTime *100;
+			
+			cout << "ratioCalTime,"<<  ratio << "," <<endl;
             //std::cout << "myvector stores " << int(fpsVector.size()) << " numbers.\n";
             cout << "fps,";
             for (int i=0; i<fpsVector.size();i++){
@@ -175,10 +186,15 @@ void convolvimg( Mat& img, CascadeClassifier& cascade,
 
     Mat dst;
 	Mat kernel;
+	std::chrono::time_point<std::chrono::system_clock> beginCalcTime , endCalcTime;
+	beginCalcTime = std::chrono::system_clock::now();
     kernel = Mat::ones( 5, 5, CV_32F )/ 25;
 
     filter2D(img, dst, -1 , kernel, Point(-1,-1), 0, BORDER_DEFAULT );
-
+	endCalcTime = std::chrono::system_clock::now();
+	std::chrono::duration<double> elapsed_seconds= endCalcTime -beginCalcTime;
+	//std::time_t end_time = std::chrono::system_clock::to_time_t(
+	totalCalcTime = totalCalcTime + elapsed_seconds;
 
     cv::putText(img, cv::format("FPS=%d", fps ), cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0,255,0));
     cv::putText(dst, cv::format("FPS=%d", fps ), cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0,255,0));

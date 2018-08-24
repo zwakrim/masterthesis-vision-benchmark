@@ -32,6 +32,7 @@ void detectAndDraw( Mat& img,  CascadeClassifier& cascade,
 
 string cascadeName;
 string nestedCascadeName;
+std::chrono::duration<double> totalCalcTime;
 
 int main( int argc, const char** argv )
 {
@@ -48,7 +49,7 @@ int main( int argc, const char** argv )
     int frames  = 0 ;
 
 
-    
+    std::vector<int> fpsVector;
     cv::CommandLineParser parser(argc, argv,
         "{help h||}"
         "{cascade|data/haarcascades/haarcascade_frontalface_default.xml|}"
@@ -103,6 +104,9 @@ int main( int argc, const char** argv )
 
     if( capture.isOpened() )
     {
+		std::chrono::time_point<std::chrono::system_clock> beginTime , endTime;
+		beginTime = std::chrono::system_clock::now();
+		
         capture.set(CV_CAP_PROP_FRAME_WIDTH,width);
         capture.set(CV_CAP_PROP_FRAME_HEIGHT,height);
 
@@ -135,6 +139,14 @@ int main( int argc, const char** argv )
                 if( c == 27 || c == 'q' || c == 'Q' )
                     break;
             }
+			endTime = std::chrono::system_clock::now();
+			std::chrono::duration<double> elapsed_totalTime= endTime -beginTime;
+			
+			//std::time_t endtime = std::time(0) - beginTime;
+			//cout << "totaltime," << elapsed_totalTime.count() << endl;
+			double ratio = totalCalcTime/ elapsed_totalTime *100;
+			
+			cout << "ratioCalTime,"<<  ratio << "," <<endl;
          //std::cout << "myvector stores " << int(fpsVector.size()) << " numbers.\n";
         cout << "fps,";
         for (int i=0; i<fpsVector.size();i++){
@@ -195,6 +207,8 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
 
 
     Mat gray ;
+	std::chrono::time_point<std::chrono::system_clock> beginCalcTime , endCalcTime;
+	beginCalcTime = std::chrono::system_clock::now();
     cvtColor(img,gray,COLOR_BGR2GRAY);
     vector<Rect> faces;
     cascade.detectMultiScale( gray,faces,
@@ -203,7 +217,7 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
             //|CASCADE_DO_ROUGH_SEARCH
             |CASCADE_SCALE_IMAGE,
             Size(30, 30) );
-
+	
     for ( size_t i = 0; i < faces.size(); i++ ){
 
         Rect r = faces[i];
@@ -220,6 +234,10 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
              continue;
 
     }
+	endCalcTime = std::chrono::system_clock::now();
+	std::chrono::duration<double> elapsed_seconds= endCalcTime -beginCalcTime;
+	//std::time_t end_time = std::chrono::system_clock::to_time_t(
+	totalCalcTime = totalCalcTime + elapsed_seconds;
      cv::putText(img, cv::format("FPS=%d", fps ), cv::Point(30, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(0,255,0));
     imshow( "result", img );
 }
