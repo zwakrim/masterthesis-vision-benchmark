@@ -126,7 +126,6 @@ if __name__ == '__main__':
 
             elif line[0][0] != "#":
                 spl = line.split (' ')
-
                 if algo[0] == "camera":
                     res = spl[5] + "," + spl[6].split ("\n")[
                         0]  # get the resolution of the facedection the last split is to remove \n
@@ -237,7 +236,7 @@ if __name__ == '__main__':
                     algo_name=algo[0]#get the name of the algoritme
                 elif line[0][0] != "#":
                     spl=line.split(' ')
-                    if algo_name == "facedetection":
+                    if algo_name == "camera":
                         res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
 
                     cpu_temp = []
@@ -249,7 +248,7 @@ if __name__ == '__main__':
                     while p.poll () is None:
                         if algo[0] == "camera":
                             cpu_info_time (array_cpu_perc=cpu_perc,
-                                           algorithme=algo_name + "_windows", counter=counter,
+                                           algorithme=algo_name + "_Linux", counter=counter,
                                            resolution=int(res.split (",")[0]))  # whats cpu does during subprocess
                         else:
                             cpu_info_time (array_cpu_perc=cpu_perc, array_temperature=cpu_temp,
