@@ -235,9 +235,10 @@ if __name__ == '__main__':
                     algo=line.split('#')[1]
                     algo= algo.split(' ')
                     algo_name=algo[0]#get the name of the algoritme
+
                 elif line[0][0] != "#":
                     spl=line.split(' ')
-                    if algo_name == "facedetection":
+                    if algo_name == "camera":
                         res = spl[3] +","+ spl[4].split("\n")[0] #get the resolution of the facedection the last split is to remove \n
 
                     cpu_temp = []
