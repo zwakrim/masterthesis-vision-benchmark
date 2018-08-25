@@ -6,6 +6,9 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_JPEG=O
 make -j4
 sudo make install
 
-g++ -std=c++11 convolv.cpp -o testconv `pkg-config --cflags --libs opencv`
+g++ -std=c++11 convolv.cpp -o convolv `pkg-config --cflags --libs opencv`
+g++ -std=c++11 convolv20.cpp -o convolv20 `pkg-config --cflags --libs opencv`
+g++ -std=c++11 facedetect.cpp -o facedetect `pkg-config --cflags --libs opencv`
+g++ -std=c++11 pixeltransform.cpp -o pxltransform `pkg-config --cflags --libs opencv`
 
 
