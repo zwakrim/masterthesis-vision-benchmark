@@ -7,6 +7,7 @@ import threading
 import psutil
 import jsonlines
 import datetime
+import platform
 
 
 #def facedetect(width , heigh):#

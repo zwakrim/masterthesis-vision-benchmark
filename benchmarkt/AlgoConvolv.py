@@ -4,6 +4,7 @@ import time
 import numpy as np
 import jsonlines
 import datetime
+import platform
 
 def convolvimg(width , heigh, fpsArray):
     video_capture = cv2.VideoCapture(camera)

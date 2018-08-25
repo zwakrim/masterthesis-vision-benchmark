@@ -1,34 +1,20 @@
 #camera facedetection  cameranumber second widht height
-<<<<<<< HEAD
-./facedetect 1 20 176 144
-./facedetect 1 20 320 240
-./facedetect 1 20 640 480
-./facedetect 1 20 960 720
-=======
 ./facedetect 0 20 176 144
 ./facedetect 0 20 320 240
 ./facedetect 0 20 640 480
 ./facedetect 0 20 960 720
->>>>>>> 0aa080fbbeadc0fdd40e68a95d2aeb77e8aaab93
 #camera convolv  cameranumber second widht height
-./convolv 1 20 176 144
-./convolv 1 20 320 240
-./convolv 1 20 640 480
-./convolv 1 20 960 720
+./convolv 0 20 176 144
+./convolv 0 20 320 240
+./convolv 0 20 640 480
+./convolv 0 20 960 720
 #camera convolv20 cameranumber second widht height
-./convolv20 1 20 176 144
-./convolv20 1 20 320 240
-./convolv20 1 20 640 480
-./convolv20 1 20 960 720
+./convolv20 0 20 176 144
+./convolv20 0 20 320 240
+./convolv20 0 20 640 480
+./convolv20 0 20 960 720
 #camera pixeltransform  cameranumber second widht height
-<<<<<<< HEAD
-./pxltransform 1 20 176 144
-./pxltransform 1 20 320 240
-./pxltransform 1 20 640 480
-./pxltransform 1 20 960 720
-=======
 ./pxltransform 0 20 176 144
 ./pxltransform 0 20 320 240
 ./pxltransform 0 20 640 480
 ./pxltransform 0 20 960 720
->>>>>>> 0aa080fbbeadc0fdd40e68a95d2aeb77e8aaab93
