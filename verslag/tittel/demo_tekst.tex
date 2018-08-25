@@ -354,11 +354,6 @@ About the other boards the installation documents are very complete.
 \chapter{Benchmark suite}
 
 
-
-
-
-  
-
 \section{Algorithms}
 Several algorithms were written to do the benchmark. Each algorithm is written in python and C++. For this proof of concept 4 algorithms were written: face detection,  convolution (filter 5 by 5 ), convolution (filter (20 by 20), pixel operation. They all use openCV. The algorithms where chosen because some are memory limited and other are compute limited. 
 
@@ -382,7 +377,30 @@ example:
    
 Each algorithm create an json file with several jsonlines. 
   
-\section{framework board side}
+\section{Framework board side}
+Before running the benchmark several libraries has to be installed. 
+\begin{itemize}
+\item OpenCV : This library is used for all the vision algorithms. Not easy to install on single boards computers. The installation of OpenCv will take most of the time. 
+\item Serial: Used to read serial port. With this library the benchmark is able to monitor the current consumption.
+\item psutil : psutil (python system and process utilities) is a library for retrieving information on running processes and system utilization. With this library we will be able to monitor the CPU utilization.  % rajouter sources https://psutil.readthedocs.io/en/latest/
+\item subprocess: with this labrary the benchmark is able to spawn new processes and connect their input and outputs. 
+\item jsonlines: This library help the benchmark to save in one json file several jsons. Each line is a json. This technique is used in a lot of big data application.
+\end{itemize}
+
+The main code for the benchmark is the benchmark.py algorithm. This will control the benchmark suite. Benchmark.py will first read two txt files that contain the terminal command to launch a algorithm. One text file for the python algorithms and an other for the C++ ones.
+Benchmark.py will read the terminal command and with the help of subprocess library it will run run the terminal command. Five second before and 5 seconds after running the command it will measure the idle mode of the single board computer.
+
+Approximately each second the benchmark.py will measure the CPU utilization, temperature if possible and current. Each second it will provide a json. 
+
+Example:
+
+\begin{lstlisting}
+{"node": "raspberrypi", "Temp": {}, "counter": 12, "percent_cpu": [55.9, 58.3, 51.5, 51.0], "Current": 0.684, "algoritme": "facedetection_python", "time": "2018-08-24 10:13:06", "resulotion": 320}
+	\end{lstlisting}
+
+On the end the benchmark provide one main json file and for each algorithm a json. 
+
+figure \ref{fig:board Arch} show schematically how the benchmark works.
 
 \begin{figure}[H]
 \center
@@ -390,7 +408,39 @@ Each algorithm create an json file with several jsonlines.
 \includegraphics[scale=0.55]{./img/boardArch.jpg}
 \end{figure} 
 
-\section{framework Server side}
+\section{Framework Server side}
+
+Ones the benchmark is done the json are zipped and the zip file need to be uploaded on the server side. To do this a server on Google cloud was created. 
+
+On the server side three main tools were installed Nifi, Zeppelin and PostgreSQL. 
+\begin{itemize}
+\item Apache Nifi: Nifi is a software from Apache build to automate dataflow between systems. In this thesis Nifi is used to transform the data from the zipfile to a SQL query and put the data in a database. The reason of the chose of Nifi is because it is simple to install and run. No code is needed to transform the data either for putting the data in the database. To transform the data the nifi UI is used. The UI provide some blocks that does the job automatically.    %. https://nifi.apache.org/docs/nifi-docs/html/overview.html
+Figure \ref{fig:zipNifi} shows the nifi process to get the zip file and unzip it.
+ 
+\begin{figure}[H]
+\center
+\caption{Get and unzip nifi.\label{fig:zipNifi}}
+\includegraphics[scale=1]{./img/getzip}
+\end{figure} 
+
+Once the data is unzipped and moved to an other folder the second part of process can begin. Figure \ref{fig:transNifi} is a screen capture of the nifi process to transform and add each json line in the database. 
+
+\begin{figure}[H]
+\center
+\caption{Transform and put in database. \label{fig:transNifi}}
+\includegraphics[scale=0.5]{./img/putinDB}
+\end{figure} 
+
+\item PostgreSQL : PostgreSQL is an database system that extend the SQL language. It is open-sources like all the other softwares used in this thesis. %https://www.postgresql.org/about/
+The advantage of PostgreSQL is that it is good for analytics and data mining. % https://www.quora.com/Why-would-a-company-use-both-MySQL-and-PostgreSQL/answer/Greg-Kemnitz?share=75ea8f4a&srid=p3QU 
+Three tables where created "machines", "resBenchmarkt" and "resAlgo". The first table is a listing of all the tested boards. "resBenchmarkt" contains the result of the benchmark.py code and "resAlgo" contains the result of each algorithm.
+
+\item Zeppelin: Zeppelin is also a software devlopped by Apache. Zeppelin is a web-based notebook a little bit like Jupyter. The main difference is that zeppelin support different languages and with Zeppelin it is easy to create a dashboard and share it. In this thesis Zeppelin is used to create the tables in the PostgreSQL database and is also use to query the database and visualize the data.
+
+\end{itemize}
+
+For uploading the file the user can use SSH transfer or more simple if the user has access to the console platform on the Google cloud website it is possible to upload the file via the a web browser. Ones this is done the rest goes automatically. Figure \ref{fig:server Arch} shows the server architecture.
+
 \begin{figure}[H]
 \center
 \caption{Schematic server framework.\label{fig:server Arch}}
@@ -406,13 +456,42 @@ The datasheet of the FS9922-DMM4 (p31) descripe how to read the bytes coming fro
 If a serial port is given as argument to the benchmark main code, the code will try to read the value coming from the serial port. (rajouter un example) 
 
 On some boards it was not possible to read the current cause the cp210x driver was not activated in the kernel. An improvement will be to activate the driver on all the single boards computers.
+\section{User guide}
+
+
+The first step before running "benchmark.py" is to install OpenCV. The best way to do that is to search how to install opencv for a specific single board computer.
+
+If the user just want to test python OpenCV algorithms then it is possible to install opencv with the following command. 
+\begin{lstlisting}[language=bash]
+pip install opencv-python
+\end{lstlisting} 
+
+Second step is to install all the python libraries to monitor the single board computer. This can be done easily by running a pip install command. 
+example: 
+\begin{lstlisting}[language=bash]
+pip install serial
+\end{lstlisting}
+
+The third step is to compile C++ code. To do that the following command can be used. In this exaple the pixel transformation code will give and output "pxltransform".
+\begin{lstlisting}[language=bash]
+g++ -std=c++11 pixeltransform.cpp -o pxltransform `pkg-config --cflags --libs opencv`
+\end{lstlisting}
+
+ones all the C++ algorithms are compiled the user can launch the benchmark. The ttyUSB0 is the serial port used by the multimeter. This argument is not mandatory. 
+
+\begin{lstlisting}[language=bash]
+python benchmark.py ttyUSB0
+\end{lstlisting}
+
+
+\subsection{Adding algorithm to benchmark}
+
+To add a new code to the suite the user should modify the text file. As example to add new python code the user should open the "python\_algorithm.txt" and add the command line for running the benchmark. the main code benchmark.py will automatically run the command line and monitor the singe board computer. The user is free to create some output in the added algorithm.
 
 
 \chapter{Results}   
 
-
 \chapter{Conclusion}
-
  
 \setstretch{1.0}
 \printbibliography
@@ -424,6 +503,5 @@ On some boards it was not possible to read the current cause the cp210x driver w
 
 
 \includepdf[scale=0.8,pages=-,pagecommand=\section{Appendix 1 : Result benchmark \cite{Benchmar1:online} \label{chap:appendix1}}]{./appendix/SBCArrow.pdf}
-
 
 \end{document}

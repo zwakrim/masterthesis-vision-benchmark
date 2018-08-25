@@ -42,18 +42,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Algorithms}{27}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}framework board side}{28}{section.5.2}
+\contentsline {section}{\numberline {5.2}Framework board side}{27}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}framework Server side}{29}{section.5.3}
+\contentsline {section}{\numberline {5.3}Framework Server side}{29}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Current measurement}{29}{section.5.4}
+\contentsline {section}{\numberline {5.4}Current measurement}{32}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Results}{30}{chapter.6}
+\contentsline {section}{\numberline {5.5}User guide}{32}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusion}{31}{chapter.7}
+\contentsline {subsection}{\numberline {5.5.1}Adding algorithm to benchmark}{33}{subsection.5.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Appendix}{33}{chapter.8}
+\contentsline {chapter}{\numberline {6}Results}{34}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {.1}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{34}{section.Alph0.1}
+\contentsline {chapter}{\numberline {7}Conclusion}{35}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {.2}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{35}{section.Alph0.2}
+\contentsline {chapter}{\numberline {8}Appendix}{37}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {.1}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{38}{section.Alph0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {.2}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{39}{section.Alph0.2}

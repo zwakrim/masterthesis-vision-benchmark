@@ -10,11 +10,13 @@
 \BOOKMARK [1][-]{section.4.2}{Working and first run experience}{chapter.4}% 10
 \BOOKMARK [0][-]{chapter.5}{Benchmark suite}{}% 11
 \BOOKMARK [1][-]{section.5.1}{Algorithms}{chapter.5}% 12
-\BOOKMARK [1][-]{section.5.2}{framework board side}{chapter.5}% 13
-\BOOKMARK [1][-]{section.5.3}{framework Server side}{chapter.5}% 14
+\BOOKMARK [1][-]{section.5.2}{Framework board side}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.3}{Framework Server side}{chapter.5}% 14
 \BOOKMARK [1][-]{section.5.4}{Current measurement}{chapter.5}% 15
-\BOOKMARK [0][-]{chapter.6}{Results}{}% 16
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 17
-\BOOKMARK [0][-]{chapter.8}{Appendix}{}% 18
-\BOOKMARK [1][-]{section.Alph0.1}{Appendix 1 : Result benchmark Benchmar1:online }{chapter.8}% 19
-\BOOKMARK [1][-]{section.Alph0.2}{Appendix 1 : Result benchmark Benchmar1:online }{chapter.8}% 20
+\BOOKMARK [1][-]{section.5.5}{User guide}{chapter.5}% 16
+\BOOKMARK [2][-]{subsection.5.5.1}{Adding algorithm to benchmark}{section.5.5}% 17
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 18
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 19
+\BOOKMARK [0][-]{chapter.8}{Appendix}{}% 20
+\BOOKMARK [1][-]{section.Alph0.1}{Appendix 1 : Result benchmark Benchmar1:online }{chapter.8}% 21
+\BOOKMARK [1][-]{section.Alph0.2}{Appendix 1 : Result benchmark Benchmar1:online }{chapter.8}% 22

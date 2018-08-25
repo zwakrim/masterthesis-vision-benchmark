@@ -11,11 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f9055c99-0193-4e2b-82a4-dcd972d3384b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarkt/AlgoConvolv.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/AlgoConvolv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/benchmarkt/AlgoConvolv20.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/AlgoConvolv20.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarkt/AlgoFacedect.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/AlgoFacedect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarkt/benchmarkt.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/benchmarkt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarkt/pixeltransformation.py" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/pixeltransformation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarkt/result/benchmarket_armv7l_raspberrypi_2018_08_25_07_24_19.zip" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarkt/result/benchmarket_armv7l_raspberrypi_2018_08_25_07_24_19.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.aux" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.blg" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.blg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verslag/tittel/demo_tekst.lof" beforeDir="false" afterPath="$PROJECT_DIR$/verslag/tittel/demo_tekst.lof" afterDir="false" />
@@ -36,15 +33,16 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="424" />
-          <entry key="py" value="704" />
+          <entry key="py" value="711" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
@@ -52,7 +50,7 @@
         <counts>
           <entry key="ObjectiveC" value="424" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="704" />
+          <entry key="Python" value="711" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benchmarkt/python_algorithm.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -86,17 +84,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransform.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
+            <state relative-caret-position="3893">
               <caret line="229" column="31" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benchmarkt/benchmarkt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+            <state relative-caret-position="266">
+              <caret line="140" column="30" selection-start-line="140" selection-start-column="20" selection-end-line="140" selection-end-column="30" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -107,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransformation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="132" column="45" lean-forward="true" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="45" />
+            <state relative-caret-position="2074">
+              <caret line="132" column="45" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -119,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoConvolv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="84" column="43" lean-forward="true" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+            <state relative-caret-position="1326">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -128,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoConvolv20.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+            <state relative-caret-position="151">
+              <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -143,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoFacedect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="1836">
               <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -192,8 +190,8 @@
         <option value="$PROJECT_DIR$/benchmarkt/pixeltransformation.py" />
         <option value="$PROJECT_DIR$/benchmarkt/AlgoConvolv.py" />
         <option value="$PROJECT_DIR$/benchmarkt/AlgoFacedect.py" />
-        <option value="$PROJECT_DIR$/benchmarkt/AlgoConvolv20.py" />
         <option value="$PROJECT_DIR$/benchmarkt/benchmarkt.py" />
+        <option value="$PROJECT_DIR$/benchmarkt/AlgoConvolv20.py" />
       </list>
     </option>
   </component>
@@ -204,10 +202,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="713" />
-    <option name="y" value="250" />
-    <option name="width" value="1120" />
-    <option name="height" value="800" />
+    <option name="x" value="890" />
+    <option name="y" value="311" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -217,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,7 +232,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,18 +267,19 @@
       <updated>1534787285333</updated>
       <workItem from="1534787289789" duration="1286000" />
       <workItem from="1534893702118" duration="22125000" />
-      <workItem from="1535172356585" duration="767000" />
+      <workItem from="1535172356585" duration="2987000" />
+      <workItem from="1535225696403" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24178000" />
+    <option name="totallyTimeSpent" value="26410000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23081024" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2946309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,7 +291,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.42917848" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -344,8 +343,45 @@
     <entry file="file://$PROJECT_DIR$/benchmarkt/benshmarkt.py" />
     <entry file="file://$PROJECT_DIR$/benchmarkt/python_algorithm.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransform.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3893">
+          <caret line="229" column="31" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransformation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="132" column="45" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoConvolv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoFacedect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -359,59 +395,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransform.cpp">
+    <entry file="file://$PROJECT_DIR$/benchmarkt/benchmarkt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="229" column="31" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmarkt/pixeltransformation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="132" column="45" lean-forward="true" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="45" />
+        <state relative-caret-position="266">
+          <caret line="140" column="30" selection-start-line="140" selection-start-column="20" selection-end-line="140" selection-end-column="30" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoFacedect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoConvolv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="84" column="43" lean-forward="true" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/benchmarkt/AlgoConvolv20.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+        <state relative-caret-position="151">
+          <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmarkt/benchmarkt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

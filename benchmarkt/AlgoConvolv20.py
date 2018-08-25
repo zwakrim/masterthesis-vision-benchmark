@@ -88,7 +88,7 @@ if __name__ == '__main__':
         counter =1
         for item in fpsArrayshared2:
             result ={}
-            result["algoritme"]= "Convolution_python"
+            result["algoritme"]= "Convolution20_python"
             result["fps"] = item
             result["Type"] = "Python"
             result["Second"] = counter
