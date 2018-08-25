@@ -15,7 +15,9 @@
 \def\triangleH{27.7mm}
 % end of title page setup
 
+
 \addbibresource{IEEEexample.bib}
+
 \begin{document}
 % do not remove the line below, makes the frontpage
 \maketitle
@@ -224,7 +226,9 @@ The user has do decides if he want to save money and work with a board like a  R
 
 About vision we can find a lot of benchmarks that compares algorithms to do some specific task like face-detection. There are also more general benchmarks that compares single boards computers (\ref{SBC}), but there is no benchmark that will compare boards on how they are good to do real time image processing.
 
-\chapter{Pixy cam}
+\chapter{Use cases}
+
+\section{Pixy cam}
 
 The pixycacam is an vision sensor. This board can help an arduino or simal board to do fast image processing. the pixicam will process the image and send only useful information to the microcontroller. The frame rate is 50Hz and it can use several interfaces to send the inforamtion:UART serial, SPI, I2C, USB, or digital/analog output. In our use cas the pixi will do the iamge processing while the micronctorller(Arduino) can use his CPU for other tasks.\cite{pixy}
 
@@ -349,11 +353,60 @@ About the other boards the installation documents are very complete.
  
 \chapter{Benchmark suite}
 
-\section{Algorithms}
-facedetection,  convolution, pixel operation,matrixmultiplucation,openCl
-\section{Working}
 
-\section{Visualization}
+
+
+
+  
+
+\section{Algorithms}
+Several algorithms were written to do the benchmark. Each algorithm is written in python and C++. For this proof of concept 4 algorithms were written: face detection,  convolution (filter 5 by 5 ), convolution (filter (20 by 20), pixel operation. They all use openCV. The algorithms where chosen because some are memory limited and other are compute limited. 
+
+Each algorithm runs for 20 seconds and is tested 4 times with a different resolution. 
+
+The output is a jsonline with several keys and value:
+\begin{itemize}
+\item ratiCalTime: The ratio between the effective calculation time of the algorithm divide by the total time of the algorithm.
+\item type: python or C++
+\item Second: each second a jsonline is created this can be use as an unique id
+\item algorithm: name of the algorithm
+\item fps: The frames per second at that moment
+\item resolution: the resolution of the algorithm
+\item node: computer’s network name (supposed to be unique)
+\end{itemize}
+
+example: 
+	\begin{lstlisting}
+	{"ratioCalTime": 8.937491320338326, "Type": "Python", "Second": 14, "algoritme": "Convolution_python", "fps": 24, "resolution": 176,"node":raspberrypi}
+	\end{lstlisting}
+   
+Each algorithm create an json file with several jsonlines. 
+  
+\section{framework board side}
+
+\begin{figure}[H]
+\center
+\caption{Schematic board framework.\label{fig:board Arch}}
+\includegraphics[scale=0.55]{./img/boardArch.jpg}
+\end{figure} 
+
+\section{framework Server side}
+\begin{figure}[H]
+\center
+\caption{Schematic server framework.\label{fig:server Arch}}
+\includegraphics[scale=0.55]{./img/serverArch.jpg}
+\end{figure} 
+
+\section{Current measurement}
+
+To measure the current a Sparkfun 70C multimeter is used. The multimeter chip is a FS9922-DMM4 from Fortune Semiconductor. This chip is a low power Analog to digital converter.   To send data via usb the multimeter use an CP2102 USB to Serial converter. (source a rajouter plus tard %https://sigrok.org/wiki/SparkFun_70C) https://www.ic-fortune.com/upload/Download/FS9922-DMM4-DS-13_EN.pdf
+
+The datasheet of the FS9922-DMM4 (p31) descripe how to read the bytes coming from the serial port. By using the Arduino IDE it was simple to get the right baudrate, 2400 baud. 
+
+If a serial port is given as argument to the benchmark main code, the code will try to read the value coming from the serial port. (rajouter un example) 
+
+On some boards it was not possible to read the current cause the cp210x driver was not activated in the kernel. An improvement will be to activate the driver on all the single boards computers.
+
 
 \chapter{Results}   
 

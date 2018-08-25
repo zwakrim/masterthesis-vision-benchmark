@@ -285,6 +285,7 @@ if __name__ == '__main__':
                                     result["Second"] = counter
 				    result["ratioCalTime"] = ratiocalc
                                     result["resolution"] = spl[3]
+                                    result["node"] = platform.node ()
                                     counter = counter +1
                                     outputfileRes.write(result)
 				

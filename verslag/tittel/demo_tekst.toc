@@ -26,9 +26,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{conlusion}{19}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Pixy cam}{21}{chapter.3}
+\contentsline {chapter}{\numberline {3}Use cases}{21}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Limit of Pixy}{21}{section.3.1}
+\contentsline {section}{\numberline {3.1}Pixy cam}{21}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Limit of Pixy}{21}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Single board computers}{24}{chapter.4}
 \defcounter {refsection}{0}\relax 
@@ -40,16 +42,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Algorithms}{27}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Working}{27}{section.5.2}
+\contentsline {section}{\numberline {5.2}framework board side}{28}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Visualization}{27}{section.5.3}
+\contentsline {section}{\numberline {5.3}framework Server side}{29}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Results}{28}{chapter.6}
+\contentsline {section}{\numberline {5.4}Current measurement}{29}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusion}{29}{chapter.7}
+\contentsline {chapter}{\numberline {6}Results}{30}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Appendix}{31}{chapter.8}
+\contentsline {chapter}{\numberline {7}Conclusion}{31}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {.1}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{32}{section.Alph0.1}
+\contentsline {chapter}{\numberline {8}Appendix}{33}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {.2}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{33}{section.Alph0.2}
+\contentsline {section}{\numberline {.1}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{34}{section.Alph0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {.2}Appendix 1 : Result benchmark \cite {Benchmar1:online} }{35}{section.Alph0.2}

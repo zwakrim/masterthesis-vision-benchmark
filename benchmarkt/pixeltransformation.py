@@ -7,6 +7,7 @@ import threading
 import psutil
 import jsonlines
 import datetime
+import platform
 import numpy as np
 
 
@@ -35,9 +36,12 @@ def pixeltransform(width , heigh, fpsArray):
         # Capture frame-by-frame
         ret, frame = video_capture.read()
 
+
         rows =  frame.shape[0]
         cols = frame.shape[1]
-        #print (frame.shape)
+        result = np.zeros((rows,cols,3), np.uint8)
+
+    #print (frame.shape)
         #print (frame.size)
 
         #b,g,r = cv2.split(frame)
@@ -55,7 +59,7 @@ def pixeltransform(width , heigh, fpsArray):
                 b= frame[i,j,0] * 1.5 + 100
                 g = frame[i,j,1] * 1.5 + 100
                 r = frame[i,j,2] * 1.5 + 100
-                frame[i,j] = [b,g,r]
+                result[i,j] = [b,g,r]
         endCalcTime = time.time() - beginCalcTime
         totalCalcTime = totalCalcTime + endCalcTime
 
@@ -82,6 +86,7 @@ def pixeltransform(width , heigh, fpsArray):
 
         # Display the resulting frame
         cv2.imshow('Video', frame)
+        cv2.imshow('lol',lol)
         #cv2.imshow('hsv', hsv)
 
 
@@ -125,6 +130,6 @@ if __name__ == '__main__':
             result["Second"] = counter
             result["resolution"] = width
             result["ratioCalTime"] = totalCalcTime/endTime * 100
-
+            result["node"] = platform.node ()
             counter = counter +1
             outputfile.write(result)

@@ -82,7 +82,7 @@ if __name__ == '__main__':
     #print("fps,"+",".join(str(x) for x in fpsArrayshared2)+ ",")
     timesnow = datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S')
 
-    filename =  'result/'+ "AlgoConvolution_python_"+str(width) + str(timesnow)+ '.json'
+    filename =  'result/'+ "AlgoConvolution20_python_"+str(width) + str(timesnow)+ '.json'
     with jsonlines.open(filename,mode='w') as outputfile:
         counter =1
         for item in fpsArrayshared2:
