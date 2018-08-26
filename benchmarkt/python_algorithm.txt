@@ -1,23 +1,23 @@
 #camera facedetection haarcascade cameranumber second widht height
-python AlgoFacedect.py haarcascade_frontalface_default.xml 0 20 176 144
-python AlgoFacedect.py haarcascade_frontalface_default.xml 0 20 320 240
-python AlgoFacedect.py haarcascade_frontalface_default.xml 0 20 640 480
-python AlgoFacedect.py haarcascade_frontalface_default.xml 0 20 960 720
+python AlgoFacedect.py haarcascade_frontalface_default.xml 1 20 176 144
+python AlgoFacedect.py haarcascade_frontalface_default.xml 1 20 320 240
+python AlgoFacedect.py haarcascade_frontalface_default.xml 1 20 640 480
+python AlgoFacedect.py haarcascade_frontalface_default.xml 1 20 960 720
 #camera convolution haarcascade cameranumber second widht height
-python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 176 144
-python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 320 240
-python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 640 480
-python AlgoConvolv.py haarcascade_frontalface_default.xml 0 20 960 720
+python AlgoConvolv.py haarcascade_frontalface_default.xml 1 20 176 144
+python AlgoConvolv.py haarcascade_frontalface_default.xml 1 20 320 240
+python AlgoConvolv.py haarcascade_frontalface_default.xml 1 20 640 480
+python AlgoConvolv.py haarcascade_frontalface_default.xml 1 20 960 720
 #camera convolution20 haarcascade cameranumber second widht height
-python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 176 144
-python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 320 240
-python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 640 480
-python AlgoConvolv20.py haarcascade_frontalface_default.xml 0 20 960 720
+python AlgoConvolv20.py haarcascade_frontalface_default.xml 1 20 176 144
+python AlgoConvolv20.py haarcascade_frontalface_default.xml 1 20 320 240
+python AlgoConvolv20.py haarcascade_frontalface_default.xml 1 20 640 480
+python AlgoConvolv20.py haarcascade_frontalface_default.xml 1 20 960 720
 #camera pixeltranform haarcascade cameranumber second widht height
-python pixeltransformation.py haarcascade_frontalface_default.xml 0 20 176 144
-python pixeltransformation.py haarcascade_frontalface_default.xml 0 20 320 240
-python pixeltransformation.py haarcascade_frontalface_default.xml 0 20 640 480
-python pixeltransformation.py haarcascade_frontalface_default.xml 0 20 960 720
+python pixeltransformation.py haarcascade_frontalface_default.xml 1 20 176 144
+python pixeltransformation.py haarcascade_frontalface_default.xml 1 20 320 240
+python pixeltransformation.py haarcascade_frontalface_default.xml 1 20 640 480
+python pixeltransformation.py haarcascade_frontalface_default.xml 1 20 960 720
 #matrixmul Matrixmul N
 #python AlgoMatrixMul.py 1000
 #python AlgoMatrixMul.py 10000
