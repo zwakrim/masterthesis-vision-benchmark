@@ -4,39 +4,39 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Related Work}{11}{chapter.2}
+\contentsline {chapter}{\numberline {2}Single board computers}{11}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Existing benchmarks}{11}{section.2.1}
+\contentsline {section}{\numberline {2.1}board comparison}{11}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Running existing benchmark}{11}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Working and first run experience}{12}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{FFTW}{11}{subsection.2.1.1}
+\contentsline {chapter}{\numberline {3}Related Work}{14}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{John The Ripper}{12}{figure.caption.7}
+\contentsline {section}{\numberline {3.1}Existing benchmarks}{14}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{C-ray}{13}{figure.caption.9}
+\contentsline {subsection}{\numberline {3.1.1}Running existing benchmark}{14}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Smallpt}{14}{figure.caption.11}
+\contentsline {subsubsection}{FFTW}{14}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{FLAC Audio Encoding}{16}{figure.caption.13}
+\contentsline {subsubsection}{John The Ripper}{15}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Redis}{17}{figure.caption.15}
+\contentsline {subsubsection}{C-ray}{16}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Himeno}{19}{figure.caption.19}
+\contentsline {subsubsection}{Smallpt}{17}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{conlusion}{19}{figure.caption.21}
+\contentsline {subsubsection}{FLAC Audio Encoding}{19}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Use cases}{21}{chapter.3}
+\contentsline {subsubsection}{Redis}{20}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Pixy cam}{21}{section.3.1}
+\contentsline {subsubsection}{Himeno}{22}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Limit of Pixy}{21}{section.3.2}
+\contentsline {subsubsection}{conlusion}{22}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Single board computers}{24}{chapter.4}
+\contentsline {chapter}{\numberline {4}Use cases}{24}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}board comparison}{24}{section.4.1}
+\contentsline {section}{\numberline {4.1}Pixy cam}{24}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Working and first run experience}{25}{section.4.2}
+\contentsline {section}{\numberline {4.2}Limit of Pixy}{24}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Benchmark suite}{27}{chapter.5}
 \defcounter {refsection}{0}\relax 

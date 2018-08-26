@@ -94,6 +94,7 @@ if __name__ == '__main__':
             result["Second"] = counter
             result["resolution"] = width
             result["ratioCalTime"] = totalCalcTime/endTime * 100
+            result["node"] = platform.node ()
             counter = counter +1
             outputfile.write(result)
 

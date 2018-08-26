@@ -6,47 +6,47 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces FFTW benchmark.\relax }}{12}{figure.caption.6}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces FFTW/Cost benchmark.\relax }}{12}{figure.caption.7}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces FFTW benchmark.\relax }}{15}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces John The Ripper benchmark.\relax }}{13}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces FFTW/Cost benchmark.\relax }}{15}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces John The Ripper / Cost benchmark.\relax }}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces John The Ripper benchmark.\relax }}{16}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces C-Ray benchmark.\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces John The Ripper / Cost benchmark.\relax }}{16}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces C-Ray/Cost benchmark.\relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces C-Ray benchmark.\relax }}{17}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces smallpt benchmark.\relax }}{15}{figure.caption.12}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces C-Ray/Cost benchmark.\relax }}{17}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces smallpt/cost benchmark.\relax }}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces smallpt benchmark.\relax }}{18}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces flac audio benchmark.\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces smallpt/cost benchmark.\relax }}{18}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.10}{\ignorespaces flac audio /cost benchmark.\relax }}{16}{figure.caption.15}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces flac audio benchmark.\relax }}{19}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Redis(Set) benchmark.\relax }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces flac audio /cost benchmark.\relax }}{19}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Redis(set)/cost benchmark.\relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Redis(Set) benchmark.\relax }}{20}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Redis(Get) benchmark.\relax }}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Redis(set)/cost benchmark.\relax }}{20}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Redis(Get)/cost benchmark.\relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Redis(Get) benchmark.\relax }}{21}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Himeno benchmark.\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Redis(Get)/cost benchmark.\relax }}{21}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Himeno/cost benchmark.\relax }}{19}{figure.caption.21}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Himeno benchmark.\relax }}{22}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Himeno/cost benchmark.\relax }}{22}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Red color detection.\relax }}{22}{figure.caption.22}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Red color detection.\relax }}{25}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Rebound object detection.\relax }}{22}{figure.caption.23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rebound object detection.\relax }}{25}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces white color detection.\relax }}{23}{figure.caption.24}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.3}{\ignorespaces white color detection.\relax }}{26}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

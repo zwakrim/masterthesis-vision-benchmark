@@ -41,17 +41,92 @@
 
 \chapter{Introduction} % use \chapter*{Inleiding} with asterix to have the title without number
 
-This thesis will benchmark vision algorithms on several single board computers. The purpose of the thesis is to check how good a single board computer can do some real time image processing. 
+This thesis will benchmark vision algorithms on several single board computers. The purpose of the thesis is to check wich single board computers are optimal for real time image processing. 
 
 Vision is a hype for the moment in the IT world, autonomous car, camera with number plate reconision,...
 
-With the ... of the Arduino a lot of hoobbies want to put vision in robots or in other application. Because a microcontroller like the one on the Arduino is not powerful enough to perform real time video processing It is mandatory to combine it with a more powerful computer or a single board computer. in severals application the single board computer will send the image to a more powerful computer or server and it is this one that will perform the imageprocessing. For our application all the image processing will be done on the single board computer.
 
-Two users were defined: students or person that are not alaise with programming. In this case the supposition is that the user will use python. The second user is a person that is more alaise with coding and that will use or C. it will be interesting to see if there is a big difference between python algorithms and C. 
 
-Last but not least is also the power consumption. Because most of the application like robots needs a battery to be powered it will be interesting to check the different power consumption during the test. 
+With the advent of the Arduino a lot of hoobbies want to put vision in robots or in other application. Because a microcontroller like the one on the Arduino is not powerful enough to perform real time video processing It is mandatory to combine it with a more powerful computer or a single board computer. in severals application the single board computer will send the image to a more powerful computer or server and it is this one that will perform the imageprocessing. For our application all the image processing will be done on the single board computer.
+
+Two users were defined: students or person that are not ease with programming. In this case the supposition is that the user will use python. The second user is a person that is more alaise with coding and that will use or C. it will be interesting to see if there is a big difference between python algorithms and C. For both uses cases we want to find the optimal choise of embedded computer. 
+
+Last but not least is also the power consumption. Because most of the application like robots needs a battery to be powered it will be interesting to check the different power consumption during the test. Concluding, the most important criteria for the evaluation are processing capacities, easy-to-use and energy consumption.
+
+The benchmark suite will be made generic such that other tests can easily be added.
 
 % they output lots of data, dozens of megabytes per second, and 2) processing this amount of data can overwhelm many processors. And if the processor can keep up with the data, much of its processing power won't be available for other tasks.
+\chapter{Single board computers}
+\section{board comparison}
+
+This thesis will compare 5 boards. The chosen boards all run an arm architecture. The boaérd are selected because of they popularity, price(depending on use case) and power consumption:
+\begin{itemize}
+\item \textbf{Raspberry Pi 3}: The most famous single board computer of our list. The cost of the board is around \$35. It is possible to run several operating system on it like Linux or Windows 10 IOT core. \cite{Raspberr76:online}
+
+\item \textbf{Udoo}: The Udoo Dual is a computer that can be used with Android and Linux. It is a powerful prototyping board because it contains a processor and a Arduino Due microcontroller. To summerize the Udoo we can say that it bring the best of an Raspberry Pi and an Arduino togheter in-to one single board.  \cite{maksimovic2014raspberry}
+On the market we can find three type of Udoo that combine a processor and an Arduino. In this thesis we will discuss the Udoo dual. The dual is the mid-range Udoo and the cost of it is around \$115 \cite{DUALQUAD20:online}.
+
+\item \textbf{Odroid Xu4}: The Odroid X4 is and powerful Single board computer. It combine two processor a Samsung Exynos5422 Cortex A15 (2 GHz) and a Cortex A7 Octa core CPU (1.4 Ghz). This two processors are combined with 2 GB of RAM. \cite{abdullah2016position} The board can run several flavors of Linux. The computing power of the X4 seems to be seven times faster than the Raspberry Pi3. 
+The Xu4 can be found on the market at the price of \$59. \cite{ODROIDHa46:online}
+
+\item \textbf{Dragonboard 410c}: The Dragonboard 410 c is a single board computer basd on the  mid-tier Qualcomm® Snapdragon™ 410E processor. It can run Windows 10 IOT core and Linux(Andoid, Debian). The price is around \$75. \cite{DRAGONBO86:online}  
+
+\item \textbf{Nvidia jetston tx2}: Jetson is an NVIDIA® high performane computer. it is low-power and it is ideal for embedded compute-intensive projects like deep learning or computer vision. \cite{JetsonFA42:online}  This thesis will compare the Jetson TX2 Developer Kit  with other boards. On the market the TX2 Devloper kit can bi found for \$599.
+
+Table \ref{comparaison board table} compares the technical specs of all the cited boards.
+\newpage
+  \null
+
+\end{itemize}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{tabular}{p{3.5cm}|p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+ & \textbf{udoo dual}   & \textbf{ raspberry pi 3} & \textbf{odroid Xu} &\textbf{ Dragonboard 410c} & \textbf{NVIDIA\newline jetston TX2 \newline devlopper kit} & \textbf{Pixycam}   \\
+ \hline
+\textbf{cpu} & NXP i.MX 6 DualLite \newline Atmel SAM3X8E (Arduino Due) & ARM Cortex-A53 Quad-core & Samsung Exynos5422 Cortex™A15 2Ghz \newline + Cortex™-A7 Octa core CPUs & ARM Cortex-A53 Quad-core & HMP Dual Denver 2/2MB L2 + Quad ARM A57/2MB L2 & NXP LPC4330 \\
+
+\# cores & 2 & 4 & 8 & 4 & 6 & 2 \\
+
+clk(GHz) & 1 & 1.2 & 2 & 1.2 & 2 & 0.204 \\
+ram(GB) & 1 & 1 & 2 & 1 & 8 & 0.000264 \\
+memory(GB) & unlimitted ( sd card) & unlimitted ( sd card) & unlimitted ( sd card) & unlimitted ( sd card) & 32 & 1M \\
+ipc(instruction per cycles) & 1 & 1 & 1 & 1 & 1 & 1 \\
+GFLOPs & 2 & 4.8 & 16 & 4.8 & 12 & 0.408 \\
+Power supply\newline(DC V) & 6 & 5 & 5 & 6.5 & 19 &  \\
+ &  &  &  &  &  &  \\
+\textbf{GPU} & yes & yes & yes & yes & yes & no \\
+ & Vivante GC 880 + Vivante GC 320 & broadcom videocore 4 & mali T628 & Qualcomm Ardeno 306 & NVIDIA Pascal, 256 NVIDIA CUDA Cores &  \\
+opencl/cuda & maybe & no & yes & yes & yes(Cuda) &  \\
+core clk (mhz) & 400 & 250 & 600 & 450 &  &  \\
+pixel/rate(Mpixel/ sec) & 80 & 1000 &  &  &  &  \\
+ &  &  &  &  &  &  \\
+operating System & Linux & linux \newline windows10 & linux & linux \newline windows & linux & no \\
+ & debian & debian & debian & debian & debian &  \\
+camera plug & yes & yes & yes & yes & yes &  \\
+ &  &  &  &  &  &  \\
+python /opencv & yes & yes & yes & yes & yes &  \\
+ &  &  &  &  &  &  \\
+price(€) & 110 & 40 & 75 & 75 & 599 &  \\
+ &  &  &  &  &  &  \\
+arduino compatible\newline(connector for Arduino) & yes & no & no & yes & no & yes
+\end{tabular}%
+}
+\caption{Comparison board table \cite{SamsungE46:online} \cite{VideoCor59:online} \cite{iMX6Solo72:online} \cite{JetsonFA42:online} } 
+\label{comparaison board table}
+\end{table}
+%\section{Camera comparison}
+
+\section{Working and first run experience}
+
+A lot of information is available on the internet for most of the boards. Some boards have a bigger community like the Rasperry Pi.
+My personal opinion is that with the Raspberry Pi everything works directly. The most difficult board is the Dragonboard. small community, slow board and less memory. I was not able to install Opencv on this board.
+
+An other point is the fact that all the board used a the same power supply socket except the dragonboard. I suggest to buy the boards with they power supply. As example for the Odroid xu4 i tried an other power supply and on some point it was not working. This is because the Dragonboard needs a maximum of 4 ampere to work. 5V 4A is not an common power supply to find.
+
+About the other boards the installation documents are very complete. 
 
 \chapter{Related Work}
 
@@ -278,77 +353,7 @@ The Pixy can only be used for color detection not for object detection. The seco
 
 
 
-\chapter{Single board computers}
-\section{board comparison}
 
-This thesis will compare 5 boards. The chosen boards all run an arm architecture. The boaérd are selected because of they popularity, price(depending on use case) and power consumption:
-\begin{itemize}
-\item \textbf{Raspberry Pi 3}: The most famous single board computer of our list. The cost of the board is around \$35. It is possible to run several operating system on it like Linux or Windows 10 IOT core. \cite{Raspberr76:online}
-
-\item \textbf{Udoo}: The Udoo Dual is a computer that can be used with Android and Linux. It is a powerful prototyping board because it contains a processor and a Arduino Due microcontroller. To summerize the Udoo we can say that it bring the best of an Raspberry Pi and an Arduino togheter in-to one single board.  \cite{maksimovic2014raspberry}
-On the market we can find three type of Udoo that combine a processor and an Arduino. In this thesis we will discuss the Udoo dual. The dual is the mid-range Udoo and the cost of it is around \$115 \cite{DUALQUAD20:online}.
-
-\item \textbf{Odroid Xu4}: The Odroid X4 is and powerful Single board computer. It combine two processor a Samsung Exynos5422 Cortex A15 (2 GHz) and a Cortex A7 Octa core CPU (1.4 Ghz). This two processors are combined with 2 GB of RAM. \cite{abdullah2016position} The board can run several flavors of Linux. The computing power of the X4 seems to be seven times faster than the Raspberry Pi3. 
-The Xu4 can be found on the market at the price of \$59. \cite{ODROIDHa46:online}
-
-\item \textbf{Dragonboard 410c}: The Dragonboard 410 c is a single board computer basd on the  mid-tier Qualcomm® Snapdragon™ 410E processor. It can run Windows 10 IOT core and Linux(Andoid, Debian). The price is around \$75. \cite{DRAGONBO86:online}  
-
-\item \textbf{Nvidia jetston tx2}: Jetson is an NVIDIA® high performane computer. it is low-power and it is ideal for embedded compute-intensive projects like deep learning or computer vision. \cite{JetsonFA42:online}  This thesis will compare the Jetson TX2 Developer Kit  with other boards. On the market the TX2 Devloper kit can bi found for \$599.
-
-Table \ref{comparaison board table} compares the technical specs of all the cited boards.
-\newpage
-  \null
-
-\end{itemize}
-% Please add the following required packages to your document preamble:
-% \usepackage{graphicx}
-\begin{table}[]
-\centering
-\resizebox{1\textwidth}{!}{%
-\begin{tabular}{p{3.5cm}|p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
- & \textbf{udoo dual}   & \textbf{ raspberry pi 3} & \textbf{odroid Xu} &\textbf{ Dragonboard 410c} & \textbf{NVIDIA\newline jetston TX2 \newline devlopper kit} & \textbf{Pixycam}   \\
- \hline
-\textbf{cpu} & NXP i.MX 6 DualLite \newline Atmel SAM3X8E (Arduino Due) & ARM Cortex-A53 Quad-core & Samsung Exynos5422 Cortex™A15 2Ghz \newline + Cortex™-A7 Octa core CPUs & ARM Cortex-A53 Quad-core & HMP Dual Denver 2/2MB L2 + Quad ARM A57/2MB L2 & NXP LPC4330 \\
-
-\# cores & 2 & 4 & 8 & 4 & 6 & 2 \\
-
-clk(GHz) & 1 & 1.2 & 2 & 1.2 & 2 & 0.204 \\
-ram(GB) & 1 & 1 & 2 & 1 & 8 & 0.000264 \\
-memory(GB) & unlimitted ( sd card) & unlimitted ( sd card) & unlimitted ( sd card) & unlimitted ( sd card) & 32 & 1M \\
-ipc(instruction per cycles) & 1 & 1 & 1 & 1 & 1 & 1 \\
-GFLOPs & 2 & 4.8 & 16 & 4.8 & 12 & 0.408 \\
-Power supply\newline(DC V) & 6 & 5 & 5 & 6.5 & 19 &  \\
- &  &  &  &  &  &  \\
-\textbf{GPU} & yes & yes & yes & yes & yes & no \\
- & Vivante GC 880 + Vivante GC 320 & broadcom videocore 4 & mali T628 & Qualcomm Ardeno 306 & NVIDIA Pascal, 256 NVIDIA CUDA Cores &  \\
-opencl/cuda & maybe & no & yes & yes & yes(Cuda) &  \\
-core clk (mhz) & 400 & 250 & 600 & 450 &  &  \\
-pixel/rate(Mpixel/ sec) & 80 & 1000 &  &  &  &  \\
- &  &  &  &  &  &  \\
-operating System & Linux & linux \newline windows10 & linux & linux \newline windows & linux & no \\
- & debian & debian & debian & debian & debian &  \\
-camera plug & yes & yes & yes & yes & yes &  \\
- &  &  &  &  &  &  \\
-python /opencv & yes & yes & yes & yes & yes &  \\
- &  &  &  &  &  &  \\
-price(€) & 110 & 40 & 75 & 75 & 599 &  \\
- &  &  &  &  &  &  \\
-arduino compatible\newline(connector for Arduino) & yes & no & no & yes & no & yes
-\end{tabular}%
-}
-\caption{Comparison board table \cite{SamsungE46:online} \cite{VideoCor59:online} \cite{iMX6Solo72:online} \cite{JetsonFA42:online} } 
-\label{comparaison board table}
-\end{table}
-%\section{Camera comparison}
-
-\section{Working and first run experience}
-
-A lot of information is available on the internet for most of the boards. Some boards have a bigger community like the Rasperry Pi.
-My personal opinion is that with the Raspberry Pi everything works directly. The most difficult board is the Dragonboard. small community, slow board and less memory. I was not able to install Opencv on this board.
-
-An other point is the fact that all the board used a the same power supply socket except the dragonboard. I suggest to buy the boards with they power supply. As example for the Odroid xu4 i tried an other power supply and on some point it was not working. This is because the Dragonboard needs a maximum of 4 ampere to work. 5V 4A is not an common power supply to find.
-
-About the other boards the installation documents are very complete. 
 
  
 \chapter{Benchmark suite}
@@ -357,25 +362,11 @@ About the other boards the installation documents are very complete.
 \section{Algorithms}
 Several algorithms were written to do the benchmark. Each algorithm is written in python and C++. For this proof of concept 4 algorithms were written: face detection,  convolution (filter 5 by 5 ), convolution (filter (20 by 20), pixel operation. They all use openCV. The algorithms where chosen because some are memory limited and other are compute limited. 
 
-Each algorithm runs for 20 seconds and is tested 4 times with a different resolution. 
 
-The output is a jsonline with several keys and value:
-\begin{itemize}
-\item ratiCalTime: The ratio between the effective calculation time of the algorithm divide by the total time of the algorithm.
-\item type: python or C++
-\item Second: each second a jsonline is created this can be use as an unique id
-\item algorithm: name of the algorithm
-\item fps: The frames per second at that moment
-\item resolution: the resolution of the algorithm
-\item node: computer’s network name (supposed to be unique)
-\end{itemize}
 
-example: 
-	\begin{lstlisting}
-	{"ratioCalTime": 8.937491320338326, "Type": "Python", "Second": 14, "algoritme": "Convolution_python", "fps": 24, "resolution": 176,"node":raspberrypi}
-	\end{lstlisting}
-   
-Each algorithm create an json file with several jsonlines. 
+Each algorithm runs for 20 seconds and is tested 4 times with a different resolution. The suite will measure the effective calculation time of the image-processing,the current and so later we can easely calculate the power and the usage of the CPU.
+
+
   
 \section{Framework board side}
 Before running the benchmark several libraries has to be installed. 
@@ -383,7 +374,7 @@ Before running the benchmark several libraries has to be installed.
 \item OpenCV : This library is used for all the vision algorithms. Not easy to install on single boards computers. The installation of OpenCv will take most of the time. 
 \item Serial: Used to read serial port. With this library the benchmark is able to monitor the current consumption.
 \item psutil : psutil (python system and process utilities) is a library for retrieving information on running processes and system utilization. With this library we will be able to monitor the CPU utilization.  % rajouter sources https://psutil.readthedocs.io/en/latest/
-\item subprocess: with this labrary the benchmark is able to spawn new processes and connect their input and outputs. 
+\item subprocess: with this library the benchmark is able to spawn new processes and connect their input and outputs. 
 \item jsonlines: This library help the benchmark to save in one json file several jsons. Each line is a json. This technique is used in a lot of big data application.
 \end{itemize}
 
@@ -400,17 +391,37 @@ Example:
 
 On the end the benchmark provide one main json file and for each algorithm a json. 
 
+The output of the algorithm code is a jsonl with several keys and value:
+\begin{itemize}
+\item ratiCalTime: The ratio between the effective calculation time of the algorithm divide by the total time of the algorithm.
+\item type: python or C++
+\item Second: each second a jsonline is created this can be use as an unique id
+\item algorithm: name of the algorithm
+\item fps: The frames per second at that moment
+\item resolution: the resolution of the algorithm
+\item node: computer’s network name (supposed to be unique)
+\end{itemize}
+
+example: 
+	\begin{lstlisting}
+	{"ratioCalTime": 8.937491320338326, "Type": "Python", "Second": 14, "algoritme": "Convolution_python", "fps": 24, "resolution": 176,"node":raspberrypi}
+	\end{lstlisting}
+   
+Each algorithm create an json file with several jsonlines. 
+
 figure \ref{fig:board Arch} show schematically how the benchmark works.
 
 \begin{figure}[H]
 \center
 \caption{Schematic board framework.\label{fig:board Arch}}
 \includegraphics[scale=0.55]{./img/boardArch.jpg}
-\end{figure} 
+\end{figure}
+
+ 
 
 \section{Framework Server side}
 
-Ones the benchmark is done the json are zipped and the zip file need to be uploaded on the server side. To do this a server on Google cloud was created. 
+once the benchmark is done the json are zipped and the zip file need to be uploaded on the server side. To do this a server on Google cloud was created. 
 
 On the server side three main tools were installed Nifi, Zeppelin and PostgreSQL. 
 \begin{itemize}
@@ -439,7 +450,7 @@ Three tables where created "machines", "resBenchmarkt" and "resAlgo". The first 
 
 \end{itemize}
 
-For uploading the file the user can use SSH transfer or more simple if the user has access to the console platform on the Google cloud website it is possible to upload the file via the a web browser. Ones this is done the rest goes automatically. Figure \ref{fig:server Arch} shows the server architecture.
+For uploading the file the user can use SSH transfer or more simple if the user has access to the console platform on the Google cloud website it is possible to upload the file via the a web browser. once this is done the rest goes automatically. Figure \ref{fig:server Arch} shows the server architecture.
 
 \begin{figure}[H]
 \center
@@ -455,7 +466,7 @@ The datasheet of the FS9922-DMM4 (p31) descripe how to read the bytes coming fro
 
 If a serial port is given as argument to the benchmark main code, the code will try to read the value coming from the serial port. (rajouter un example) 
 
-On some boards it was not possible to read the current cause the cp210x driver was not activated in the kernel. An improvement will be to activate the driver on all the single boards computers.
+On some boards it was not possible to read the current cause the cp210x(USB to Serial convert) driver was not activated in the kernel. An improvement will be to activate the driver on all the single boards computers.
 \section{User guide}
 
 

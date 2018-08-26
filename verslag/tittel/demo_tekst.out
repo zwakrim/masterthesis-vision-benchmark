@@ -1,13 +1,13 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Existing benchmarks}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{Running existing benchmark}{section.2.1}% 4
-\BOOKMARK [0][-]{chapter.3}{Use cases}{}% 5
-\BOOKMARK [1][-]{section.3.1}{Pixy cam}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.2}{Limit of Pixy}{chapter.3}% 7
-\BOOKMARK [0][-]{chapter.4}{Single board computers}{}% 8
-\BOOKMARK [1][-]{section.4.1}{board comparison}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.2}{Working and first run experience}{chapter.4}% 10
+\BOOKMARK [0][-]{chapter.2}{Single board computers}{}% 2
+\BOOKMARK [1][-]{section.2.1}{board comparison}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Working and first run experience}{chapter.2}% 4
+\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 5
+\BOOKMARK [1][-]{section.3.1}{Existing benchmarks}{chapter.3}% 6
+\BOOKMARK [2][-]{subsection.3.1.1}{Running existing benchmark}{section.3.1}% 7
+\BOOKMARK [0][-]{chapter.4}{Use cases}{}% 8
+\BOOKMARK [1][-]{section.4.1}{Pixy cam}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.2}{Limit of Pixy}{chapter.4}% 10
 \BOOKMARK [0][-]{chapter.5}{Benchmark suite}{}% 11
 \BOOKMARK [1][-]{section.5.1}{Algorithms}{chapter.5}% 12
 \BOOKMARK [1][-]{section.5.2}{Framework board side}{chapter.5}% 13
